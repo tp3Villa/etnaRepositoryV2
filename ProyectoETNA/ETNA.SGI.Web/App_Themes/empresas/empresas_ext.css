@@ -1,0 +1,860 @@
+/* CSS Document */
+
+.busqueda
+{
+	border-bottom: #66abe8 1px solid;
+	border-collapse: collapse;
+	border-left: #66abe8 1px solid;
+	border-right: #66abe8 1px solid;
+	border-top: #66abe8 1px solid;
+	margin: 1px;
+}
+.busqueda_emp
+{
+	border-bottom: #426D5F 1px solid;
+	border-collapse: collapse;
+	border-left: #426D5F 1px solid;
+	border-right: #426D5F 1px solid;
+	border-top: #426D5F 1px solid;
+	margin: 1px;
+}
+
+.cuadrotexto
+{
+	border-collapse: collapse;
+	border-left: #2c2c2c 1px solid;
+	border-right: #2c2c2c 1px solid;
+	margin: 1px;
+}
+.progreso 
+{
+    color: #adadad; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-align: center;
+    text-decoration: none; 
+}
+.boton
+{
+	background-color: #3399cc; /*#ffffff; */
+	border-bottom: #000000 1px solid;
+	border-collapse: collapse;
+	border-left: #000000 1px solid;
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	height: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.celdaimpar 
+{
+    background-color: #F9F9F9; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: none; 
+}
+
+.celdaimpar A:link 
+{
+    background-color: #F9F9F9; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: decoration; 
+}
+
+.celdaimpar A:visited 
+{
+    background-color: #F9F9F9; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: decoration; 
+}
+
+.celdaimpar A:active 
+{
+    background-color: #F9F9F9; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: decoration; 
+}
+
+.celdaimpar A:hover 
+{
+    background-color: #F9F9F9; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: none; 
+}
+
+.celdapar 
+{
+    background-color: #C9DED8; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: none; 
+}
+
+.celdapar A:link 
+{
+    background-color: #e2e2e2; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px;
+    height: 23px;    
+    text-decoration: decoration; 
+}
+
+.celdapar A:visited 
+{
+    background-color: #e2e2e2; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px;
+    height: 23px;     
+    text-decoration: decoration; 
+}
+
+.celdapar A:active 
+{
+    background-color: #e2e2e2; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: decoration; 
+}
+
+.celdapar A:hover 
+{
+    background-color: #e2e2e2; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;    
+    text-decoration: none; 
+}
+
+.celdaseleccionada 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: none; 
+}
+
+.celdaseleccionada A:link 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdaseleccionada A:visited 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdaseleccionada A:active 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdaseleccionada A:hover 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: none; 
+}
+
+.celdasombreada 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    cursor: pointer;    
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: none; 
+}
+
+.celdasombreada A:link 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    cursor: pointer;    
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdasombreada A:visited 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    cursor: pointer;    
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdasombreada A:active 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    cursor: pointer;    
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: decoration; 
+}
+
+.celdasombreada A:hover 
+{
+    background-color: #426D5F; 
+    color: #2c2c2c; 
+    cursor: pointer;    
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    height: 23px;
+    text-decoration: none; 
+}
+.celdaherramientastexto
+{
+    color: #4d3e3e;
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.celdaherramientastexto A:link 
+{
+    color: #4d3e3e; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.celdaherramientastexto A:visited 
+{
+    color: #4d3e3e; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    font-weight: bold;    
+    text-decoration: none; 
+}
+
+.celdaherramientastexto A:active 
+{
+    color: #faa016; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    font-weight: bold;   
+    text-decoration: none; 
+}
+
+.celdaherramientastexto A:hover 
+{
+    color: #faa016; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.celdatitulo
+{
+	background-color: #064183;
+	color: #ffffff;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 23px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.celdatitulo A:link 
+{
+    background-color: #426D5F; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo A:visited 
+{
+    background-color: #426D5F; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo A:active 
+{
+    background-color: #426D5F; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo A:hover 
+{
+    background-color: #426D5F; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: none; 
+}
+.controles 
+{
+    color: #000000; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+}
+
+.interno{
+	background-color: #FFFFFF;
+	border-top-color: #426D5F;
+	border-top-style: solid;
+	border-top-width: 2px;	
+}
+
+.datos
+{
+    background-color: #FFFFFF;/*#fff2df;*/
+   /* border-bottom: #FFFFFF 1px solid; 
+    border-collapse: collapse;     
+    border-left: #FFFFFF 1px solid; 
+    border-right: #FFFFFF 1px solid; 
+    border-top: #FFFFFF 1px solid; 
+    margin: 1px; */  
+}
+.emp_datos
+{
+    background-color: #FFFFFF;/*#fff2df;*/
+    border-bottom: #FFFFFF 0px solid; 
+    border-collapse: collapse;     
+    border-left: #FFFFFF 0px solid; 
+    border-right: #FFFFFF 0px solid; 
+    border-top: #FFFFFF 0px solid; 
+    margin: 0px;   
+}
+.error 
+{
+    color: #426D5F; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 1px; 
+    padding-left: 1px; 
+    text-decoration: none; 
+}
+/* used to set the different module align options - from module settings */
+.DNNAlignleft
+{
+	text-align: left;
+}
+.DNNAlignright
+{
+	text-align: right;
+}
+.DNNAligncenter
+{
+	text-align: center;
+}
+.Normal{ font-size:11px; color:#333333; }
+.importante {
+	color: #ff6600;
+	padding-bottom: 10px;
+}
+
+.destacado {
+	color: #014E98;
+}
+
+.resumen {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+/* GENERIC */
+H1
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 18px;
+	font-weight: normal;
+	color: #0D4B7E;
+	padding-top: 15px;
+}
+
+H2
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 20px;
+	font-weight: normal;
+	color: #666644;
+}
+
+H3
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: normal;
+	color: #003366;
+}
+
+H4
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 12px;
+	font-weight: normal;
+	color: #003366;
+}
+
+H5, DT
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #003366;
+}
+
+H6
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #003366;
+	margin-top: 5px;
+}
+h3 {font-family: tahoma;font-size: 13px;font-weight: bold;color:#6D6D6D;padding: 2px 0 1px 7px;margin-top: 10px;margin-left: 0;margin-right: 0;margin-bottom: 5px;letter-spacing: 2px;}
+h2 {font-family: tahoma;font-size: 12px;font-weight: bold;color:#6D6D6D;padding: 2px 0 1px 7px;margin-top: 10px;margin-left: 0;margin-right: 0;margin-bottom: 5px;letter-spacing: 2px;}
+/* this is the font class used throughout your site - change the size here */
+table,tr, td, th, div, p {font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 10px;line-height: 1.4em; }
+
+label, .normal, .Normal {font-family: tahoma;font-size: 11px;}
+table {padding: 0;}
+.link_pdf {
+	list-style-type: none;
+	background-image: url(../Imagenes/icon_pdf.gif);
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin-left: -20px;
+	height: 20px;
+}
+
+
+
+a.link_masinfo {
+	background-image: url(../Imagenes/arrow_orange.gif);
+	background-repeat: no-repeat;
+	display: block;
+	padding-left: 10px;
+	background-position: 0px 4px;
+	margin-top: 5px;
+}
+
+.fondo_azul {
+	background-color: #E5EAEE;
+}
+
+/*li {
+	list-style-type: none;
+	background-image: url(../Imagenes/arrow_blue.gif);
+	background-repeat: no-repeat;
+	margin-left: -20px;
+	padding-left: 15px;
+	padding-top: -2px;
+	margin-top: 5px;
+	background-position: 0px 3px;
+}*/
+.titulo_oferta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#999999;
+	background-image: url(../Imagenes/bt_arrow_circle_white.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	display: block;
+	padding-left: 20px;
+	padding-top: 2px;
+	height: 18px;
+	font-weight: bold;
+}
+
+.titulo_oferta_mes {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#999999;
+	background-image: url(../Imagenes/bt_arrow_circle_blue.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	display: block;
+	padding-left: 20px;
+	padding-top: 2px;
+	height: 18px;
+	font-weight: bold;
+}
+.precio_oferta {
+	color: #ff6600;
+	font-size: 16px;
+	font-weight: bold;
+}
+.precio_oferta_mes {
+	color: #014E98;
+	font-size: 16px;
+	font-weight: bold;
+}
+.precio_producto {
+	color: #014E98;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/*
+** B˜ìsquedas
+*/
+
+.fnd_buscar {
+	background-image: url(../Imagenes/_recursos/fnd_buscar.gif);
+	background-repeat: no-repeat;
+	padding-top: 7px;
+	padding-bottom: 20px;
+	padding-right: 10px;
+	padding-left: 52px;
+}
+.form_gris {
+	background-color: #CCCCCC;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+/*
+** Login
+*/
+
+.fnd_login {
+	background-image: url(../Imagenes/_recursos/fnd_login.gif);
+	background-repeat: no-repeat;
+}
+.link_login {
+	color: #FFFFFF;
+	text-decoration: underline;
+	background-image: url(../Imagenes/_recursos/flecha_login.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	padding-left: 8px;
+	padding-top: 4px;
+	font-size: 10px;
+}
+.link_login:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+input.tipo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	width: 15px;
+}
+
+input.login {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	width: 90px;
+}
+
+input.pass {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	width: 114px;
+}
+
+/*
+** Fondos tablas
+*/
+
+/*
+** Celdas TABLAS
+*/
+.tabla_servicios {
+	background-color: #EBEBEB;
+	font-size: 11px;
+	font-family: Verdana, "arial narrow", arial, verdana;
+}
+.celda_gris1 {
+	background-color: #F5F5F5;
+	text-align: center;
+	font-weight: bold;
+	font-size: 9px;
+}
+.celda_gris2 {
+	background-color: #EBEBEB;
+	font-size: 9px;
+	font-family: Verdana, "arial narrow", arial, verdana;
+}
+.celda_gris3 {
+	background-color: #CCCCCC;
+	font-weight: normal;
+}
+.celda_gris4 {
+	color: #FFFFFF;
+	background-color: #999999;
+	font-weight: bold;
+	font-size: 9px;
+}
+.celda_azul {
+	color: #FFFFFF;
+	background-color: #014d98;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: normal;
+}
+.celda_amarilla1 {
+	background-color: #d1e3f1;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: 9px;
+}
+.celda_amarilla2 {
+	background-color: #FFCC00;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: normal;
+}
+.celda_bt {
+	background-color: #333333;
+}
+.bt_grey_tabla {
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: center;
+	display: block;
+	text-decoration: underline;
+	font-size: 9px;
+}
+.bt_grey_tabla:hover {
+	font-weight: normal;
+	color: #FFFF00;
+	background-color: #333333;
+	text-align: center;
+	display: block;
+	text-decoration: underline;
+}
+.bt_grey_tabla_tel {
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	font-size: 10px;
+}
+.bt_grey_tabla_tel:hover {
+	font-weight: normal;
+	color: #FFFF00;
+	background-color: #333333;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+}
+/*
+** Acceso colaboradores
+*/
+
+.colaboradores-1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	font-weight: bold;
+}
+.colaboradores-2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bold;
+}
+/********************** Pager */
+
+table.pager select  { width:50px; margin:0 3px; }
+table.pager {
+	width:100%;
+	background:url(../../img/pager_bg.gif) repeat-x 0 100% #f9f9f9;
+}
+table.pager td { width:33%; border-top:1px solid #ddd; padding:4px 8px; vertical-align:middle; }
+table.pager td.pages { text-align:center; }
+table.pager ol,
+table.pager li { display:inline; }
+table.pager li { padding:0 2px; }
+table.pager td.sort-by { width:60%; }
+table.pager td.sort-by .active,
+table.pager td.sort-by .active:hover { color:#444; }
+
+/* Alignment */
+.v-top          { vertical-align:top !important; }
+.v-middle       { vertical-align:middle !important; }
+.v-bottom       { vertical-align:bottom !important; }
+.a-left         { text-align:left !important; }
+.a-center       { text-align:center !important; }
+.a-right        { text-align:right!important; }
+.left,
+.f-left         { float:left !important; }
+.right,
+.f-right        { float:right !important; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.accent         { color:#FFFFFF !important; font-weight:bold !important; }
+
+.nobr,
+.nowrap         { white-space:nowrap !important; }
+.normal-weight  { font-weight:normal !important; }
+.no-border      { border:none !important; }
+.no-padding     { padding:0 !important; }
+.no-margin     { margin:0 !important; }
+.auto-width     { width:auto !important; }
+
+.celdatitulo_s
+{
+	background-color: #FFFFFF; /*#ffc97f;*/
+	color: #ffffff;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 23px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.celdatitulo_s A:link 
+{
+    background-color: #FFFFFF; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo_s A:visited 
+{
+    background-color: #FFFFFF; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo_s A:active 
+{
+    background-color:#FFFFFF; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: decoration; 
+}
+
+.celdatitulo_s A:hover 
+{
+    background-color: #FFFFFF; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight: bold; 
+    height: 23px;    
+    text-align: center; 
+    text-decoration: none; 
+}
+.grid table 
+{
+	border-color:#D0D0D0;
+	border-width:1px;
+}
+
+.grid caption {
+	background:#f9f9f9 url(../../Imagenes/captionbckg.gif) repeat-x;
+    color:#333333;
+	text-align:center;
+	line-height   :22px;
+	font-size:11px;
+	font-weight:bold;
+	padding-top:4px;
+	padding-left:4px;
+	/*font-family:tahoma,arial,verdana,sans-serif;*/
+}

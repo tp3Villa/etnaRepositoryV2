@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppMenu.master.cs" Inherits="LCSA.SGI.WebLogisticaUtiles.Presentacion.MasterPage.AppMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Three-column, fixed width CSS layout template</title>
+        <link href="Creditos.css" rel="stylesheet" type="text/css" />
+        <script type = "text/javascript" >
+            function disableBackButton() {
+                window.history.forward();
+            }
+            setTimeout("disableBackButton()", 0);
+    </script>
+</head>
+<body  onload="disableBackButton()">
+    <form id="form1" runat="server">
+    <br />
+	
+		<div id="wrapper">
+		
+	         <div id="header" style="left: 0px; top: 0px">  
+				<div id="logo" style="z-index: 100">
+					<asp:HyperLink ID="lnkHome" runat="server" ToolTip="Return to homepage" 
+                        NavigateUrl="~/WebMenuPrincipal.aspx" ImageUrl="~/Imagenes/descarga.gif">
+                    <asp:Image ID="imgLogo" runat="server" AlternateText="company logo" 
+                        SkinID="logoImage" />
+					</asp:HyperLink>
+				</div>
+				<div id="banner">
+					<%-- Put a banner here if you wish. --%>
+				</div>
+				<div id="search" style="z-index: 101">
+					<asp:Label runat="server" ID="lblSearch" AssociatedControlID="txtSearch" style="display:none;" Text="Search:" />
+					<asp:TextBox ID="txtSearch" SkinID="searchBox" runat="server" AccessKey="s" TabIndex="50"></asp:TextBox>&nbsp;
+					<asp:Button ID="btnSearch" SkinID="searchButton" runat="server" AccessKey="c" Text="Search" TabIndex="51" />
+				</div>   &nbsp;
+		  	</div>	
+			<div id="mainnav">
+                Bienvenido :<asp:Label ID="lblUsuario" runat="server" Font-Size="Smaller" Text="Label"></asp:Label>  
+            </div>
+            <div id="mainnav">
+			</div>
+			
+			
+			<div id="contentwrapper">
+				<div id="floatwrapper">
+					<div id="centercolumn">
+						<div id="breadcrumbs" style="left: 27px; width: 417px; top: 10px; text-align: center">
+                            <asp:Label ID="lblTitle" runat="server" Font-Bold="True"
+                                Width="394px" Font-Size="Small" ForeColor="#000099"></asp:Label>&nbsp;</div>
+						<div id="copy">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+					</div>
+					<div id="leftcolumn" style="left: 1px; top: 1px; width: 1px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <div class="sidebarcontainer" style="width: 123px">
+                        <h3>
+                            &nbsp;</h3>
+                        <p>
+			                        
+			                        <%--
+                                            <asp:Button ID="Button1" runat="server"  Text="Cerrar Session" 
+                                                onclick="Button1_Click" />
+                                                
+                                           --%>
+                                                
+                                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" 
+                         LogoutPageUrl="~/WebLogin.aspx" onloggingout="LoginStatus1_LoggingOut" BorderStyle="Solid" 
+                                            Font-Size="Small" Visible="False" />
+                        </p>
+                        <p>
+                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Size="Small" 
+                                NavigateUrl="~/WebLogin.aspx">Cerrar Sesion</asp:HyperLink>
+                        </p>
+                    </div>
+        </asp:ContentPlaceHolder>
+        <div id="leftcolcontainer">
+                            &nbsp;</div>
+					</div>
+				</div>
+				<div id="rightcolumn">
+					<div id="rightcolcontainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <div class="sidebarcontainer">
+								<h4>
+									otro tipo</h4>
+								<p>
+									<asp:Image runat="server" ID="boatImage" ImageUrl="~/Imagenes/Sailing.gif" 
+                                        Width="115" Height="178" AlternateText="sailing boat"  /></p>
+								<p>
+									Otro tipo de mensaje que se quiera dar o otro clase de inforamcion.</p>
+							</div>
+        </asp:ContentPlaceHolder>
+        </div>
+				</div>
+                
+                     
+                
+                <div id="footer" style="text-align: center">
+					© 2015 ETNA S.A.                        
+                                 
+                </div>
+                     
+                     
+                     
+                     
+                        
+                        
+                        
+			</div>
+    </div>
+    </form>
+</body>
+</html>

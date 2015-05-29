@@ -1,0 +1,5 @@
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessEntity\bin\Debug\SGR.BusinessEntity.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessEntity\bin\Debug\SGR.BusinessEntity.pdb
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessEntity\obj\Debug\ResolveAssemblyReference.cache
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessEntity\obj\Debug\SGR.BusinessEntity.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessEntity\obj\Debug\SGR.BusinessEntity.pdb

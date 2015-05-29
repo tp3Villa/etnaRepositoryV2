@@ -1,0 +1,7 @@
+D:\SGR\SGR.DataAccess\bin\Debug\SGR.DataAccess.dll
+D:\SGR\SGR.DataAccess\bin\Debug\SGR.DataAccess.pdb
+D:\SGR\SGR.DataAccess\bin\Debug\SGR.BusinessEntity.dll
+D:\SGR\SGR.DataAccess\bin\Debug\SGR.BusinessEntity.pdb
+D:\SGR\SGR.DataAccess\obj\Debug\SGR.DataAccess.csprojResolveAssemblyReference.cache
+D:\SGR\SGR.DataAccess\obj\Debug\SGR.DataAccess.dll
+D:\SGR\SGR.DataAccess\obj\Debug\SGR.DataAccess.pdb

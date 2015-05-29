@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBEA3933-8D41-4161-BA30-4C4750C5A6A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ETNA.SGI.Presentacion</RootNamespace>
+    <AssemblyName>ETNA.SGI.Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>APLICAC.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Compras\frmBusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmBusquedaProveedor.Designer.cs">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoAprobacionCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoAprobacionCotizacion.Designer.cs">
+      <DependentUpon>frmListadoAprobacionCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoProveedor.Designer.cs">
+      <DependentUpon>frmListadoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoReqCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoReqCotizacion.Designer.cs">
+      <DependentUpon>frmListadoReqCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoRequerimientoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoRequerimientoCompra.Designer.cs">
+      <DependentUpon>frmListadoRequerimientoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmCotizacion.Designer.cs">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoCondicionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoCondicionPago.Designer.cs">
+      <DependentUpon>frmListadoCondicionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoCotizacion.Designer.cs">
+      <DependentUpon>frmListadoCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoOrdenCompra.Designer.cs">
+      <DependentUpon>frmListadoOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmOrdenCompra.Designer.cs">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.Designer.cs">
+      <DependentUpon>frmActualizarInfoRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.Designer.cs">
+      <DependentUpon>frmAprobacionDetaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAprobacionSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAprobacionSolicitud.Designer.cs">
+      <DependentUpon>frmAprobacionSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAtencionSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmAtencionSolicitud.Designer.cs">
+      <DependentUpon>frmAtencionSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmBusquedaFormatoComercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmBusquedaFormatoComercial.Designer.cs">
+      <DependentUpon>frmBusquedaFormatoComercial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\FrmBusquedaGRAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\FrmBusquedaGRAL.Designer.cs">
+      <DependentUpon>FrmBusquedaGRAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmBusquedaRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmBusquedaRequerimiento.Designer.cs">
+      <DependentUpon>frmBusquedaRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmFormatoComercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmFormatoComercial.Designer.cs">
+      <DependentUpon>frmFormatoComercial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmListadocumentosAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmListadocumentosAsociados.Designer.cs">
+      <DependentUpon>frmListadocumentosAsociados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmNuevoRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmNuevoRequerimiento.Designer.cs">
+      <DependentUpon>frmNuevoRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.Designer.cs">
+      <DependentUpon>frmRegistroSolicitudAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TablasPrincipales\frmPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TablasPrincipales\frmPaises.Designer.cs">
+      <DependentUpon>frmPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingletonFormProvider.cs" />
+    <EmbeddedResource Include="Formularios\Compras\frmBusquedaProveedor.resx">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoAprobacionCotizacion.resx">
+      <DependentUpon>frmListadoAprobacionCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoProveedor.resx">
+      <DependentUpon>frmListadoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoReqCotizacion.resx">
+      <DependentUpon>frmListadoReqCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoRequerimientoCompra.resx">
+      <DependentUpon>frmListadoRequerimientoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmCotizacion.resx">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoCondicionPago.resx">
+      <DependentUpon>frmListadoCondicionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoCotizacion.resx">
+      <DependentUpon>frmListadoCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmOrdenCompra.resx">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoOrdenCompra.resx">
+      <DependentUpon>frmListadoOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.resx">
+      <DependentUpon>frmActualizarInfoRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.resx">
+      <DependentUpon>frmAprobacionDetaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmAprobacionSolicitud.resx">
+      <DependentUpon>frmAprobacionSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmAtencionSolicitud.resx">
+      <DependentUpon>frmAtencionSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmBusquedaFormatoComercial.resx">
+      <DependentUpon>frmBusquedaFormatoComercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\FrmBusquedaGRAL.resx">
+      <DependentUpon>FrmBusquedaGRAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmBusquedaRequerimiento.resx">
+      <DependentUpon>frmBusquedaRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmFormatoComercial.resx">
+      <DependentUpon>frmFormatoComercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmListadocumentosAsociados.resx">
+      <DependentUpon>frmListadocumentosAsociados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmNuevoRequerimiento.resx">
+      <DependentUpon>frmNuevoRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.resx">
+      <DependentUpon>frmRegistroSolicitudAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TablasPrincipales\frmPaises.resx">
+      <DependentUpon>frmPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Copia de Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FonodAmarillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.ico" />
+    <None Include="Resources\Abrir.ico" />
+    <None Include="Resources\16 %28Find%29.ico" />
+    <None Include="Resources\16 %28Find%291.ico" />
+    <None Include="Resources\Abrir1.ico" />
+    <None Include="Resources\abacus.ico" />
+    <Content Include="APLICAC.ICO" />
+    <Content Include="Resources\ACCESOS.bmp" />
+    <Content Include="Resources\ACCESOS12.bmp" />
+    <None Include="Resources\Access1.ico" />
+    <None Include="Resources\Access11.ico" />
+    <Content Include="Resources\ACERCA DE.BMP" />
+    <Content Include="Resources\ACERCA DE12.BMP" />
+    <Content Include="Resources\ACTUALIZ.BMP" />
+    <Content Include="Resources\ACTUALIZ1.BMP" />
+    <Content Include="Resources\ANULAR.bmp" />
+    <Content Include="Resources\ANULAR12.bmp" />
+    <None Include="Resources\apercu.ico" />
+    <None Include="Resources\Aprobado.ico" />
+    <None Include="Resources\apercu1.ico" />
+    <Content Include="Resources\APROBAR.BMP" />
+    <Content Include="Resources\ASNT.BMP" />
+    <Content Include="Resources\ASNT1.BMP" />
+    <Content Include="Resources\barra01.jpg" />
+    <Content Include="Resources\barra011.jpg" />
+    <Content Include="Resources\barra012.jpg" />
+    <None Include="Resources\barra013.jpg" />
+    <Content Include="Resources\barra03.jpg" />
+    <None Include="Resources\barra031.jpg" />
+    <Content Include="Resources\barra04.jpg" />
+    <None Include="Resources\barra041.jpg" />
+    <Content Include="Resources\barra07.jpg" />
+    <None Include="Resources\Baterias\mant.jpg" />
+    <None Include="Resources\Baterias\AC.BMP" />
+    <None Include="Resources\Baterias\IntroET.BMP" />
+    <None Include="Resources\Baterias\Intro.BMP" />
+    <None Include="Resources\Baterias\Baterias1.jpg" />
+    <None Include="Resources\Baterias\ETc.BMP" />
+    <None Include="Resources\barra071.jpg" />
+    <Content Include="Resources\BO.bmp" />
+    <Content Include="Resources\BO12.bmp" />
+    <None Include="Resources\BO121.bmp" />
+    <Content Include="Resources\Borrar.bmp" />
+    <None Include="Resources\Borrar1.bmp" />
+    <Content Include="Resources\Borrar12.bmp" />
+    <Content Include="Resources\btnConfiguracion.bmp" />
+    <Content Include="Resources\btnIngresar.bmp" />
+    <Content Include="Resources\btnSalir.bmp" />
+    <Content Include="Resources\BUSCAR.BMP" />
+    <None Include="Resources\Buscar.ico" />
+    <Content Include="Resources\BuscarAbonados.png" />
+    <None Include="Resources\CALC1.ICO" />
+    <Content Include="Resources\CALCULA.BMP" />
+    <None Include="Resources\Cancel__Red.png" />
+    <None Include="Resources\Cancel_Red_mini.png" />
+    <Content Include="Resources\CIERRPER.BMP" />
+    <Content Include="Resources\CLIENTES.bmp" />
+    <Content Include="Resources\CLIENTES12.bmp" />
+    <Content Include="Resources\close.bmp" />
+    <Content Include="Resources\close12.bmp" />
+    <None Include="Resources\conference.ico" />
+    <None Include="Resources\conference1.ico" />
+    <Content Include="Resources\DGA_lupa.gif" />
+    <None Include="Resources\Edit.ico" />
+    <Content Include="Resources\EDITAR.JPG" />
+    <Content Include="Resources\ELIMINA.BMP" />
+    <None Include="Resources\ELIMINA1.BMP" />
+    <Content Include="Resources\ELIMINA12.BMP" />
+    <None Include="Resources\ERASE02.ICO" />
+    <Content Include="Resources\FA112.bmp" />
+    <Content Include="Resources\FACTURAR12.BMP" />
+    <None Include="Resources\Filter.ico" />
+    <Content Include="Resources\Footer1.jpg" />
+    <Content Include="Resources\GRABAR12.BMP" />
+    <Content Include="Resources\GRABARAR112.BMP" />
+    <None Include="Resources\GRABARAR1121.BMP" />
+    <Content Include="Resources\GRABARAR12.BMP" />
+    <Content Include="Resources\help12.BMP" />
+    <Content Include="Resources\HLP-UP12.BMP" />
+    <Content Include="Resources\icono_excel.jpg" />
+    <Content Include="Resources\icono_excel1.jpg" />
+    <Content Include="Resources\imagenCabecera1.JPG" />
+    <None Include="Resources\IMPRESOR.ICO" />
+    <Content Include="Resources\ImprimeOC12.bmp" />
+    <Content Include="Resources\IMPRIMIR.BMP" />
+    <Content Include="Resources\INICIAR.BMP" />
+    <Content Include="Resources\Inicio12.bmp" />
+    <Content Include="Resources\llantita.jpg" />
+    <Content Include="Resources\LOCKED.BMP" />
+    <Content Include="Resources\Logo12.jpg" />
+    <Content Include="Resources\lq12.bmp" />
+    <Content Include="Resources\lupa.png" />
+    <Content Include="Resources\MODIFICA12.BMP" />
+    <None Include="Resources\non.ico" />
+    <Content Include="Resources\NOTAS12.BMP" />
+    <Content Include="Resources\NUEVO.BMP" />
+    <None Include="Resources\NUEVO1.BMP" />
+    <Content Include="Resources\NUEVO12.BMP" />
+    <None Include="Resources\Operaciones.ICO" />
+    <None Include="Resources\ok.ico" />
+    <None Include="Resources\PAISES.ico" />
+    <Content Include="Resources\PREGUNTA12.BMP" />
+    <Content Include="Resources\PROCESO.BMP" />
+    <None Include="Resources\PROCESO1.BMP" />
+    <Content Include="Resources\PRODUC.BMP" />
+    <Content Include="Resources\PRODUCTO12.bmp" />
+    <Content Include="Resources\REFRESH.BMP" />
+    <Content Include="Resources\REFRESH12.BMP" />
+    <Content Include="Resources\REFRESH121.BMP" />
+    <Content Include="Resources\REPORTE12.BMP" />
+    <Content Include="Resources\SALIDA.BMP" />
+    <Content Include="Resources\SALIDA12.BMP" />
+    <Content Include="Resources\SALIDA121.BMP" />
+    <Content Include="Resources\SAVEPLUS.BMP" />
+    <Content Include="Resources\SQLSIM.BMP" />
+    <Content Include="Resources\TIPOCAMB12.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Ventas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ETNA.SGI.Bussiness\ETNA.SGI.Bussiness.csproj">
+      <Project>{A9FE44E1-5459-43C5-8493-8B2BBFE85F23}</Project>
+      <Name>ETNA.SGI.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.SGI.Entity\ETNA.SGI.Entity.csproj">
+      <Project>{9D5B3824-833F-413A-B2F7-15F37A5E645F}</Project>
+      <Name>ETNA.SGI.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.SGI.Utils\ETNA.SGI.Utils.vbproj">
+      <Project>{5D9C7F95-E28A-40B8-A788-7293CF53A400}</Project>
+      <Name>ETNA.SGI.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

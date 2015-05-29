@@ -1,0 +1,410 @@
+/* Sets element margins, padding, and border to 0 to even out browser differences when adding desired values later. */
+html, body, div, p, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, li, dl, dt, dd, td, form, fieldset, a, img, button {
+     margin: 0;
+     padding: 0;
+     border: 0;
+}
+body{
+	text-align:center;
+	background-color:#F8F8EC;
+	background-image:url(Images/bg_tile.gif); 
+	background-repeat:repeat;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:0.78em;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: Arial, Helvetica, Sans-Serif;}
+
+h1, h2 {color:#0055CC;}
+
+h3, h4, h5, h6 {color:#9E9E34;}	
+	
+/*Typographics styles adapted from http://www.thenoodleincident.com/tutorials/typography/ */
+
+h1 {
+	margin:0.5em 0 0 0;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+h2 {
+    margin:0.5em 0 0 0;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+h3 {
+    margin:0.5em 0 0 0;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+h4 {
+	margin: 0.5em 0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+h5 {
+	margin: 0.5em 0;
+	font-size: 1em;
+	font-weight: bold;
+}
+h6 {
+	margin: 0.5em 0;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+p  {
+	margin: 1em 0;
+	line-height: 1.5em;
+}
+
+a {text-decoration:underline;}
+
+a:hover {text-decoration:none;}
+
+#wrapper{
+	width:770px;
+	margin:0 auto;
+	padding-bottom:2px;
+	border-left:1px solid #F0EFC8;
+	border-right:1px solid #F0EFC8;
+	text-align:left;
+	background-color:#FFFFFF;
+	background-image:url(Images/main_bg.gif);
+	background-repeat:repeat-y;
+	background-position: center top;	
+}
+* html .wrapper {   /*** IE5.x/win box model fix ***/
+	width: 772px;
+	wid\th: 770px;
+}
+#header{
+	height:70px; 
+	position:relative;
+	background-image:url(Images/header_bg.png);
+	background-repeat:repeat-y; 
+	background-color:#FFFFFF;
+}
+#logo{
+	position:absolute;
+	top:20px;
+	left:3px;
+	width:152px;
+}
+#banner{
+	text-align:center;
+	margin:0 152px;
+}
+#search{
+	position:absolute;
+	bottom:5px;
+	right:5px;
+}
+#mainnav {
+	padding:0 152px;
+	border-bottom:solid 1px #CCCC66;
+	background-color:#F7F7E8;
+	background-image:url(Images/mainnav_bg.gif);
+	background-repeat:repeat-x;
+}
+
+* html #mainnav {
+	background-image:url(Images/mainnav_bg_ie.gif);
+	background-repeat:repeat-x;
+}
+
+* html #mainnav tr {height:1.4em;}
+
+#mainnav .item {
+	padding:2px 7px;
+	color:#333333; 
+	font-weight:normal; 
+}
+
+* html #mainnav .item {padding:0 20px;}
+
+#mainnav .selected {
+	color:#0066FF; 
+	background-color:#FFFFFF;
+	background-image:url(Images/mainnav_select_bg.gif); 
+	background-repeat:repeat-x;
+}
+#mainnav .hover {
+	color:#59B101; 
+	background-color:#FFFFFF; 
+	background-image:url(Images/mainnav_hover_bg.gif); 
+	background-repeat:repeat-x; 
+}
+
+/* Keep IE from displaying the background images twice.*/
+* html #mainnav .selected .selected, * html #mainnav .hover .hover {
+	background-image:none; 
+	background-color:transparent;
+}
+#contentwrapper{
+	position: relative; /*** IE needs this or the contents won't show outside the parent container. ***/
+	width: 468px;   /*** Critical left and right col/divider dimension value (moves inversly) ***/
+	margin-left: 150px;    /*** Critical left col dimension value ***/
+	border-left: 1px solid #F0EFC8;   /*** Critical left divider dimension value ***/
+	border-right: 1px solid #F0EFC8;   /*** Critical right divider dimension value ***/
+}
+* html #contentwrapper {  /*** IE5.x/win box model fix ***/
+	width: 470px;   /*** Critical left and right col/divider dimension value (moves inversly) ***/
+	wid\th: 468px;   /*** Critical left and right col/divider dimension value (moves inversly) ***/
+}
+#floatwrapper {
+	float: left;
+	width: 468px;   /*** Critical left and right col/divider dimension value (moves inversly) ***/
+	margin-right: -1px;   /*** Static fix ***/
+}
+#centercolumn{
+	float: right;
+	width: 468px;   /*** Critical left and right col/divider dimension value (moves inversly) ***/
+	/* \*/
+	margin-left: -1px; 
+	/* Hidden from IE-mac */
+	padding-top:30px;
+}
+#breadcrumbs{
+	position:absolute;
+	top:5px;
+	left:20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:0.9em;
+	color:#666666;
+}
+#breadcrumbs a {
+	color:#59B101;
+	text-decoration:underline;
+}
+
+#breadcrumbs a:hover {text-decoration:none;}
+
+#copy a {color:#59B101;}
+
+#copy .container {
+	margin:5px;
+	padding:0 20px 15px 20px; 
+	background-color:#FFFFFF;
+}
+	
+/* \*/
+* html #copy .container {height:1%;}
+/* */
+
+#copy img, #rightcolumn img {border:1px solid #6BD601 !important;}
+
+#copy .teaser {
+	margin-top:-0.2em;
+	color:#9E9E34;
+	font-weight:normal;
+}
+
+#copy td, #copy th {padding: 0.2em 0.5em;}
+
+#copy td {
+	padding: 0.2em 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.txtBox {
+    border:1px solid #CCCC66;
+    background-color:#F7F7E8;
+}
+
+.txtBox:focus {background-color:#FFFFFF;}
+
+#copy fieldset {	
+	margin-bottom:1em;
+	padding:1em;
+	border:1px solid #CCCC66;
+}
+
+#copy fieldset legend {
+	color:#0055CC;
+	background-color:#FFFFFF;
+}
+
+* html #copy legend {
+	padding:0.5em;
+}
+
+div.readmore {
+	text-align:right;
+	font-size:0.9em;
+}
+
+#leftcolumn {
+	position: relative; /*** IE needs this or the contents won't show outside the parent container. ***/
+	width: 152px;    /*** Critical left col/divider dimension value ***/
+	margin-left: -151px;    /*** Critical left col/divider dimension value ***/
+	padding-top:30px;
+}
+* html #leftcolumn {
+	float:left;	
+	padding-top:25px;
+}
+
+*>html #leftcolumn {width:151px;}   /*** Fix only for IE/Mac ***/
+
+#leftcolcontainer{width: 150px;}    /*** Critical left col dimension value ***/
+
+#subnav {
+	margin-bottom:40px; 
+	margin-left:1px; 
+	overflow:hidden;
+}
+
+* html #subnav tr {height:1.4em;}
+
+#subnav .item {
+	padding:2px 7px;
+	background-color:#F0EFC8; 
+	color:#333333; 
+}
+
+* html #subnav .item {padding:0 20px;}
+
+#subnav .selected {
+	background-color:#FFFFFF; 
+	color:#0066FF;
+}
+#subnav .hover {
+	color:#333333; 
+	background-color:#F7F7E8;
+}
+#rightcolumn{
+	float: left; 
+	position: relative; /*** IE needs this or the contents won't show outside the parent container. ***/
+	width: 152px;    /*** Critical right col/divider dimension value ***/
+	margin-right: -150px;    /*** Critical right col/divider dimension value ***/
+	margin-left: -1px;   /*** Static fix ***/
+	padding-top:30px;
+}
+
+/* \*/
+* html #rightcolumn {
+	margin-left: 0px; 
+	margin-right: -500px; 
+	mar\gin-right: -152px;
+	padding-top:25px;
+}
+/* */
+
+/*** These commented-out rules below are there to explain the "Critical" info 
+	for the rules above, because comments must not appear within the Mac-hack.
+	The "rules" below are not active, they are just for teaching purposes. ***/
+
+/*
+* html .right {
+margin-left: 0px;    *** Critical right divider dimension value ***
+margin-right: -500px;    *** IE5.x/win fix, must be above a critical number, but very high values appear okay ***
+mar\gin-right: -152px;    *** Critical right col/divider dimension value ***
+}
+*/
+
+#rightcolcontainer{
+	/* \*/
+	width: 150px;
+	/* Hidden from IE-Mac */   /*** Critical right col dimension value ***/
+	margin-left: 3px;    /*** Critical right divider dimension value ***/
+}
+/* \*/
+* html #rightcolcontainer {
+	fl\oat: right;
+	margin-left: 2px; 
+	mar\gin-left: 0px; 
+}
+/* */
+
+.sidebarcontainer{
+	border:1px solid #CCCC66;
+	margin:5px;
+	padding:6px;
+	background-color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.9em;
+}
+
+/* \*/
+* html .sidebarcontainer {height:1%;}
+/* */
+
+.sidebarcontainer a {color:#59B101;}
+
+.sidebarcontainer li {list-style-type:none;}
+
+#footer{
+	clear:both;
+	margin:1px 0;
+	padding:2px 15px;	
+	border-top:1px solid #CCCC66;
+	border-bottom:1px solid #CCCC66;
+	background-color:#F0EFC8;
+	background-image:url(Images/footer_bg.gif);
+	background-repeat:repeat;
+	font-size:0.9em;
+}
+#footer a {
+	margin:1px 5px;
+	color:#59B101; 
+}
+.button {
+    border:1px solid #CCCC66;
+    color:#FFFFFF;
+    background-color:#0066FF;
+    font-size:1em;
+}
+.imgfloatright {
+	float:right;
+	display:inline;
+	margin: 0.25em 0 0.25em 1em;
+}
+.imgfloatleft {
+	float:left;
+	display:inline;
+	margin: 0.25em 1em 0.25em 0;
+}
+
+
+@media print {	
+	body{
+		font-size:11pt;
+		line-height:13pt;
+		background:#FFFFFF !important;
+	}	
+	#wrapper, #contentwrapper, #floatwrapper, #centercolumn, * html #wrapper, * html #contentwrapper, * html #floatwrapper, * html #centercolumn {
+		width:auto !important;
+		margin:auto !important;
+	}
+
+	#wrapper, #contentwrapper {border:none;}
+
+	#mainnav{
+		padding:0;
+		text-align:center;
+	}
+
+	#leftcolumn, #rightcolumn, #search {display:none;}
+
+	#wrapper, #header, #mainnav, #mainnav .item, #mainnav .selected, #copy .container, #footer {
+		background:transparent;
+	}
+	#centercolumn {
+		float:none;
+		margin:0 1em 0 2.5em;
+	}	
+
+	#breadcrumbs {position:static;}
+
+	#copy .container{
+		margin:0;
+		margin:0;
+		border-style:none !important;
+		border-width:0;
+	}
+	
+    #copy fieldset {border:none;}
+
+	#footer {		
+		border-style:none !important;
+		border-top:1px solid #000000;
+	}
+}

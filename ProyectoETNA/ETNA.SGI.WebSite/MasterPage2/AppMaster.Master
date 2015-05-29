@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppMaster.master.cs" Inherits="LCSA.SGI.WebLogisticaUtiles.Presentacion.MasterPage.AppMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head runat="server">
+    <title>Three-column, fixed width CSS layout template</title>
+        <script type = "text/javascript" >
+    function disableBackButton()
+    {
+        window.history.forward();
+    }
+    setTimeout("disableBackButton()", 0);
+    </script>
+</head>
+<body onload="disableBackButton()">
+    <form id="form1" runat="server">
+    <br />
+	
+		<div id="wrapper">
+		
+	         <div id="header" style="left: 0px; top: 0px">  
+				<div id="logo" style="z-index: 100">
+					<asp:HyperLink ID="lnkHome" runat="server" ToolTip="Return to homepage" 
+                        NavigateUrl="~/WebMenuPrincipal.aspx" ImageUrl="~/Imagenes/descarga.gif">
+                    <asp:Image ID="imgLogo" runat="server" AlternateText="company logo" 
+                        SkinID="logoImage" />
+					</asp:HyperLink>
+				</div>
+				<div id="banner">
+					<%-- Put a banner here if you wish. --%>
+				</div>
+				<div id="search" style="z-index: 101; right: 5px; width: 133px; bottom: 5px;">
+                    &nbsp; &nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Size="8pt" NavigateUrl="">Cerrar Sesion</asp:HyperLink></div>   &nbsp;
+		  	</div>	
+			<div id="mainnav">
+                &nbsp;&nbsp;
+                
+                
+                
+                
+                
+                <asp:LoginName ID="LoginName1" runat="server" FormatString="Bienvenido: {0}" Style="z-index: 101;
+                    left: 475px; position: absolute; top: 84px" Width="318px" />
+                &nbsp;
+			</div>
+			<div id="contentwrapper">
+				<div id="floatwrapper">
+					<div id="centercolumn">
+						<div id="breadcrumbs" style="left: 27px; width: 417px; top: 10px; text-align: center">
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Solicitud de Utiles"
+                                Width="292px"></asp:Label>&nbsp;</div>
+						<div id="copy">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+					</div>
+					<div id="leftcolumn" style="left: 1px; top: 1px; width: 1px;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <div class="sidebarcontainer" style="width: 123px">
+									<h4>
+                                        <asp:Login ID="Login1" runat="server" BackColor="#efefef" BorderColor="#efefef" BorderPadding="4"
+                BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333"
+                Height="153px" TextLayout="TextOnTop" Width="123px">
+                <TextBoxStyle Font-Size="0.8em" />
+                <LoginButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px"
+                    Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                <LayoutTemplate>
+                    <table border="0" cellpadding="4" cellspacing="0" style="border-collapse: collapse">
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" style="width: 123px; height: 153px">
+                                    <tr>
+                                        <td align="center" style="font-weight: bold; font-size: 0.9em; color: white; height: 17px;
+                                            background-color: #990000">
+                                            Iniciar sesión</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">usuario:</asp:Label></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 27px">
+                                            <asp:TextBox ID="UserName" runat="server" Font-Size="9pt" Height="15px" Width="104px"></asp:TextBox>&nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Contraseña:</asp:Label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:TextBox ID="Password" runat="server" Font-Size="9pt" Height="14px" TextMode="Password"
+                                                Width="103px"></asp:TextBox>&nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">
+                                            <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#CC9966"
+                                                BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Verdana"
+                                                Font-Size="0.8em" ForeColor="#990000" OnClick="LoginButton_Click" Text="Inicio de sesión"
+                                                ValidationGroup="ctl00$Login1" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <asp:Label ID="lblvalida" runat="server" Visible="False"></asp:Label></td>
+                        </tr>
+                    </table>
+                </LayoutTemplate>
+                <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                <TitleTextStyle BackColor="#990000" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+            </asp:Login>
+                                        </h4>										
+									<br />
+								</div>
+        </asp:ContentPlaceHolder>
+        <div id="leftcolcontainer">
+                            &nbsp;</div>
+					</div>
+				</div>
+				<div id="rightcolumn">
+					<div id="rightcolcontainer">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+         <div class="sidebarcontainer">
+								<p>
+									<asp:Image runat="server" ID="boatImage" ImageUrl="~/Imagenes/Sailing.gif" 
+                                        Width="115" Height="178" AlternateText="sailing boat"  /></p>
+							</div>
+        </asp:ContentPlaceHolder>
+        </div>
+				</div>
+				<div id="footer" style="text-align: center">
+					© 2015 ETNA S.A.</div>
+			</div>
+    </div>
+    </form>
+</body>
+</html>

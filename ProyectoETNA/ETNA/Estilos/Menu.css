@@ -1,0 +1,39 @@
+.menustyle
+{
+	background-color: white;
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+}
+ 
+.menuitem
+{
+	background-color: #B5B5B5;	/*Black; */
+	color: menutext;	/*White; */
+	font-family: Arial;
+	font-size: 11px;
+	border: 1px;
+	border-style: solid;
+	border-color: white;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 15px;
+	cursor: pointer;
+	cursor: hand;	
+}
+
+.mouseover
+{
+	background-color: White;  /*silver;*/
+	color: menutext; 
+	font-family: Arial;
+	font-size: 11px;
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 15px;
+	cursor: pointer;
+	cursor: hand;
+}

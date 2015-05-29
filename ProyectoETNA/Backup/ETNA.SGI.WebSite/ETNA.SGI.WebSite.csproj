@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{597F06E2-B6C9-40D7-9E94-5563F625942A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ETNA.SGI.WebSite</RootNamespace>
+    <AssemblyName>ETNA.SGI.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Granite\Default.css" />
+    <Content Include="App_Themes\Granite\Images\bg_tile.gif" />
+    <Content Include="App_Themes\Granite\Images\header_bg.png" />
+    <Content Include="App_Themes\Granite\Images\logo.gif" />
+    <Content Include="App_Themes\Granite\Images\logo_small.gif" />
+    <Content Include="App_Themes\Granite\Images\main_bg.png" />
+    <Content Include="App_Themes\Granite\Images\stock_report.gif" />
+    <Content Include="App_Themes\Paper\Default.css" />
+    <Content Include="App_Themes\Paper\Images\logo.gif" />
+    <Content Include="App_Themes\Paper\Images\logo_small.gif" />
+    <Content Include="App_Themes\Paper\Images\main_bg.png" />
+    <Content Include="App_Themes\Paper\Images\stock_report.gif" />
+    <Content Include="App_Themes\Pcbr\Default.css" />
+    <Content Include="App_Themes\Pcbr\Images\bg_leftnavactive.gif" />
+    <Content Include="App_Themes\Pcbr\Images\bg_tile.gif" />
+    <Content Include="App_Themes\Pcbr\Images\header_bg.png" />
+    <Content Include="App_Themes\Pcbr\Images\logo.gif" />
+    <Content Include="App_Themes\Pcbr\Images\logo_small.gif" />
+    <Content Include="App_Themes\Pcbr\Images\main_bg.png" />
+    <Content Include="App_Themes\Pcbr\Images\stock_report.gif" />
+    <Content Include="App_Themes\Sand\Default.css" />
+    <Content Include="App_Themes\Sand\Images\bg_tile.gif" />
+    <Content Include="App_Themes\Sand\Images\footer_bg.gif" />
+    <Content Include="App_Themes\Sand\Images\header_bg.png" />
+    <Content Include="App_Themes\Sand\Images\logo.gif" />
+    <Content Include="App_Themes\Sand\Images\logo_small.gif" />
+    <Content Include="App_Themes\Sand\Images\mainnav_bg.gif" />
+    <Content Include="App_Themes\Sand\Images\mainnav_bg_ie.gif" />
+    <Content Include="App_Themes\Sand\Images\mainnav_hover_bg.gif" />
+    <Content Include="App_Themes\Sand\Images\mainnav_select_bg.gif" />
+    <Content Include="App_Themes\Sand\Images\main_bg.gif" />
+    <Content Include="App_Themes\Sand\Images\stock_report.gif" />
+    <Content Include="Imagenes\4x4.jpg" />
+    <Content Include="Imagenes\accesar_cuenta.jpg" />
+    <Content Include="Imagenes\BatETNA3.gif" />
+    <Content Include="Imagenes\Buscar.ico" />
+    <Content Include="Imagenes\calendar.gif" />
+    <Content Include="Imagenes\car.gif" />
+    <Content Include="Imagenes\descarga.gif" />
+    <Content Include="Imagenes\Dibujo.jpg" />
+    <Content Include="Imagenes\Editar.gif" />
+    <Content Include="Imagenes\fondcbody.jpg" />
+    <Content Include="Imagenes\fondocam.jpg" />
+    <Content Include="Imagenes\fondosello.jpg" />
+    <Content Include="Imagenes\HojitaNueva.BMP" />
+    <Content Include="Imagenes\ingresar.jpg" />
+    <Content Include="Imagenes\logo_lc.jpg" />
+    <Content Include="Imagenes\Sailing.gif" />
+    <Content Include="MasterPage2\Creditos.css" />
+    <Content Include="MasterPage\Creditos.css" />
+    <Content Include="PaginasWeb\Bienvenida.aspx" />
+    <Content Include="PaginasWeb\RequerimientoCliente.aspx" />
+    <Content Include="PaginasWeb\webMenuPrincipal.aspx" />
+    <Content Include="PaginasWeb\WebNewSolicitudUtiles.aspx" />
+    <Content Include="PaginasWeb\WebRequirimientoNEW.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebLogin.aspx" />
+    <Content Include="WebLogin2aspx.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MasterPage2\AppMaster.Master.cs">
+      <DependentUpon>AppMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage2\AppMaster.Master.designer.cs">
+      <DependentUpon>AppMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage2\AppMaster2.Master.cs">
+      <DependentUpon>AppMaster2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage2\AppMaster2.Master.designer.cs">
+      <DependentUpon>AppMaster2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage2\AppMenu.Master.cs">
+      <DependentUpon>AppMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage2\AppMenu.Master.designer.cs">
+      <DependentUpon>AppMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage2\AppMenu2.Master.cs">
+      <DependentUpon>AppMenu2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage2\AppMenu2.Master.designer.cs">
+      <DependentUpon>AppMenu2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\Bienvenida.aspx.cs">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\Bienvenida.aspx.designer.cs">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\RequerimientoCliente.aspx.cs">
+      <DependentUpon>RequerimientoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\RequerimientoCliente.aspx.designer.cs">
+      <DependentUpon>RequerimientoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\webMenuPrincipal.aspx.cs">
+      <DependentUpon>webMenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\webMenuPrincipal.aspx.designer.cs">
+      <DependentUpon>webMenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\WebNewSolicitudUtiles.aspx.cs">
+      <DependentUpon>WebNewSolicitudUtiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\WebNewSolicitudUtiles.aspx.designer.cs">
+      <DependentUpon>WebNewSolicitudUtiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasWeb\WebRequirimientoNEW.aspx.cs">
+      <DependentUpon>WebRequirimientoNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasWeb\WebRequirimientoNEW.aspx.designer.cs">
+      <DependentUpon>WebRequirimientoNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebLogin.aspx.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebLogin.aspx.designer.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebLogin2aspx.aspx.cs">
+      <DependentUpon>WebLogin2aspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebLogin2aspx.aspx.designer.cs">
+      <DependentUpon>WebLogin2aspx.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\ClassDiagram.cd" />
+    <None Include="App_Code\ClassDiagram2.cd" />
+    <None Include="App_Themes\Granite\Images\Thumbs.db" />
+    <Content Include="App_Themes\Granite\Skins.skin" />
+    <None Include="App_Themes\Granite\Thumbs.db" />
+    <None Include="App_Themes\Paper\Images\Thumbs.db" />
+    <Content Include="App_Themes\Paper\Skins.skin" />
+    <None Include="App_Themes\Sand\Default.css~RF776629.TMP" />
+    <None Include="App_Themes\Sand\Default.css~RF778f2d.TMP" />
+    <None Include="App_Themes\Sand\Images\Thumbs.db" />
+    <Content Include="App_Themes\Sand\Skins.skin" />
+    <None Include="Imagenes\Thumbs.db" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MasterPage\MasterPage.Master" />
+    <Content Include="MasterPage2\AppMaster.Master" />
+    <Content Include="MasterPage2\AppMaster2.Master" />
+    <Content Include="MasterPage2\AppMenu.Master" />
+    <Content Include="MasterPage2\AppMenu2.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ETNA.SGI.Bussiness\ETNA.SGI.Bussiness.csproj">
+      <Project>{A9FE44E1-5459-43C5-8493-8B2BBFE85F23}</Project>
+      <Name>ETNA.SGI.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.SGI.Entity\ETNA.SGI.Entity.csproj">
+      <Project>{9D5B3824-833F-413A-B2F7-15F37A5E645F}</Project>
+      <Name>ETNA.SGI.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2419</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

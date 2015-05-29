@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppMaster2.master.cs" Inherits="LCSA.SGI.WebLogisticaUtiles.Presentacion.MasterPage.AppMaster2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head runat="server">
+    <title>Three-column, fixed width CSS layout template</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper1">		
+	         <div id="header" style="left: 0px; top: 0px">  
+				<div id="logo" style="z-index: 100">
+					<asp:HyperLink ID="lnkHome" runat="server">
+					    <asp:Image runat="server" ID="imgLogo" SkinID="logoImage" AlternateText="company logo" />
+					</asp:HyperLink>
+				</div>
+		  	</div>	
+			<div id="mainnav">
+                <asp:Label ID="lblUsuario" runat="server" Text="lblUsuario"></asp:Label>
+			</div>
+			<div id="contentwrapper1">
+			    <div id="copy">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        	</div>
+			</div>
+    </div>
+    </form>
+</body>
+</html>

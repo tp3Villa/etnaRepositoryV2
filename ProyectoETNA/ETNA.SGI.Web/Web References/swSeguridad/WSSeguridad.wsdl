@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mpr.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://mpr.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mpr.org/">
+      <s:element name="AutenticaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Usuario_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Aplicacion_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutenticaUsuarioResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCadenaConexionUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Usuario_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCadenaConexionUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCadenaConexionUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="esAutorizado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Usuario_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Funcion_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Aplicacion_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="esAutorizadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="esAutorizadoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cambiar_Clave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Usuario_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Clave_Antigua" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Confirma_Clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cambiar_ClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Cambiar_ClaveResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Tx_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutenticaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:AutenticaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:AutenticaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCadenaConexionUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:getCadenaConexionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="getCadenaConexionUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:getCadenaConexionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="esAutorizadoSoapIn">
+    <wsdl:part name="parameters" element="tns:esAutorizado" />
+  </wsdl:message>
+  <wsdl:message name="esAutorizadoSoapOut">
+    <wsdl:part name="parameters" element="tns:esAutorizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cambiar_ClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:Cambiar_Clave" />
+  </wsdl:message>
+  <wsdl:message name="Cambiar_ClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:Cambiar_ClaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSSeguridadSoap">
+    <wsdl:operation name="AutenticaUsuario">
+      <wsdl:input message="tns:AutenticaUsuarioSoapIn" />
+      <wsdl:output message="tns:AutenticaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCadenaConexionUsuario">
+      <wsdl:input message="tns:getCadenaConexionUsuarioSoapIn" />
+      <wsdl:output message="tns:getCadenaConexionUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="esAutorizado">
+      <wsdl:input message="tns:esAutorizadoSoapIn" />
+      <wsdl:output message="tns:esAutorizadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cambiar_Clave">
+      <wsdl:input message="tns:Cambiar_ClaveSoapIn" />
+      <wsdl:output message="tns:Cambiar_ClaveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSeguridadSoap" type="tns:WSSeguridadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutenticaUsuario">
+      <soap:operation soapAction="http://mpr.org/AutenticaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCadenaConexionUsuario">
+      <soap:operation soapAction="http://mpr.org/getCadenaConexionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esAutorizado">
+      <soap:operation soapAction="http://mpr.org/esAutorizado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cambiar_Clave">
+      <soap:operation soapAction="http://mpr.org/Cambiar_Clave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSeguridadSoap12" type="tns:WSSeguridadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutenticaUsuario">
+      <soap12:operation soapAction="http://mpr.org/AutenticaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCadenaConexionUsuario">
+      <soap12:operation soapAction="http://mpr.org/getCadenaConexionUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esAutorizado">
+      <soap12:operation soapAction="http://mpr.org/esAutorizado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cambiar_Clave">
+      <soap12:operation soapAction="http://mpr.org/Cambiar_Clave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSeguridad">
+    <wsdl:port name="WSSeguridadSoap" binding="tns:WSSeguridadSoap">
+      <soap:address location="http://sistem04/WSHMIS2/WSSeguridad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSeguridadSoap12" binding="tns:WSSeguridadSoap12">
+      <soap12:address location="http://sistem04/WSHMIS2/WSSeguridad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

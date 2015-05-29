@@ -1,0 +1,5 @@
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.BusinessEntity\bin\Debug\ETNA.BusinessEntity.dll
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.BusinessEntity\bin\Debug\ETNA.BusinessEntity.pdb
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.BusinessEntity\obj\Debug\ETNA.SGL.Entity.csprojResolveAssemblyReference.cache
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.BusinessEntity\obj\Debug\ETNA.BusinessEntity.dll
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.BusinessEntity\obj\Debug\ETNA.BusinessEntity.pdb

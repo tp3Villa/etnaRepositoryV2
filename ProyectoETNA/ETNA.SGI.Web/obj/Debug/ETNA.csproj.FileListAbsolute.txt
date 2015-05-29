@@ -1,0 +1,30 @@
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\Interop.Microsoft.Office.Interop.Excel.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.csprojResolveAssemblyReference.cache
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.csproj.ResolveComReference.cache
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.pdb
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessEntity.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessLogic.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.DataAccess.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessEntity.pdb
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessLogic.pdb
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\bin\ETNA.DataAccess.pdb
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.dll
+D:\UPC\TP2\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.pdb
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.pdb
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessEntity.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessLogic.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.DataAccess.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessEntity.pdb
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.BusinessLogic.pdb
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\ETNA.DataAccess.pdb
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\bin\Interop.Microsoft.Office.Interop.Excel.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.csprojResolveAssemblyReference.cache
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.csproj.ResolveComReference.cache
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.dll
+D:\JRM Documentos\jcarrillo\Documentos\UPC\TP2\Entregables\Arquitectura\ETNA\ETNA\obj\Debug\ETNA.pdb

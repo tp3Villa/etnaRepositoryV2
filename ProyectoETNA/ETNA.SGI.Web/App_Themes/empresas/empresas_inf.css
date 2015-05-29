@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.cabecerainforme {
+	background-image: url(../../Imagenes/emp_cabeceraInforme.jpg);
+	height: 74px;
+}
+.cabeceravehicular {
+	background-image: url(../../Imagenes/emp_cabeceravehicular.jpg);
+	height: 74px;
+}
+.fondoinforme{
+	background-image: url(../../Imagenes/medio.jpg);
+	vertical-align: top;
+}
+.pieinforme{
+	background-image: url(../../Imagenes/pieinforme2.jpg);
+	height: 50px;
+}
+.formatotabla{
+	/*vertical-align: top;*/
+	width: 740px;
+}
+.usuario 
+{
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-right: 1px;
+	padding-left: 1px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.formatovehicular{
+	color:#333333;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+.contenidovehicular
+{
+height:24px;
+}
+.celdamenuvehicular{
+border-right: #006699 1px solid;
+border-right-color:#006699;
+border-right-width:1px;
+}

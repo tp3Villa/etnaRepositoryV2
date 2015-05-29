@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC9ECB9E-0CBF-4DF4-91F9-2E8169CBE155}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ETNA</RootNamespace>
+    <AssemblyName>ETNA</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10123.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Buayacorp.WebControls, Version=1.0.0.0, Culture=neutral">
+      <HintPath>bin\Buayacorp.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericComparer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>bin\GenericComparer.dll</HintPath>
+    </Reference>
+    <Reference Include="skmmenu, Version=2.1.1500.19923, Culture=neutral">
+      <HintPath>bin\skmmenu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Estilos\General.css" />
+    <Content Include="Estilos\HMIS_StyleSheet.css" />
+    <Content Include="Estilos\Menu.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagenes\bt_salir.jpg" />
+    <Content Include="Imagenes\cabecera.jpg" />
+    <Content Include="Imagenes\comisiones.jpg" />
+    <Content Include="Imagenes\entrar.gif" />
+    <Content Include="Imagenes\login2.JPG" />
+    <Content Include="Imagenes\Pr_.jpg" />
+    <Content Include="JavaScript\popCalendar.js" />
+    <Content Include="JavaScript\validacion.js" />
+    <Content Include="Logistica\frmConsultaMovimientosAlmacen.aspx" />
+    <Content Include="Logistica\frmGeneracionMovimiento.aspx" />
+    <Content Include="Logistica\frmMantenimientoProgramacionInventario.aspx" />
+    <Content Include="Logistica\frmMovimientosAlmacen.aspx" />
+    <Content Include="Logistica\frmProgramacionInventario.aspx" />
+    <Content Include="Seguridad\Error.aspx" />
+    <Content Include="Seguridad\Index.aspx" />
+    <Content Include="Seguridad\Login.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comun.cs" />
+    <Compile Include="Controles\Calendario.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Calendario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Calendario.ascx.designer.cs">
+      <DependentUpon>Calendario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CalendarioLibre.ascx.cs">
+      <DependentUpon>CalendarioLibre.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CalendarioLibre.ascx.designer.cs">
+      <DependentUpon>CalendarioLibre.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CalendarioOptional.ascx.cs">
+      <DependentUpon>CalendarioOptional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CalendarioOptional.ascx.designer.cs">
+      <DependentUpon>CalendarioOptional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\TextBoxHora.ascx.cs">
+      <DependentUpon>TextBoxHora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBoxHora.ascx.designer.cs">
+      <DependentUpon>TextBoxHora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmConsultaMovimientosAlmacen.aspx.cs">
+      <DependentUpon>frmConsultaMovimientosAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmConsultaMovimientosAlmacen.aspx.designer.cs">
+      <DependentUpon>frmConsultaMovimientosAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmGeneracionMovimiento.aspx.cs">
+      <DependentUpon>frmGeneracionMovimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmGeneracionMovimiento.aspx.designer.cs">
+      <DependentUpon>frmGeneracionMovimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmMantenimientoProgramacionInventario.aspx.cs">
+      <DependentUpon>frmMantenimientoProgramacionInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmMantenimientoProgramacionInventario.aspx.designer.cs">
+      <DependentUpon>frmMantenimientoProgramacionInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmMovimientosAlmacen.aspx.cs">
+      <DependentUpon>frmMovimientosAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmMovimientosAlmacen.aspx.designer.cs">
+      <DependentUpon>frmMovimientosAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmProgramacionInventario.aspx.cs">
+      <DependentUpon>frmProgramacionInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmProgramacionInventario.aspx.designer.cs">
+      <DependentUpon>frmProgramacionInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPrincipal.master.cs">
+      <DependentUpon>MasterPrincipal.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MasterPrincipal.master.designer.cs">
+      <DependentUpon>MasterPrincipal.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Seguridad.Master.cs">
+      <DependentUpon>Seguridad.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Seguridad.Master.designer.cs">
+      <DependentUpon>Seguridad.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\swSeguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\empresas\empresasinterno.css" />
+    <Content Include="App_Themes\empresas\empresas_cnt.css" />
+    <Content Include="App_Themes\empresas\empresas_ext.css" />
+    <Content Include="App_Themes\empresas\empresas_inf.css" />
+    <Content Include="Controles\Calendario.ascx" />
+    <Content Include="Controles\CalendarioLibre.ascx" />
+    <Content Include="Controles\CalendarioOptional.ascx" />
+    <Content Include="Controles\TextBoxHora.ascx" />
+    <Content Include="Estilos\common1.css" />
+    <Content Include="Estilos\Estilo_Paginas.css" />
+    <Content Include="Imagenes\add.png" />
+    <Content Include="Imagenes\Agregar.png" />
+    <Content Include="Imagenes\ajax-loader.gif" />
+    <Content Include="Imagenes\button_cancel.png" />
+    <Content Include="Imagenes\calendario.gif" />
+    <Content Include="Imagenes\close.gif" />
+    <Content Include="Imagenes\colapsar.gif" />
+    <Content Include="Imagenes\conf.png" />
+    <Content Include="Imagenes\contrato.png" />
+    <Content Include="Imagenes\delete.png" />
+    <Content Include="Imagenes\Desembolso.png" />
+    <Content Include="Imagenes\dividir.gif" />
+    <Content Include="Imagenes\drop1.gif" />
+    <Content Include="Imagenes\drop2.gif" />
+    <Content Include="Imagenes\Editar.png" />
+    <Content Include="Imagenes\Eliminar.png" />
+    <Content Include="Imagenes\expandir.gif" />
+    <Content Include="Imagenes\e_btn_first.png" />
+    <Content Include="Imagenes\e_btn_last.png" />
+    <Content Include="Imagenes\e_btn_next.png" />
+    <Content Include="Imagenes\e_btn_previous.png" />
+    <Content Include="Imagenes\flecha_submenu_e.gif" />
+    <Content Include="Imagenes\folder_add.png" />
+    <Content Include="Imagenes\folder_delete1.png" />
+    <Content Include="Imagenes\help.gif" />
+    <Content Include="Imagenes\help.png" />
+    <Content Include="Imagenes\indicator.gif" />
+    <Content Include="Imagenes\info.gif" />
+    <Content Include="Imagenes\items.png" />
+    <Content Include="Imagenes\left1.gif" />
+    <Content Include="Imagenes\left2.gif" />
+    <Content Include="Imagenes\lock.png" />
+    <Content Include="Imagenes\LogoPortal ver3.png" />
+    <Content Include="Imagenes\LogoPortal.png" />
+    <Content Include="Imagenes\lupa.gif" />
+    <Content Include="Imagenes\Movimientos.png" />
+    <Content Include="Imagenes\openfolder.gif" />
+    <Content Include="Imagenes\printer.png" />
+    <Content Include="Imagenes\right1.gif" />
+    <Content Include="Imagenes\right2.gif" />
+    <Content Include="Imagenes\tareas.png" />
+    <Content Include="Imagenes\tick.png" />
+    <Content Include="Imagenes\trabajador.png" />
+    <Content Include="Imagenes\verplanilla.png" />
+    <Content Include="JavaScript\General.js" />
+    <Content Include="JavaScript\jquery.min.js" />
+    <Content Include="JavaScript\tabs.js" />
+    <Content Include="MasterPage\Seguridad.Master" />
+    <Content Include="MasterPage\MasterPrincipal.master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\swSeguridad\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\swSeguridad\WSSeguridad.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ETNA.BusinessEntity\ETNA.BusinessEntity.csproj">
+      <Project>{EFDE5B11-EBC0-4396-B96D-A2B78197F6F1}</Project>
+      <Name>SGR.BusinessEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETNA.BusinessLogic\ETNA.BusinessLogic.csproj">
+      <Project>{2FF8945A-A6FD-4FEA-BF88-9810DAB681E5}</Project>
+      <Name>SGR.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://sistem04/WSHMIS2/WSSeguridad.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\swSeguridad\</RelPath>
+      <UpdateFromURL>http://sistem04/WSHMIS2/WSSeguridad.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SGR_swSeguridad_WSSeguridad</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54881</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

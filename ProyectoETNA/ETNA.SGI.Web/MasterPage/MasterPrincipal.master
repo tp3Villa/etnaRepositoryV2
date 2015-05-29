@@ -1,0 +1,117 @@
+<%@ Master   Language="C#" AutoEventWireup="true" Inherits="ETNA.MasterPage.MasterPrincipal" Codebehind="MasterPrincipal.master.cs" %>
+
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<%@ Register TagPrefix="cc1" Namespace="skmMenu" Assembly="skmMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>ETNA - Sistema Integrado</title>
+    
+    <link type="text/css" rel="stylesheet" href="../Estilos/common1.css" />
+    <link href="../Estilos/General.css" type="text/css" rel="stylesheet" />
+    
+    <script src="../JavaScript/General.js" type="text/javascript"></script>        
+    <script src="../JavaScript/validacion.js" type="text/javascript"></script>    
+    
+    <script language="javascript" type="text/javascript" >
+    
+        document.oncontextmenu=DeshabilitarClickDerecho; 
+    
+        document.onkeydown = DeshabilitarTeclaF11;        
+        function AbrirManualUsuario()
+        {       
+           
+            OpenCenterPopUpManualUsuario("../Recursos/ETNA_Doc.htm",null,800,800);                                    
+        } 
+      
+        function OpenCenterPopUpManualUsuario(url, name, width, height)
+        {
+            var TopLeftX=screen.width / 2 - width/2;
+            var TopLeftY=screen.height / 2 - height/2;
+            window.open(url,name,'');											
+        }
+        
+    </script>
+</head>
+<body>
+<form id="frmmain" runat="server">
+
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+<div id="wrapper">
+
+    <div class="header_emp"> 
+        <div class="cuadrocabecera">
+            <div id="izquierda">
+                Usuario :<asp:Label ID="lblUsuario" style="color:#FFFFFF;" runat="server"></asp:Label>
+            </div>
+            <div id="derecha">
+                <a class="headerLink" href="../Seguridad/Index.aspx">Inicio</a>&nbsp;|
+                <a class="headerLink" href="#" >Manual de Usuario</a>&nbsp;|                
+                <a class="headerLink" href="#" >Manual Word</a>&nbsp;| 
+                <a class="headerLink" href="../Seguridad/Login.aspx?OUT=SI" >Cerrar Sesion</a>                
+                
+            </div>
+            </div>
+    </div>
+    
+    <div id="header">
+        <div class="logo"></div>
+    </div>   
+    
+   	
+   	<table style="border-right: #006699 0px solid; border-top: #006699 0px solid; border-left: #006699 0px solid;
+                        border-bottom: #006699 0px solid; background-color: white; width: 100%; height: 100%">
+   	<tr align="left">
+        <td class="Alineacion" style="width: 100%" valign="bottom">                                   
+                <asp:Menu ID="Menu1" runat="server" BackColor="#E3EAEB" 
+                    DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Small" 
+                    ForeColor="#666666" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem 
+                            Text="Logística" Value="Logistica">
+                            <asp:MenuItem NavigateUrl="~/Logistica/frmMovimientosAlmacen.aspx" 
+                                Text="Movimientos Almacén" Value="MovimientosAlmacen"></asp:MenuItem>                            
+                            <asp:MenuItem NavigateUrl="~/Logistica/frmProgramacionInventario.aspx" 
+                                Text="Programación Inventario" Value="ProgramacionInventario"></asp:MenuItem>                            
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+      </td>
+     </tr>
+    </table>
+    
+
+    <!--<div id="content" class="clearfix">-->
+        <asp:contentplaceholder id="cphMaster" runat="server">     
+          
+          
+        
+        </asp:contentplaceholder>
+  <!--  </div>-->
+    
+    <div id="footer">
+        <div style="float: left; text-align: left;">
+            <small>Fecha :<asp:Label ID="lblFecha" runat="server"></asp:Label></small>
+        </div>
+
+        <div style="float: right; text-align: right;">
+            <small>Copyright 2015 - ETNA- www.etna.com.pe</small>
+        </div>
+    
+    </div>
+</div>
+</form>
+</body>
+</html>

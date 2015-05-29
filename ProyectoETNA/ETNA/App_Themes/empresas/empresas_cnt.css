@@ -1,0 +1,247 @@
+/*
+** Campos de formulario
+*/
+.campo_titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	/*font-weight: bold;*/
+	color: #999999;
+	height: 18px;
+	clear: right;
+	padding-top: 3px;
+}
+.campo_texto {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	font-weight: normal;	
+}
+.text_field {
+	border: 1px solid #7F9DB9;
+	height: 14px;
+	max-height: 19px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	padding-left: 7px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+.cajas_reg {
+	height: 12px;
+	max-height: 19px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+.cajas_mul {
+	height: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+
+.combo {	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	padding-left: 7px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+.text_area {
+	border: 1px solid #7F9DB9;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+	width: 100%;
+}
+.combobox {
+	border: 1px solid #7F9DB9;
+	height: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #666666;
+}
+/* CSS Document */
+
+.XFlowerBlack 
+{
+	color: #ffffff;
+	font-size: 15px;
+	font-family: 'Arial Narrow';
+	padding-left: 10px; 
+	padding-bottom: 10px;
+	text-align: left;
+}
+/* standard hyperlinks for the tokens eg. copyright, login, user */
+.SkinObject{ color:#FFFFFF; text-decoration:none; font-weight:normal; font-size:10px;}
+.pedrin{ color:#213950; text-decoration:none; font-weight:normal; font-size:10px;}
+A.pedrin:link { color:#213950; text-decoration:none; font-weight:normal; font-size:10px;}
+A.pedrin:visited {color:#213950; text-decoration:none; font-weight:normal; font-size:10px;}
+A.pedrin:active {color:#213950; text-decoration:none; font-weight:normal; font-size:10px;}
+A.pedrin:hover{color:#213950; text-decoration:none; font-weight:bold; font-size:10px;}
+
+
+A.SkinObject:link { color:#FFFFFF; text-decoration:none; font-weight:normal; font-size:10px;}
+A.SkinObject:visited {color:#FFFFFF; text-decoration:none; font-weight:normal; font-size:10px;}
+A.SkinObject:active {color:#FFFFFF; text-decoration:none; font-weight:normal; font-size:10px;}
+A.SkinObject:hover{color:#FFFFFF; text-decoration:none; font-weight:bold; font-size:10px;}
+
+/*
+** General
+*/
+
+h1 {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color:#0066CC;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	color: #426D5F;
+	height: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #666666;
+	height: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h6 {
+	font-family: Tahoma;
+	font-size: 11px;	
+	text-align: left;
+	color: #003366;	
+	margin-top: 8px;
+	margin-bottom: 2px;
+}
+/*
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #666666;
+	height: 20px;
+	margin-top: 0px;
+	margin-bottom: auto;
+}*/
+
+.texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	text-align: justify;
+}
+.titulo_caso {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:#426D5F;	
+	font-size: 14px;
+}
+.texto_10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	text-align: justify;
+}
+.texto_11 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-align: justify;
+}
+
+.tit_noticias_mini {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.gestion {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	text-align: left;
+	color: #333333;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.subtitulo_caso {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #426D5F;
+	height: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #6C6C6C;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.campo_popup {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: left;
+	color: #6C6C6C;
+	height: 18px;	
+}
+.dato_popup {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: left;
+	color: #6C6C6C;
+	height: 18px;	
+}
+.campo_monto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #999999;
+	height: 18px;
+	clear: right;
+}

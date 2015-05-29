@@ -1,0 +1,14 @@
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessLogic.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessLogic.pdb
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessEntity.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.DataAccess.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessEntity.pdb
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\bin\Debug\SGR.DataAccess.pdb
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\obj\Debug\SGR.BusinessLogic.dll
+C:\SS_MPR-MJBR\Desarrollo\Apps\SGR\SGR\SGR.BusinessLogic\obj\Debug\SGR.BusinessLogic.pdb

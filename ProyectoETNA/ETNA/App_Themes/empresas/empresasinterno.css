@@ -1,0 +1,247 @@
+﻿/* CSS Document */
+h1 {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color:#FFFFFF;
+	color: #FFFFFF;
+	font-family: Tahoma, Arial, Helvetica;
+}
+h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: left;
+	color: #426D5F;
+	height: 21px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	margin-bottom: 5px;
+	display: block;
+}
+h3 {
+	padding-top: 10px;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 15px;
+	text-align: left;
+	color: #E3001B;
+	height: 21px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	margin-bottom: 5px;
+	display: block;
+}
+h5 {
+	font-family: Verdana, Tahoma, "Trebuchet MS";
+	font-size: 11px;
+	text-align: left;
+	color: #2c2c2c;
+	font-weight: bold; 
+	height:1px; /*22px;*/
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: black;/* #426D5F;*/
+	margin-top: 5px;/*10px;*/
+	margin-bottom:5px;/* 5px;*/
+}
+.intranet{
+	background-color: #000000;
+	color: #FFFFFF;
+	padding-left: 2px;
+	font-weight: bold;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: #CCCCCC;
+	border-top-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.botonsalud{
+	background-color: #CCCCCC;
+	color: #000000;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: #CCCCCC;
+	border-top-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: 1px;
+	height: 16px;
+}
+.cont_empresas{
+	background-repeat: repeat-x;
+	border-top-color: #426D5F;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-bottom-color: #426D5F;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	background-color: #E4E4E4;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+/*li {
+	list-style-type: none;	
+	margin-left: -20px;
+	padding-left: 20px;
+	padding-top: -4px;
+	margin-top: 6px;
+	text-align: left;
+}
+*/
+.error 
+{
+    color: #d34e4f; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 1px; 
+    padding-left: 1px; 
+    text-decoration: none; 
+}
+.titulo_oferta {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#999999;	
+	text-align: left;
+	vertical-align: top;
+	padding-left: 20px;
+	padding-top: 2px;
+	height: 18px;
+	font-weight: bold;
+}
+.informacionsalud{
+	padding-bottom:10px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:15px;
+}
+.boton
+{
+	background-color: #054285; /*#ffffff; */
+	border-bottom: #000000 1px solid;
+	border-collapse: collapse;
+	border-left: #000000 1px solid;
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	height: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.camposempresas{
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	color: #054285;
+	height: 22px;	
+	font-weight: bold;	
+}
+.formularioempresas{
+padding-left:10px;
+padding-right:10px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.texto 
+{
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: none; 
+}
+
+.textoarbol
+{
+    color: #666666; 
+    font-family: Verdana, Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: none; 
+}
+
+.textoarbol A:link 
+{
+    color: #666666; 
+    font-family: Verdana, Arial, Helvetica, Sans-Serif; 
+    font-size: 10px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: none; 
+}
+
+.textoarbol A:hover 
+{
+    color: #666666; 
+    font-family: Verdana, Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    font-weight:bold;
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: none; 
+}
+
+.texto A:link 
+{
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: decoration; 
+}
+
+.texto A:visited 
+{
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: decoration; 
+}
+
+.texto A:active 
+{
+    color: #2c2c2c; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: decoration; 
+}
+
+.texto A:hover 
+{
+    color:#426D5F; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    text-decoration: none; 
+}
+.footer a, .footer a:visited, a.headerLink, a:visited.headerLink { color:#E0E0E0; font-weight:bold; text-decoration:none; }
+.footer a:hover, .footer a:active, a:hover.headerLink, a:active.headerLink { color:#ffcc33; text-decoration:none; border-bottom:1px #ffcc33 dotted; }

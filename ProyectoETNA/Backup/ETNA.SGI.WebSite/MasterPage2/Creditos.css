@@ -1,0 +1,170 @@
+﻿
+
+
+.TituloPrincipal
+{
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+	color: #1e90ff;
+	font-weight: normal;
+}
+
+.TituloSecundarioTabla
+{
+	background-color: #afeeee;
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+	color: #4169e1;
+	font-weight: bold;
+}
+
+.TablaContenido
+{
+	background-color: #f8f8f8;
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+	color: #000066;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+.CampoTexto
+{
+	font-family: Verdana;
+	font-size: 10px;
+	border: 1px solid #666666;
+	height: 16px;
+	text-transform: uppercase;
+}
+
+.CampoTextoReadOnly
+{
+	background-color: #fffaf2;
+	font-family: Verdana;
+	font-size: 10px;
+	border: 1px solid #666666;
+	height: 16px;
+	text-transform: uppercase;
+}
+
+.Boton
+{
+	color: White;
+	font-family: Verdana;
+	font-size: 9px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	text-decoration: none;
+	border: thin double #666666;
+	border-width: 2pt;
+	background-color: #b00000;
+}
+.PiePagina
+{
+	color: Gray;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+}
+.MenuItemNivel1
+{
+	color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	background-color: #990000;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	text-indent: 5px;
+}
+
+.MenuItemNivel2
+{
+	color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	background-color: #666666;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	text-indent: 5px;
+}
+
+.MenuItemNivel3
+{
+		color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	background-color: #666666;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	text-indent: 5px;
+}
+.MenuItemNivel4
+{
+		color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	background-color: #666666;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	text-indent: 5px;
+}
+
+MenuItemHover
+{
+	color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	background-color: #CC9900;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	text-indent: 5px;	
+}

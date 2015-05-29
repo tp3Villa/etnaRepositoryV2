@@ -1,0 +1,84 @@
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\UPC\Taller de Proyectos 2\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\TP2 FINAL PRESENTAR\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\TP2 Terminar FINAL\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\Terminar ETNA\Proyecto ETNA\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\Ricardo\Desktop\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbprojResolveAssemblyReference.cache
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\App\visualstudio\UPC\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbprojResolveAssemblyReference.cache
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbprojResolveAssemblyReference.cache
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb

@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="ETNA.SGI.WebSite.MasterPage.MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Lima Caucho - Sistema Manufactury</title>
+    <link href="Creditos.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table border="0" cellpadding="0" cellspacing="0" width="80%" >
+            <tr style="background-color:#1B3477">
+                <td style="height: 55px; width: 168px;" align="left">
+                    <asp:Image ID="Image1" runat="server" Height="51px" ImageUrl="~/Imagenes/batETNA.jpg"
+                        Style=" left  : 0px; position: relative; top: 0px" Width="165px"   />
+                </td>
+                <td  colspan="2" style="height: 55px" align="right">
+                    <asp:Image ID="Image2" runat="server" Height="51px" ImageUrl="~/Imagenes/4x4.jpg"/>
+                </td>
+            </tr>
+            <tr>
+               <td colspan="3" >
+                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr class="TablaContenido" style="background-color:#F8F9FB">
+                                <td align="left" style="height: 21px">
+                                    Usuario: <asp:Label ID="lblUsuario" runat="server"/> </td>
+                                <td style="width: 66%; height: 21px;">
+                                    &nbsp;<asp:Label ID="lblFechaHora" runat="server"></asp:Label></td>
+                                <td style="width: 10%; height: 21px;">
+                                    <asp:Button ID="btnCerrarSesion" runat="server" CssClass="Boton" OnClick="btnCerrarSesion_Click"
+                                        Text="Cerrar Sesion" />
+                               </td>
+                            </tr>
+                        </table>
+                </td> 
+            </tr>
+            <tr>
+                <td style="width: 168px;background-color:#1B3477 " valign="top" align="center" >
+                    &nbsp;&nbsp;
+                    <asp:Menu ID="mnuCreditos" runat="server" Style="position: relative" DataSourceID="SiteMapDataSource1" StaticDisplayLevels="2">
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle CssClass="MenuItemNivel1" Font-Underline="False" />
+                            <asp:MenuItemStyle CssClass="MenuItemNivel2" Font-Underline="False" />
+                            <asp:MenuItemStyle CssClass="MenuItemNivel3" Font-Underline="False" />
+                            <asp:MenuItemStyle CssClass="MenuItemNivel4" Font-Underline="False" />
+                        </LevelMenuItemStyles>
+                        <DynamicHoverStyle CssClass="MenuItemHover" />
+                        <StaticHoverStyle CssClass="MenuItemHover" />
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                   
+                </td>
+                <td style=" height: 350px; background-image: url(../Imagenes/fondcbody.jpg);" valign="top" >                    
+                    <asp:ContentPlaceHolder ID="cphSistemaGeneral" runat="server">                    
+                    </asp:ContentPlaceHolder>                    
+                </td>
+            </tr>
+            <tr>
+             <td colspan="3" align="left">
+                 <asp:SiteMapPath ID="SiteMapPath1" runat="server"
+                     PathSeparator=" : ">
+                     <PathSeparatorStyle Font-Bold="True" ForeColor="#F8F9FB" />
+                     <CurrentNodeStyle ForeColor="#990000" />
+                     <NodeStyle Font-Bold="True" ForeColor="#F8F9FB" />
+                     <RootNodeStyle Font-Bold="True" ForeColor="#F8F9FB" />
+                 </asp:SiteMapPath>
+             </td>
+            </tr>
+            <tr>
+              <td align="center" style="background-color:#1B3477; height: 20px  ;" colspan="3">
+                    <span style="font-size: 8pt; color: White ; font-family: Arial;">Copyright ETNA S.A. 2015 - All Rights Reserved</span>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

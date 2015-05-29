@@ -1,0 +1,45 @@
+<%-- The company logo at the top of the page --%>
+<asp:Image runat="server" SkinID="logoImage" Height="41" Width="325" ImageUrl="Images/logo.gif" />
+
+<%-- Search box --%>
+<asp:TextBox SkinID="searchBox" runat="server" Width="70px" BorderColor="#993300" BorderStyle="Solid" BorderWidth="1px" Style="font-size:1em;"/>
+<%-- Search button --%>
+<asp:Button SkinID="searchButton" runat="server" BackColor="#AB1414" ForeColor="#FFFFFF" BorderColor="#B8B8B8" BorderStyle="solid" BorderWidth="1px" Style="font-size:0.9em;"/>
+
+<%-- Top vertical menu --%>
+<asp:Menu SkinID="mainmenu" Orientation="Horizontal" runat="server" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="0" StaticSubMenuIndent="0">
+	<StaticMenuStyle BackColor="#FFFFFF" />
+	<StaticMenuItemStyle CssClass="item" ItemSpacing="1" />
+	<StaticHoverStyle CssClass="hover" />
+	<StaticSelectedStyle CssClass="selected" />					
+</asp:Menu>
+
+<%-- Breadcrumbs --%>
+<asp:SiteMapPath runat="server" PathSeparator="&nbsp;&raquo;&nbsp;" />
+
+<%-- Submenu --%>
+<asp:Menu runat="server" SkinID="subMenu" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="0" StaticSubMenuIndent="20">
+	<StaticMenuStyle BackColor="#FFFFFF" Width="150" />
+	<StaticMenuItemStyle CssClass="item" ItemSpacing="0" />
+	<StaticHoverStyle CssClass="hover" />
+	<StaticSelectedStyle CssClass="selected" />	
+</asp:Menu>
+
+<%-- Mini logo image --%>
+<asp:Image runat="server" SkinID="logoImageSmall" Height="19" Width="22" ImageUrl="Images/logo_small.gif" ImageAlign="Bottom" />
+
+<%-- Stock report image --%>
+<asp:Image runat="server" SkinID="stockChartImage" Height="50" Width="125" ImageUrl="Images/stock_report.gif" />
+
+<%-- Default textbox appearance --%>
+<asp:TextBox runat="server" CssClass="txtBox" />
+
+<%-- Default button appearance --%>
+<asp:Button runat="server" CssClass="button" />
+
+<%-- Sample GridView on the Page1.aspx page --%>
+<asp:GridView SkinID="booksSkin" runat="server" BackColor="White" BorderColor="#F2F2F2" BorderStyle="Solid" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+	<HeaderStyle BackColor="#AB1414" Font-Bold="True" ForeColor="#FFFFFF" />
+	<RowStyle BackColor="#FFFFFF" ForeColor="#333333" />		
+	<AlternatingRowStyle BackColor="#F2F2F2" ForeColor="#333333" />
+</asp:GridView>

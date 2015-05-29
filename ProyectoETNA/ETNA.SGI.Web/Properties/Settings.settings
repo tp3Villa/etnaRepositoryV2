@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SGR.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IPProxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">192.168.90.5</Value>
+    </Setting>
+    <Setting Name="PuertoProxy" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="UserProxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">adminaplicaciones</Value>
+    </Setting>
+    <Setting Name="PassProxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="DomProxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">domparques</Value>
+    </Setting>
+    <Setting Name="IdApplication" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SR</Value>
+    </Setting>
+    <Setting Name="NumeroRegistrosInicialPorPagina" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="NumeroRegistrosPorPagina" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10|20|30|40|50</Value>
+    </Setting>
+    <Setting Name="SRET_swSeguridad_WSSeguridad" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dtmartsrv/WSHMIS2/WSSeguridad.asmx</Value>
+    </Setting>
+    <Setting Name="Tx_Servidor_De_Informes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://appsrv/ReportServer/Pages/ReportViewer.aspx?%2fETNA%2f</Value>
+    </Setting>
+    <Setting Name="UrlWSSeguridad" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://dtmartsrv/WSHMIS2/WSSeguridad.asmx</Value>
+    </Setting>
+    <Setting Name="ETNA_swSeguridad_WSSeguridad" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sistem04/WSHMIS2/WSSeguridad.asmx</Value>
+    </Setting>
+    <Setting Name="SGR_swSeguridad_WSSeguridad" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sistem04/WSHMIS2/WSSeguridad.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,609 @@
+BODY
+{
+    BACKGROUND: white;
+    MARGINHEIGHT: 0;
+    MARGINWIDTH: 0
+}
+.table 
+{
+    BACKGROUND-COLOR: white;
+    BORDER-BOTTOM-COLOR: #0330c0;
+    BORDER-LEFT-COLOR: #0330c0;
+    BORDER-RIGHT-COLOR: #0330c0;
+    BORDER-TOP-COLOR: #0330c0
+}
+.trLine
+{
+    BACKGROUND-COLOR: #006531;
+    HEIGHT: 1px
+}
+.trHeader
+{
+    BACKGROUND-COLOR: #98c0e6;
+    COLOR: navy;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 16px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 2px;
+    PADDING-TOP: 0px
+}
+TD.Separator
+{
+    BACKGROUND-COLOR: #404040;
+    HEIGHT: 18px
+}
+TR.Separator
+{
+    BACKGROUND-COLOR: #404040;
+    HEIGHT: 1px
+}
+.WarningMsg
+{
+    COLOR: red;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.InformatoryMsg
+{
+    COLOR: green;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.AppName
+{
+    COLOR: lightyellow;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 13px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.Logo
+{
+    COLOR: white;
+    FONT-FAMILY: times new roman;
+    FONT-SIZE: 24px;
+    FONT-STYLE: italic;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}	 
+
+.datagrid
+{	
+	/*border-style: solid;
+	border-color: #CCCCCC;*/	
+	font-family: Arial;
+	font-size: 10px;   
+    BACKGROUND-COLOR: #F2F2F2;	/* white */
+    BORDER-BOTTOM: #e5e5e5 1px groove;
+    BORDER-LEFT: #e5e5e5 1px groove;
+    BORDER-RIGHT: #e5e5e5 1px groove;
+    BORDER-TOP: #e5e5e5 1px groove;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;    
+}
+.dgAlternatingItemStyle
+{
+    BACKGROUND-COLOR: #e5e5e5;
+    COLOR: black;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;        
+}
+.dgFooterStyle
+{
+    BACKGROUND-COLOR: white;
+    COLOR: black;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;    
+}
+.dgHeaderStyle
+{
+    BACKGROUND-COLOR: lightblue;
+    COLOR: brown;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    VERTICAL-ALIGN: top
+}
+.dgItemStyle
+{
+    COLOR: black;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px
+}
+.dgSelectedItemStyle
+{
+    BACKGROUND-COLOR: lightyellow;
+    COLOR: black;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+A:link
+{
+    COLOR: blue;
+    FONT-FAMILY: arial,courier,Tahoma,sans-serif;
+    FONT-SIZE: 11px
+}
+A:visited
+{
+    COLOR: blue;
+    FONT-FAMILY: arial,courier,Tahoma,sans-serif;
+    FONT-SIZE: 11px
+}
+A:active
+{
+    COLOR: yellow;
+    FONT-FAMILY: arial,courier,Tahoma,sans-serif;
+    FONT-SIZE: 11px
+}
+A.globalLink:link
+{
+    COLOR: lightyellow;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10px;
+    TEXT-DECORATION: none
+}
+A.globalLink:visited
+{
+    COLOR: #e5e5e5;
+	    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10px;
+    TEXT-DECORATION: none
+}
+A.globalLink:active
+{
+    COLOR: lightyellow;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10px;
+    TEXT-DECORATION: none
+}
+A.globalLink:hover
+{
+    COLOR: yellow;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10px;
+    TEXT-DECORATION: none
+}
+A.textLink:link
+{
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Tahoma;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+A.textLink:visited
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+A.textLink:active
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+
+.ScreenLinkHL
+{
+font-size: 11px;
+color: red;
+font-family: Arial,courier, Tahoma, sans-serif;
+text-decoration: underline;
+}
+
+.ScreenLinkCurrent
+{
+font-weight: bold;
+font-size: 11px;
+color: green;
+font-family: Arial,courier, Tahoma, sans-serif;
+text-decoration: none;
+}
+
+.ScreenLink:link
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+.ScreenLink:visited
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+.ScreenLink:hover
+{
+    COLOR: orange;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+.Disabled-ScreenLink 
+{
+    COLOR: gray;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+HR
+{
+    COLOR: gray;
+    SIZE: 1
+}
+.asterisk
+{
+    COLOR: red
+}
+.label
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: right
+}
+.label-center
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center
+}
+
+.label-left
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: left
+}
+
+.label-right
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: right
+}
+
+.dropdownlist
+{
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+
+.button
+{
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    REM: outset
+}
+.Textbox
+{
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 10px;    
+    REM: outset
+}
+.NonEditable_textfield
+{
+    BACKGROUND-COLOR: #efefef;
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    REM: outset
+}
+.textbox_numeric
+{
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    TEXT-ALIGN: right;
+    REM: outset
+}
+.NonEditable_textbox_numeric
+{
+    BACKGROUND-COLOR: #efefef;
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    TEXT-ALIGN: right;
+    REM: outset
+}
+INPUT.nav
+{
+    BACKGROUND-COLOR: InactiveBorder;
+    BORDER-BOTTOM-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-TOP-STYLE: none;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 18px;
+    PADDING-TOP: 2px;
+    REM: outset;
+    valign: bottom
+}
+.Listbox
+{
+    BORDER-BOTTOM-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-TOP-STYLE: groove;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    REM: outset
+}
+.radiobutton
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 11px;
+    MARGIN-LEFT: 0px;
+    REM: outset
+}
+.radiobuttonlist
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    MARGIN-LEFT: 0px;
+    REM: outset
+}
+.checkbox
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    MARGIN-LEFT: 0px;    
+    COLOR: #000000;        
+    font-weight: bold;  
+    
+    
+}
+.checkboxlist
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    MARGIN-LEFT: 0px;
+    REM: outset
+}
+.content
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.search-heading
+{
+    COLOR: #990000;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+TD.altrow
+{
+    BACKGROUND-COLOR: yellow;
+    COLOR: navy;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 32px
+}
+TD.subheading
+{
+    COLOR: lightyellow;
+    FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+
+.button_select
+{
+BORDER-BOTTOM-STYLE: Double;
+BORDER-LEFT-STYLE: Double;
+BORDER-RIGHT-STYLE: Double;
+BORDER-TOP-STYLE: Double;
+BORDER-COLOR:#4265A5;
+BACKGROUND-COLOR:#4265A5;
+COLOR:White;
+FONT-FAMILY: Arial,courier, Tahoma, sans-serif;
+FONT-SIZE: 11px;
+HEIGHT: 18px;
+/*REM: outset*/
+}
+
+.ReportTitle
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 14px;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    COLOR: #000000;
+}
+
+.ReportHeaderTitle
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    COLOR: #000000;
+}
+
+.ReportHeaderText
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+
+.PageHeaderTitle
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    COLOR: #000000;
+}
+
+.PageHeaderText
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+
+.GroupHeaderTitle
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+}
+
+.GroupHeaderText
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+
+.DetailHeaderWithBG
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    BACKGROUND-COLOR: gray;
+    TEXT-ALIGN: center
+}
+
+.DetailHeader
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+}
+    
+.DetailText
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 8px;
+    COLOR: #000000;
+}
+
+.GroupFooterTitle
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+}
+
+.GroupFooterText
+{
+   FONT-FAMILY: MS Sans Serif;
+   FONT-SIZE: 10px;
+   COLOR: #000000;
+}
+
+.PageFooterTitle
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+}
+
+.PageFooterText
+{
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+
+.ReportFooterTitle
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    COLOR: #000000;
+}
+
+.ReportFooterText
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+}
+/*REM: NAV 01/15/2006 Issue 31586 + Issue 40200*/
+.lockheaderrow
+{ 
+	TOP: expression(document.getElementById("divResults").scrollTop-2); 
+	POSITION: relative; 
+} 

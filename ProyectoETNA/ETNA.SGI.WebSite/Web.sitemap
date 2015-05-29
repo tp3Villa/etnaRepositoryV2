@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode title="Inicio" url="~/PaginasWeb/Bienvenida.aspx">
+      <siteMapNode title="Exportación">
+         <siteMapNode title="Requerimiento" url="~/PaginasWeb/RequerimientoCliente.aspx" description="Generar Req.">
+           <!-- <siteMapNode title="Reporte de Recetas" url="~/PaginasWeb/RequerimientoCliente.aspx" description="...." /> -->
+         </siteMapNode> 
+      </siteMapNode>
+    <siteMapNode title="Ventas"/>
+    <siteMapNode title="Finanzas">
+    </siteMapNode>
+  </siteMapNode> 
+ </siteMap>

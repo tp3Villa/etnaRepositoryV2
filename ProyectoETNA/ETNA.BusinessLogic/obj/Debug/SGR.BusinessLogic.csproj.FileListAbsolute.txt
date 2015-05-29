@@ -1,0 +1,11 @@
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessLogic.dll
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessLogic.pdb
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessEntity.dll
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.DataAccess.dll
+D:\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\SGR\SGR.BusinessLogic\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.BusinessEntity.pdb
+D:\SGR\SGR.BusinessLogic\bin\Debug\SGR.DataAccess.pdb
+D:\SGR\SGR.BusinessLogic\obj\Debug\SGR.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\SGR\SGR.BusinessLogic\obj\Debug\SGR.BusinessLogic.dll
+D:\SGR\SGR.BusinessLogic\obj\Debug\SGR.BusinessLogic.pdb

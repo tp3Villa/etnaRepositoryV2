@@ -1,0 +1,114 @@
+﻿body 
+{
+	font-size:12px;
+}
+input
+{
+text-transform:uppercase;
+font-size:10px;
+	text-align: left;
+}
+select
+{
+	font-size:10px;
+}
+.cuerpo_principal_empresa
+{
+	background:url('../Imagenes/fondo.gif') repeat-y; 
+	width:810px;
+	/*   :815px;*/
+	  height :815px;
+	/*border:1px solid yellow;*/
+}
+.body_login{ 
+/*margin:0px;*/
+   height:100%;
+border:1px solid silver;
+}
+.boton
+{
+	border: 1px solid #000000;
+	background-color: #C2031C; /*#ffffff; */
+		border-collapse: collapse;
+		color: #ffffff;
+		cursor: pointer;
+		font-family: Arial, Helvetica, Sans-Serif;
+		font-size: 11px;
+	  	padding-right: 5px;
+		padding-left: 5px;
+		text-align: center;
+	height: 20px;
+}
+.ingreso_datos_tabla
+{
+width: 100%;
+border-collapse:collapse;
+border:1px solid #7A7A7A;
+	}
+.titulo_certigas
+{
+	background-color:#BBBBBB;
+	font-weight:bold;
+	color:White;
+	font-size:15px;
+	border:0px 0px 0px 0px;
+	
+}
+.btn_control
+{
+cursor:pointer;	
+	}
+.invisible_inicio
+{
+	display:none;
+}
+.flotar
+{
+position:absolute;
+left:180px;
+top:200px;
+border:3px solid Silver;
+background-color:White;
+}
+.span_cer
+{
+ font-size:10px;
+}
+.tabla_cofide
+{
+border:2px solid silver;
+	}
+.color_lectura{
+		background-color:#DCDCDC;
+	}
+	
+.subtitulos
+{
+background-color:Silver;
+height:15px;
+padding:5px 5px 5px 5px; 
+border:1px solid black;
+}
+.transparencia
+{
+	opacity:0.4;
+	filter:alpha(opacity=40);		
+}
+.control_hoja_activo
+{
+ background-color:#FFFFFF;
+}
+.control_hoja_eliminado
+{
+	 background-color:#F2DDDC;
+}
+.control_hoja_liberado
+{
+	 background-color:#F9EEED;
+}
+.controles 
+{
+    color: #000000; 
+    font-family: Arial, Helvetica, Sans-Serif; 
+    font-size: 11px; 
+}

@@ -70,10 +70,11 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
 
         }
 
+        /* Datos por Proveedor */
         public DataTable DGetProveedorById(EProveedor EProveedor)
         {
-            string sql = "SELECT codProveedor,razonSocial,direccion,telefono,email,ruc,observacion,codCondicionPago,codEstado FROM Proveedor " +
-                          "WHERE codProveedor = " + EProveedor.CodProveedor + "";
+            string sql = "SELECT codProveedor,razonSocial,direccion,telefono,email,ruc,observacion,a.codCondicionPago,codEstado, b.desCondicionPago FROM Proveedor a , condicionpago b " +
+                          "WHERE codProveedor = " + EProveedor.CodProveedor + " and b.codCondicionPago = a.codCondicionPago";
             SqlDataAdapter da = new SqlDataAdapter(sql, cn.Conectar);
             DataTable tabla = new DataTable();
             try

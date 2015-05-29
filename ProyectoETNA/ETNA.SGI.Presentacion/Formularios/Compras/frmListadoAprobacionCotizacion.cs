@@ -98,6 +98,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frm.ShowDialog();
 
             txtProveedor.Text = frm.vCodigo;
+            lblRazonSocial.Text = frm.vRazonSocial;
         }
 
         private void btnSolicitud_Click(object sender, EventArgs e)

@@ -46,8 +46,6 @@
             this.dtExpiracionTo = new System.Windows.Forms.DateTimePicker();
             this.dtExpiracionFrom = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.codCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codRequerimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +53,10 @@
             this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aprobar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
+            this.lblRequerimientoDesc = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,6 +90,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblRequerimientoDesc);
+            this.groupBox1.Controls.Add(this.lblRazonSocial);
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -261,27 +265,6 @@
             this.dataGridView1.TabIndex = 113;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Location = new System.Drawing.Point(12, 12);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(747, 49);
-            this.groupBox6.TabIndex = 112;
-            this.groupBox6.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(6, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(735, 29);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Aprobación de Cotización";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // codCotizacion
             // 
             this.codCotizacion.DataPropertyName = "codCotizacion";
@@ -332,6 +315,43 @@
             this.Aprobar.ReadOnly = true;
             this.Aprobar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Aprobar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Location = new System.Drawing.Point(12, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(747, 49);
+            this.groupBox6.TabIndex = 112;
+            this.groupBox6.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label11.Location = new System.Drawing.Point(6, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(735, 29);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Aprobación de Cotización";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblRazonSocial
+            // 
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(236, 96);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(0, 13);
+            this.lblRazonSocial.TabIndex = 113;
+            // 
+            // lblRequerimientoDesc
+            // 
+            this.lblRequerimientoDesc.AutoSize = true;
+            this.lblRequerimientoDesc.Location = new System.Drawing.Point(236, 122);
+            this.lblRequerimientoDesc.Name = "lblRequerimientoDesc";
+            this.lblRequerimientoDesc.Size = new System.Drawing.Size(0, 13);
+            this.lblRequerimientoDesc.TabIndex = 114;
             // 
             // frmListadoAprobacionCotizacion
             // 
@@ -385,5 +405,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
         private System.Windows.Forms.DataGridViewImageColumn Aprobar;
+        private System.Windows.Forms.Label lblRequerimientoDesc;
+        private System.Windows.Forms.Label lblRazonSocial;
     }
 }

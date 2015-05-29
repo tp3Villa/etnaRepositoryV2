@@ -28,14 +28,7 @@ namespace ETNA.SGI.Entity.Compras
             get { return codCotizacion; }
             set { codCotizacion = value; }
         }
-        private int codMoneda;
-
-        public int CodMoneda
-        {
-            get { return codMoneda; }
-            set { codMoneda = value; }
-        }
-
+        
         private int codEstado;
 
         public int CodEstado

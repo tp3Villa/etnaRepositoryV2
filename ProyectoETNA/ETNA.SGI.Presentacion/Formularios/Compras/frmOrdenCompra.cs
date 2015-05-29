@@ -87,19 +87,11 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void frmOrdenCompra_Load(object sender, EventArgs e)
         {
-            // Carga de Combo Moneda
-            /*DataTable dtMoneda = bMoneda.ObtenerListadoMoneda();
-            cboMoneda.DataSource = dtMoneda;
-            cboMoneda.DisplayMember = "desMoneda";
-            cboMoneda.ValueMember = "codMoneda";*/
-
             txtIgv.Text = IGV.ToString("0.00");
             
             // Para nuevo registro de OC
             if ("".Equals(codOrdenCompra))
             {
-               // cboMoneda.SelectedIndex = 0;
-
                 // Fecha Actual
                 dtpFechaEntrega.Value = DateTime.Today;
 
@@ -112,12 +104,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 txtTotal.Text = 0.ToString("0.00");
                 btnGenerar.Text = "Generar";
                 btnBuscarRequerimiento.Enabled = true;
-                this.Text = "Generar Órden de Compra";
+                this.Text = "Generar Orden de Compra";
             }
             else // Para modificacion de OC
             {
-                //cboMoneda.SelectedValue = Int32.Parse(codMoneda);
-
                 // Fecha Actual
                 dtpFechaEntrega.Value = DateTime.Parse(fechaEntrega);
 
@@ -129,7 +119,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
                 btnGenerar.Text = "Modificar";
                 btnBuscarRequerimiento.Enabled = false;
-                this.Text = "Modificar Órden de Compra";
+                this.Text = "Modificar Orden de Compra";
 
                 DataTable dtDetalleRequerimientoCompra = bRequerimientoCompra.ObtenerListadoDetallePorCodigoRequerimientoCompra(Int32.Parse(codRequerimiento));
                 calcularTotales(dtDetalleRequerimientoCompra);
@@ -174,7 +164,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     double precioUnidad = Double.Parse(dtDetalleRequerimientoCompra.Rows[i]["precioUnidad"].ToString());
                     double descuento = Double.Parse(dtDetalleRequerimientoCompra.Rows[i]["descuento"].ToString());
                     double subTotalSinDesc = cantidad * precioUnidad;
-                    //double subTotal = subTotalSinDesc - (subTotalSinDesc * descuento);
                     double subTotal = subTotalSinDesc - descuento;
                     dtDetalleRequerimientoCompra.Rows[i]["subTotal"] = subTotal;
                     totalDt += subTotal;
@@ -216,7 +205,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     // Guardar la Orden de Compra con su detalle
                     // Datos de Cabecera
                     EOrdenCompra eOrdenCompra = new EOrdenCompra();
-                    //eOrdenCompra.CodMoneda = (int)cboMoneda.SelectedValue;
                     eOrdenCompra.FechaEntrega = dtpFechaEntrega.Value;
                     eOrdenCompra.LugarEntrega = txtLugarEntrega.Text;
                     eOrdenCompra.Observacion = txtObservacion.Text;
@@ -251,7 +239,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     // Datos de Cabecera
                     EOrdenCompra eOrdenCompra = new EOrdenCompra();
                     eOrdenCompra.CodOrdenCompra = Int32.Parse(codOrdenCompra);
-                    //eOrdenCompra.CodMoneda = (int)cboMoneda.SelectedValue;
                     eOrdenCompra.FechaEntrega = dtpFechaEntrega.Value;
                     eOrdenCompra.LugarEntrega = txtLugarEntrega.Text;
                     eOrdenCompra.Observacion = txtObservacion.Text;
@@ -263,10 +250,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 }
 
                 this.Close();
-
-            }
-                        
-            
+            }                     
         }
     }
 }

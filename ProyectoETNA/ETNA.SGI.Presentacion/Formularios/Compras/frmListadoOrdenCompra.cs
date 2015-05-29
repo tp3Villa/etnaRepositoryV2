@@ -76,7 +76,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         {
             DataTable dt = bOrdenCompra.ObtenerListadoOrdenCompra(eOrdenCompra);           
             dt.Columns["codEstado"].ColumnMapping = MappingType.Hidden;
-            //dt.Columns["codMoneda"].ColumnMapping = MappingType.Hidden;
             dt.Columns["observacion"].ColumnMapping = MappingType.Hidden;
             dt.AcceptChanges();
             dtGridOC.DataSource = dt;            
@@ -84,12 +83,13 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         
         private void dtGridOC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ("3".Equals(dtGridOC.Rows[e.RowIndex].Cells["codEstado"].Value.ToString()))
+            if (ESTADO_ANULADA.ToString().Equals(dtGridOC.Rows[e.RowIndex].Cells["codEstado"].Value.ToString()))
             {
                 if (e.ColumnIndex == 0) { MessageBox.Show("No se puede modificar una orden de compra anulada"); }
                 if (e.ColumnIndex == 1) { MessageBox.Show("No se puede anular una orden de compra anulada"); }                
                 return;
             }
+
             // Modificar
             if (e.ColumnIndex == 0) 
             {

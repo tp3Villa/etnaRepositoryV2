@@ -37,6 +37,10 @@
             this.txtCodReq = new System.Windows.Forms.TextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.dtGridOC = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGenerarOC = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.codOrdenCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codRequerimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,14 +49,9 @@
             this.fechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugarEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codMoneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anular = new System.Windows.Forms.DataGridViewImageColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGenerarOC = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOC)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -159,7 +158,6 @@
             this.fechaEntrega,
             this.lugarEntrega,
             this.codEstado,
-            this.codMoneda,
             this.observacion,
             this.modificar,
             this.anular});
@@ -170,6 +168,57 @@
             this.dtGridOC.Size = new System.Drawing.Size(686, 229);
             this.dtGridOC.TabIndex = 107;
             this.dtGridOC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridOC_CellContentClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnGenerarOC);
+            this.groupBox2.Controls.Add(this.btnClose);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.Location = new System.Drawing.Point(273, 368);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(163, 81);
+            this.groupBox2.TabIndex = 111;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Opciones";
+            // 
+            // btnGenerarOC
+            // 
+            this.btnGenerarOC.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
+            this.btnGenerarOC.Location = new System.Drawing.Point(11, 18);
+            this.btnGenerarOC.Name = "btnGenerarOC";
+            this.btnGenerarOC.Size = new System.Drawing.Size(81, 57);
+            this.btnGenerarOC.TabIndex = 6;
+            this.btnGenerarOC.Text = "Generar OC";
+            this.btnGenerarOC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGenerarOC.UseVisualStyleBackColor = true;
+            this.btnGenerarOC.Click += new System.EventHandler(this.btnGenerarOC_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
+            this.btnClose.Location = new System.Drawing.Point(98, 18);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 57);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Salir";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Buscar;
+            this.button1.Location = new System.Drawing.Point(584, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 49);
+            this.button1.TabIndex = 108;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // codOrdenCompra
             // 
@@ -231,14 +280,6 @@
             this.codEstado.ReadOnly = true;
             this.codEstado.Visible = false;
             // 
-            // codMoneda
-            // 
-            this.codMoneda.DataPropertyName = "codMoneda";
-            this.codMoneda.HeaderText = "CodMoneda";
-            this.codMoneda.Name = "codMoneda";
-            this.codMoneda.ReadOnly = true;
-            this.codMoneda.Visible = false;
-            // 
             // observacion
             // 
             this.observacion.DataPropertyName = "observacion";
@@ -264,57 +305,6 @@
             this.anular.Name = "anular";
             this.anular.ReadOnly = true;
             this.anular.Width = 40;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnGenerarOC);
-            this.groupBox2.Controls.Add(this.btnClose);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(273, 368);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 81);
-            this.groupBox2.TabIndex = 111;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Opciones";
-            // 
-            // btnGenerarOC
-            // 
-            this.btnGenerarOC.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
-            this.btnGenerarOC.Location = new System.Drawing.Point(11, 18);
-            this.btnGenerarOC.Name = "btnGenerarOC";
-            this.btnGenerarOC.Size = new System.Drawing.Size(81, 57);
-            this.btnGenerarOC.TabIndex = 6;
-            this.btnGenerarOC.Text = "Generar OC";
-            this.btnGenerarOC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGenerarOC.UseVisualStyleBackColor = true;
-            this.btnGenerarOC.Click += new System.EventHandler(this.btnGenerarOC_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
-            this.btnClose.Location = new System.Drawing.Point(98, 18);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 57);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Salir";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Buscar;
-            this.button1.Location = new System.Drawing.Point(584, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 49);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmListadoOrdenCompra
             // 
@@ -367,7 +357,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEstado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codMoneda;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
         private System.Windows.Forms.DataGridViewImageColumn modificar;
         private System.Windows.Forms.DataGridViewImageColumn anular;

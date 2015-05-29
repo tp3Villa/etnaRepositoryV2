@@ -31,6 +31,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblRequerimientoDesc = new System.Windows.Forms.Label();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -55,8 +57,6 @@
             this.Aprobar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblRazonSocial = new System.Windows.Forms.Label();
-            this.lblRequerimientoDesc = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -110,6 +110,22 @@
             this.groupBox1.TabIndex = 114;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios de Búsqueda";
+            // 
+            // lblRequerimientoDesc
+            // 
+            this.lblRequerimientoDesc.AutoSize = true;
+            this.lblRequerimientoDesc.Location = new System.Drawing.Point(236, 122);
+            this.lblRequerimientoDesc.Name = "lblRequerimientoDesc";
+            this.lblRequerimientoDesc.Size = new System.Drawing.Size(0, 13);
+            this.lblRequerimientoDesc.TabIndex = 114;
+            // 
+            // lblRazonSocial
+            // 
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(236, 96);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(0, 13);
+            this.lblRazonSocial.TabIndex = 113;
             // 
             // btnLimpiar
             // 
@@ -336,22 +352,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Aprobación de Cotización";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblRazonSocial
-            // 
-            this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(236, 96);
-            this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(0, 13);
-            this.lblRazonSocial.TabIndex = 113;
-            // 
-            // lblRequerimientoDesc
-            // 
-            this.lblRequerimientoDesc.AutoSize = true;
-            this.lblRequerimientoDesc.Location = new System.Drawing.Point(236, 122);
-            this.lblRequerimientoDesc.Name = "lblRequerimientoDesc";
-            this.lblRequerimientoDesc.Size = new System.Drawing.Size(0, 13);
-            this.lblRequerimientoDesc.TabIndex = 114;
             // 
             // frmListadoAprobacionCotizacion
             // 

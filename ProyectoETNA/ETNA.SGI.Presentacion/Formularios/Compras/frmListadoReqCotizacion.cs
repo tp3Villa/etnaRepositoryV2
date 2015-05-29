@@ -14,7 +14,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
     public partial class frmListadoReqCotizacion : Form
     {
 
-        public string vCodigoReq;
+        public string vCodigoReq,vReqObs;
         public string sOpcion;
 
         private BRequerimientoCompra bRequerimientoCompra = BRequerimientoCompra.getInstance();
@@ -84,6 +84,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 {
                     int p = dataGridView1.CurrentRow.Index;
                     vCodigoReq = dataGridView1.Rows[p].Cells["codRequerimiento"].Value.ToString();
+                    vReqObs = dataGridView1.Rows[p].Cells["observacion"].Value.ToString();
                     this.Close();
                 }
                 catch { }

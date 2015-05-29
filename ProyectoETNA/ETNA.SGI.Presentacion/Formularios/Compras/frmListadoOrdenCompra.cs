@@ -104,7 +104,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     frm.Proveedor = dtGridOC.Rows[currentIndex].Cells["razonSocial"].Value.ToString();
                     frm.FechaEntrega = dtGridOC.Rows[currentIndex].Cells["fechaEntrega"].Value.ToString();
                     frm.LugarEntrega = dtGridOC.Rows[currentIndex].Cells["lugarEntrega"].Value.ToString();
-                    //frm.CodMoneda = dtGridOC.Rows[currentIndex].Cells["codMoneda"].Value.ToString();
                     frm.Observacion = dtGridOC.Rows[currentIndex].Cells["observacion"].Value.ToString();
                     frm.ShowDialog();
                     cargaGrilla(new EOrdenCompra());

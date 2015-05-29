@@ -177,7 +177,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Se procederá a cerrar la ventana, desea continuar?", "Compras", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                    this.Close();
+            }            
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -197,7 +200,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 return;
             }
 
-            if (MessageBox.Show("Se procederá a grabar la orde de compra", "Compras", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Se procederá a grabar la orden de compra", "Compras", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 // Generación de OC
                 if ("".Equals(codOrdenCompra))

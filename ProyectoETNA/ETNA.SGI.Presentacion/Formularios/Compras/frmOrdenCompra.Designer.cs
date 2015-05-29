@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,9 +75,9 @@
             this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(28, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha Entrega:";
+            this.label3.Text = "*Fecha Entrega:";
             // 
             // label4
             // 
@@ -86,9 +86,9 @@
             this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(29, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Lugar Entrega:";
+            this.label4.Text = "*Lugar Entrega:";
             // 
             // label5
             // 
@@ -133,9 +133,9 @@
             this.label6.ForeColor = System.Drawing.Color.Navy;
             this.label6.Location = new System.Drawing.Point(29, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 13);
+            this.label6.Size = new System.Drawing.Size(97, 13);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Requerimiento:";
+            this.label6.Text = "*Requerimiento:";
             // 
             // txtRequerimiento
             // 
@@ -199,8 +199,8 @@
             // descripcionProducto
             // 
             this.descripcionProducto.DataPropertyName = "descripcionProducto";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.descripcionProducto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.descripcionProducto.DefaultCellStyle = dataGridViewCellStyle51;
             this.descripcionProducto.HeaderText = "Producto";
             this.descripcionProducto.Name = "descripcionProducto";
             this.descripcionProducto.ReadOnly = true;
@@ -211,8 +211,8 @@
             // cantidad
             // 
             this.cantidad.DataPropertyName = "cantidad";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cantidad.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle52;
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
@@ -221,10 +221,10 @@
             // precioUnidad
             // 
             this.precioUnidad.DataPropertyName = "precioUnidad";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.precioUnidad.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle53.Format = "N2";
+            dataGridViewCellStyle53.NullValue = "0";
+            this.precioUnidad.DefaultCellStyle = dataGridViewCellStyle53;
             this.precioUnidad.HeaderText = "Precio Unitario";
             this.precioUnidad.Name = "precioUnidad";
             this.precioUnidad.ReadOnly = true;
@@ -232,10 +232,10 @@
             // descuento
             // 
             this.descuento.DataPropertyName = "descuento";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.descuento.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle54.Format = "N2";
+            dataGridViewCellStyle54.NullValue = "0";
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle54;
             this.descuento.HeaderText = "Descuento";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
@@ -244,10 +244,10 @@
             // subTotal
             // 
             this.subTotal.DataPropertyName = "subTotal";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.subTotal.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle55.Format = "N2";
+            dataGridViewCellStyle55.NullValue = "0";
+            this.subTotal.DefaultCellStyle = dataGridViewCellStyle55;
             this.subTotal.HeaderText = "SubTotal";
             this.subTotal.Name = "subTotal";
             this.subTotal.ReadOnly = true;
@@ -277,7 +277,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(347, 468);
+            this.label10.Location = new System.Drawing.Point(380, 468);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 112;
@@ -288,7 +288,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(347, 491);
+            this.label11.Location = new System.Drawing.Point(379, 491);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 113;
@@ -330,7 +330,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(486, 29);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Órden de Compra";
+            this.label12.Text = "Orden de Compra";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
@@ -339,7 +339,7 @@
             this.groupBox2.Controls.Add(this.btnClose);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(187, 512);
+            this.groupBox2.Location = new System.Drawing.Point(193, 512);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(160, 81);
             this.groupBox2.TabIndex = 121;
@@ -384,7 +384,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(347, 444);
+            this.label2.Location = new System.Drawing.Point(379, 444);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 122;
@@ -421,7 +421,7 @@
             this.MaximizeBox = false;
             this.Name = "frmOrdenCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Generar Órden de Compra";
+            this.Text = "Generar Orden de Compra";
             this.Load += new System.EventHandler(this.frmOrdenCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDetalleOC)).EndInit();
             this.groupBox6.ResumeLayout(false);

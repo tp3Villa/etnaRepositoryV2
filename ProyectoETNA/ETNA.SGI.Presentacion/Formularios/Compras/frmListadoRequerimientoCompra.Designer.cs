@@ -110,9 +110,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(173, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Categoria:";
+            this.label2.Text = "Categoría:";
             // 
             // btnBuscar
             // 
@@ -175,7 +175,7 @@
             // desCategoria
             // 
             this.desCategoria.DataPropertyName = "desCategoria";
-            this.desCategoria.HeaderText = "Categoria";
+            this.desCategoria.HeaderText = "Categoría";
             this.desCategoria.Name = "desCategoria";
             this.desCategoria.ReadOnly = true;
             // 
@@ -233,11 +233,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewLinkColumn codRequerimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn desCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
-        private System.Windows.Forms.Label label3;
     }
 }

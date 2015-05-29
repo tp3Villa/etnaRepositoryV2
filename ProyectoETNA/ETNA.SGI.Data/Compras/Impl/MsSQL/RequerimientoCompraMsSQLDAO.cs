@@ -112,7 +112,7 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                             "ON c.codCategoria = rq.codCategoria " +
                             "INNER JOIN Cotizacion ct " +
                             "ON ct.codRequerimiento = rq.codRequerimiento " +
-                         "WHERE rq.codEstado = 2 AND ct.codEstado = 2 " +
+                         "WHERE rq.codEstado = 2 AND ct.codEstado = 2 AND ct.fechaExpiracion > @fechaExpiracion " +
                          " AND rq.codRequerimiento not in (select oc.codRequerimiento from OrdenCompra oc WHERE oc.codEstado <> 3) " +
                          " AND ( @codRequerimiento = 0 OR rq.codRequerimiento = @codRequerimiento ) " +
                           "AND ( @codCategoria = 0 OR rq.codCategoria = @codCategoria ) ";
@@ -126,6 +126,8 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             command.Parameters["@codRequerimiento"].Value = eRequerimientoCompra.CodRequerimiento;
             command.Parameters.Add("@codCategoria", SqlDbType.Int);
             command.Parameters["@codCategoria"].Value = eRequerimientoCompra.CodCategoria;
+            command.Parameters.Add("@fechaExpiracion", SqlDbType.Date);
+            command.Parameters["@fechaExpiracion"].Value = DateTime.Today.Date;
 
             adapter.SelectCommand = command;
 

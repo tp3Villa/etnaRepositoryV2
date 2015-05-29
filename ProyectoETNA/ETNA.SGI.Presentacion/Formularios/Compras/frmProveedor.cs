@@ -44,6 +44,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 txtEmail.Text = tblDetalle.Rows[0]["email"].ToString();
                 txtCondPago.Text = tblDetalle.Rows[0]["codCondicionPago"].ToString();
                 txtObs.Text = tblDetalle.Rows[0]["observacion"].ToString();
+                lblCondicionPago.Text = tblDetalle.Rows[0]["desCondicionPago"].ToString();
 
                 if (tblDetalle.Rows[0]["codEstado"].ToString() == "5")
                 {
@@ -208,6 +209,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frm.ShowDialog();
 
             txtCondPago.Text = frm.vCodigo;
+            lblCondicionPago.Text = frm.vDescripcion;
         }
 
                 

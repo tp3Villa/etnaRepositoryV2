@@ -54,6 +54,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.lblCondicionPago = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -194,6 +195,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCondicionPago);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnCondPago);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -331,6 +333,14 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // lblCondicionPago
+            // 
+            this.lblCondicionPago.AutoSize = true;
+            this.lblCondicionPago.Location = new System.Drawing.Point(206, 176);
+            this.lblCondicionPago.Name = "lblCondicionPago";
+            this.lblCondicionPago.Size = new System.Drawing.Size(0, 13);
+            this.lblCondicionPago.TabIndex = 107;
+            // 
             // frmProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +389,6 @@
         private System.Windows.Forms.RadioButton rdActivo;
         private System.Windows.Forms.Button btnCondPago;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCondicionPago;
     }
 }

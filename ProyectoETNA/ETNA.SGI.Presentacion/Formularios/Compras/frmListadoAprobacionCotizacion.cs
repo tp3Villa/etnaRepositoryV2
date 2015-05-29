@@ -98,6 +98,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frm.ShowDialog();
 
             txtProveedor.Text = frm.vCodigo;
+            lblRazonSocial.Text = frm.vRazonSocial;
         }
 
         private void btnSolicitud_Click(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frm.ShowDialog();
 
             txtSolicitud.Text = frm.vCodigoReq;
+            lblRequerimientoDesc.Text = frm.vReqObs;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -114,6 +116,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             txtSolicitud.Text = "";
             dtExpiracionFrom.Value = DateTime.Now;
             dtExpiracionTo.Value = DateTime.Now;
+            lblRazonSocial.Text = "";
+            lblRequerimientoDesc.Text = "";
         }
     }
 }

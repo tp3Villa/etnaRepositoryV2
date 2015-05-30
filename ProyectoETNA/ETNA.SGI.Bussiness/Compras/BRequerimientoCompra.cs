@@ -54,5 +54,50 @@ namespace ETNA.SGI.Bussiness.Compras
             return dRequerimientoCompra.DGetAllDetalleByCodRequerimientoCompra(codRequerimientoCompra);
         }
         
+        /* METODOS RICHARD */
+        public List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal)
+        {
+            return null;// RequerimientoDAO.ListarPorCodigoPersonal(codPersonal);
+        }
+
+        public List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado)
+        {
+            return null;//RequerimientoDAO.ListarPorCodigoPersonalYEstado(codPersonal, codEstado);
+        }
+
+        public List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento)
+        {
+            return null;//RequerimientoDAO.ListaDetallePorCodigoRequerimiento(codRequerimiento);
+        }
+
+        public List<ECotizacion> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento)
+        {
+            return null;//RequerimientoDAO.ListaDetallePorCodigoRequerimientoCotizacion(codRequerimiento);
+        }
+
+        public void Registrar(ERequerimientoCompra reqCab, List<ERequerimientoCompraDetalle> reqDets)
+        {
+            //int codigo = RequerimientoDAO.RegistrarCabecera(reqCab);
+            //foreach (ERequerimientoCompraDetalle reqDet in reqDets)
+            //{
+            //    reqDet.CodRequerimiento = codigo;
+            //    RequerimientoDAO.RegistrarDetalle(reqDet);
+            //}
+        }
+
+        public void Actualizar(ERequerimientoCompra reqCab, List<ERequerimientoCompraDetalle> reqDets)
+        {
+            //RequerimientoDAO.ActualizarCabecera(reqCab);
+            //RequerimientoDAO.EliminarDetalle(reqCab.Codigo);
+            //foreach (ERequerimientoCompraDetalle reqDet in reqDets)
+            //{
+            //    RequerimientoDAO.RegistrarDetalle(reqDet);
+            //}
+        }
+
+        public void ActualizarEstado(int codRequerimiento, int codEstado)
+        {
+            //RequerimientoDAO.ActualizarEstado(codRequerimiento, codEstado);
+        }
     }
 }

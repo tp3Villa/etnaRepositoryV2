@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Compras\EProducto.cs" />
     <Compile Include="Compras\EOrdenCompraDetalle.cs" />
     <Compile Include="Compras\ECategoria.cs" />
     <Compile Include="Compras\ECondicionPago.cs" />
@@ -52,6 +52,7 @@
     <Compile Include="Compras\EProveedor.cs" />
     <Compile Include="Compras\ERequerimientoCompraDetalle.cs" />
     <Compile Include="Compras\ERquerimientoCompra.cs" />
+    <Compile Include="Compras\EMarca.cs" />
     <Compile Include="Exportacion\ELogin.cs" />
     <Compile Include="Exportacion\eReqCab.cs" />
     <Compile Include="Exportacion\EReqDetalle.cs" />

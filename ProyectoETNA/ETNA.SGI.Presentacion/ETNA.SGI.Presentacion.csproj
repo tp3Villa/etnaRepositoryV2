@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Compras\frmListadoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoProducto.designer.cs">
+      <DependentUpon>frmListadoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Compras\frmBusquedaProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,18 @@
     </Compile>
     <Compile Include="Formularios\Compras\frmOrdenCompra.Designer.cs">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoReqCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmListadoReqCompra.designer.cs">
+      <DependentUpon>frmListadoReqCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmReqCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmReqCompra.designer.cs">
+      <DependentUpon>frmReqCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.cs">
       <SubType>Form</SubType>
@@ -214,6 +232,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingletonFormProvider.cs" />
+    <EmbeddedResource Include="Formularios\Compras\frmListadoProducto.resx">
+      <DependentUpon>frmListadoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\frmBusquedaProveedor.resx">
       <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\frmListadoOrdenCompra.resx">
       <DependentUpon>frmListadoOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmListadoReqCompra.resx">
+      <DependentUpon>frmListadoReqCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmReqCompra.resx">
+      <DependentUpon>frmReqCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.resx">
       <DependentUpon>frmActualizarInfoRequerimiento.cs</DependentUpon>

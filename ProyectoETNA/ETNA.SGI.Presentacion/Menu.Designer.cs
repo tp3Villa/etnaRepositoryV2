@@ -50,7 +50,7 @@
             this.ETN010C = new System.Windows.Forms.ToolStripMenuItem();
             this.ETN011C = new System.Windows.Forms.ToolStripMenuItem();
             this.ETN012C = new System.Windows.Forms.ToolStripMenuItem();
-            this.aprobacionCotizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ETN013C = new System.Windows.Forms.ToolStripMenuItem();
             this.Exportacion = new System.Windows.Forms.ToolStripMenuItem();
             this.ETN05S = new System.Windows.Forms.ToolStripMenuItem();
             this.ETN06S = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +65,7 @@
             this.stStrip03 = new System.Windows.Forms.ToolStripStatusLabel();
             this.stStrip04 = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ETN014C = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.stStrip.SuspendLayout();
@@ -219,10 +220,11 @@
             // Compras
             // 
             this.Compras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ETN014C,
             this.ETN010C,
             this.ETN011C,
             this.ETN012C,
-            this.aprobacionCotizacionToolStripMenuItem});
+            this.ETN013C});
             this.Compras.Name = "Compras";
             this.Compras.Size = new System.Drawing.Size(67, 20);
             this.Compras.Text = "&Compras";
@@ -232,7 +234,7 @@
             // 
             this.ETN010C.Image = global::ETNA.SGI.Presentacion.Properties.Resources.BO12;
             this.ETN010C.Name = "ETN010C";
-            this.ETN010C.Size = new System.Drawing.Size(193, 22);
+            this.ETN010C.Size = new System.Drawing.Size(214, 22);
             this.ETN010C.Text = "Proveedor";
             this.ETN010C.Visible = false;
             this.ETN010C.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
@@ -241,7 +243,7 @@
             // 
             this.ETN011C.Image = global::ETNA.SGI.Presentacion.Properties.Resources.CALC1;
             this.ETN011C.Name = "ETN011C";
-            this.ETN011C.Size = new System.Drawing.Size(193, 22);
+            this.ETN011C.Size = new System.Drawing.Size(214, 22);
             this.ETN011C.Text = "Orden de Compra";
             this.ETN011C.Visible = false;
             this.ETN011C.Click += new System.EventHandler(this.ordenDeCompraToolStripMenuItem_Click);
@@ -250,18 +252,19 @@
             // 
             this.ETN012C.Image = global::ETNA.SGI.Presentacion.Properties.Resources.CALC1;
             this.ETN012C.Name = "ETN012C";
-            this.ETN012C.Size = new System.Drawing.Size(193, 22);
+            this.ETN012C.Size = new System.Drawing.Size(214, 22);
             this.ETN012C.Text = "Cotización";
             this.ETN012C.Visible = false;
             this.ETN012C.Click += new System.EventHandler(this.ETN03C_Click);
             // 
-            // aprobacionCotizacionToolStripMenuItem
+            // ETN013C
             // 
-            this.aprobacionCotizacionToolStripMenuItem.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
-            this.aprobacionCotizacionToolStripMenuItem.Name = "aprobacionCotizacionToolStripMenuItem";
-            this.aprobacionCotizacionToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.aprobacionCotizacionToolStripMenuItem.Text = "Aprobación cotización";
-            this.aprobacionCotizacionToolStripMenuItem.Click += new System.EventHandler(this.aprobacionCotizacionToolStripMenuItem_Click);
+            this.ETN013C.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
+            this.ETN013C.Name = "ETN013C";
+            this.ETN013C.Size = new System.Drawing.Size(214, 22);
+            this.ETN013C.Text = "Aprobación cotización";
+            this.ETN013C.Visible = false;
+            this.ETN013C.Click += new System.EventHandler(this.aprobacionCotizacionToolStripMenuItem_Click);
             // 
             // Exportacion
             // 
@@ -375,6 +378,15 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // ETN014C
+            // 
+            this.ETN014C.Image = global::ETNA.SGI.Presentacion.Properties.Resources.BO12;
+            this.ETN014C.Name = "ETN014C";
+            this.ETN014C.Size = new System.Drawing.Size(214, 22);
+            this.ETN014C.Text = "Requerimiento de Compra";
+            this.ETN014C.Visible = false;
+            this.ETN014C.Click += new System.EventHandler(this.ETN014C_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,7 +453,8 @@
         private System.Windows.Forms.ToolStripMenuItem paisesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ETN011C;
         private System.Windows.Forms.ToolStripMenuItem ETN012C;
-        private System.Windows.Forms.ToolStripMenuItem aprobacionCotizacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ETN013C;
+        private System.Windows.Forms.ToolStripMenuItem ETN014C;
     }
 }
 

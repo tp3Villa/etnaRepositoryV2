@@ -212,5 +212,11 @@ namespace ETNA.SGI.Presentacion
             Formularios.Compras.frmListadoAprobacionCotizacion frm = SingletonFormProvider.GetInstance <Formularios.Compras.frmListadoAprobacionCotizacion>(this);
             frm.Show();
         }
+
+        private void ETN014C_Click(object sender, EventArgs e)
+        {
+            Formularios.Compras.frmListadoReqCompra frm = SingletonFormProvider.GetInstance<Formularios.Compras.frmListadoReqCompra>(this);
+            frm.Show();
+        }
     }
 }

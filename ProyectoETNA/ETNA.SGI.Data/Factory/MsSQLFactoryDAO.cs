@@ -55,6 +55,24 @@ namespace ETNA.SGI.Data.Factory
         {
             RequerimientoCompraDAO objeto = RequerimientoCompraMsSQLDAO.getInstance();
             return objeto;
-        }       
+        }
+
+        public override MarcaDAO getMarcaDAO()
+        {
+            MarcaDAO objeto = MarcaMsSQLDAO.getInstance();
+            return objeto;
+        }
+
+        public override ProductoDAO getProductoDAO()
+        {
+            ProductoDAO objeto = ProductoMsSQLDAO.getInstance();
+            return objeto;
+        }
+
+        public override PersonaDAO getPersonaDAO()
+        {
+            PersonaDAO objeto = PersonaMsSQLDAO.getInstance();
+            return objeto;
+        }   
     }
 }

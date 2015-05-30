@@ -22,5 +22,6 @@ namespace ETNA.SGI.Presentacion
         public static string Nombre = "";
         public static string CodCli = "";
         public static string CodReq = "";
+        public static int CodPersonal;
     }
 }

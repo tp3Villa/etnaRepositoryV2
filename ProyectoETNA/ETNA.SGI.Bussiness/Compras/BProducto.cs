@@ -7,7 +7,7 @@ using ETNA.SGI.Data.Compras;
 
 namespace ETNA.SGI.Bussiness.Compras
 {
-    public class BProducto
+    public class BProducto : BBase
     {
         private static BProducto bProducto;
 
@@ -20,14 +20,21 @@ namespace ETNA.SGI.Bussiness.Compras
             return bProducto;
         }
 
+        private ProductoDAO dProducto;
+
+        public BProducto()
+        {
+            this.dProducto = ObjFactoryDAO.getProductoDAO();
+        } 
+
         public List<EProducto> ListarPorCategoria(int codCategoria)
         {
-            return null; // ArticuloDAO.ListarPorCategoria(codCategoria);
+            return dProducto.ListarPorCategoria(codCategoria);
         }
 
         public List<EProducto> ListarPorCategoriaYMarca(int codCategoria, int codMarca)
         {
-            return null; //ArticuloDAO.ListarPorCategoriaYMarca(codCategoria, codMarca);
+            return dProducto.ListarPorCategoriaYMarca(codCategoria, codMarca);
         }
     }
 }

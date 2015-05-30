@@ -164,5 +164,237 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             return tabla;
         }
 
+
+        /* METODOS RICHARD */
+        public List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal)
+        {
+            List<ERequerimientoCompra> lista = null;
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_listarRequerimientoxCodPersonal";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@idPersona", SqlDbType.Int).Value = codPersonal;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        lista = new List<ERequerimientoCompra>();
+                        while (reader.Read())
+                        {
+                            ERequerimientoCompra req = new ERequerimientoCompra();
+                            req.CodRequerimiento = reader.GetInt32(0);
+                            req.FechaRegistro = reader.GetDateTime(1);
+                            req.Observacion = reader.GetString(2);
+                            req.CodEstado = reader.GetInt32(3);
+                            req.DesEstado = reader.GetString(4);
+                            req.CodCategoria = reader.GetInt32(5);
+                            req.DesCategoria = reader.GetString(6);
+                            lista.Add(req);
+                        }
+                    }
+                }
+
+            }
+            return lista;
+        }
+
+        public List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado)
+        {
+            List<ERequerimientoCompra> lista = null;
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_listarRequerimientoxCodPersonalyEstado";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@idPersona", SqlDbType.Int).Value = codPersonal;
+                    cmd.Parameters.Add("@codEstado", SqlDbType.Int).Value = codEstado;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        lista = new List<ERequerimientoCompra>();
+                        while (reader.Read())
+                        {
+                            ERequerimientoCompra req = new ERequerimientoCompra();
+                            req.CodRequerimiento = reader.GetInt32(0);
+                            req.FechaRegistro = reader.GetDateTime(1);
+                            req.Observacion = reader.GetString(2);
+                            req.CodEstado = reader.GetInt32(3);
+                            req.DesEstado = reader.GetString(4);
+                            req.CodCategoria = reader.GetInt32(5);
+                            req.DesCategoria = reader.GetString(6);
+                            lista.Add(req);
+                        }
+                    }
+                }
+
+            }
+            return lista;
+        }
+
+        public List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento)
+        {
+            List<ERequerimientoCompraDetalle> lista = null;
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_listarRequerimientoDetalle";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        lista = new List<ERequerimientoCompraDetalle>();
+                        while (reader.Read())
+                        {
+                            ERequerimientoCompraDetalle reqDet = new ERequerimientoCompraDetalle();
+                            reqDet.CodRequerimiento = reader.GetInt32(0);
+                            reqDet.IdProducto = reader.GetInt32(1);
+                            reqDet.DesCategoria = reader.GetString(2);
+                            reqDet.DesMarca = reader.GetString(3);
+                            reqDet.Descripcion = reader.GetString(4);
+                            reqDet.TipoUnidad = reader.GetString(5);
+                            reqDet.Cantidad = reader.GetInt32(6);
+                            lista.Add(reqDet);
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public List<ECotizacionDetalle> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento)
+        {
+            List<ECotizacionDetalle> lista = null;
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_listarRequerimientoDetalleCotizacion";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        lista = new List<ECotizacionDetalle>();
+                        while (reader.Read())
+                        {
+                            ECotizacionDetalle reqDet = new ECotizacionDetalle();
+                            reqDet.IdProducto = reader.GetInt32(0);
+                            reqDet.DesProducto = reader.GetString(1);
+                            reqDet.Cantidad = reader.GetInt32(2);
+                            lista.Add(reqDet);
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public int RegistrarCabecera(ERequerimientoCompra reqCab)
+        {
+            int codigo = 0;
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_registrarRequerimiento";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodEstado", SqlDbType.Int).Value = reqCab.CodEstado;
+                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = reqCab.CodCategoria;
+                    cmd.Parameters.Add("@FechaRegistro", SqlDbType.DateTime).Value = reqCab.FechaRegistro;
+                    cmd.Parameters.Add("@FechaActualizacion", SqlDbType.DateTime).Value = reqCab.FechaActualizacion;
+                    cmd.Parameters.Add("@UsuarioRegistro", SqlDbType.VarChar).Value = reqCab.UsuarioRegistro;
+                    cmd.Parameters.Add("@UsuarioModificacion", SqlDbType.VarChar).Value = reqCab.UsuarioModificacion;
+                    cmd.Parameters.Add("@Observacion", SqlDbType.VarChar).Value = reqCab.Observacion;
+                    cmd.Parameters.Add("@CodPersonal", SqlDbType.Int).Value = reqCab.IdPersona;
+                    codigo = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            return codigo;
+        }
+
+        public void RegistrarDetalle(ERequerimientoCompraDetalle reqDet)
+        {
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_registrarRequetimientoDetalle";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = reqDet.CodRequerimiento;
+                    cmd.Parameters.Add("@CodArticulo", SqlDbType.Int).Value = reqDet.IdProducto;
+                    cmd.Parameters.Add("@Cantidad", SqlDbType.Int).Value = reqDet.Cantidad;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void ActualizarCabecera(ERequerimientoCompra reqCab)
+        {
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_actualizarRequerimiento";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = reqCab.CodRequerimiento;
+                    cmd.Parameters.Add("@CodPersonal", SqlDbType.Int).Value = reqCab.IdPersona;
+                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = reqCab.CodCategoria;
+                    cmd.Parameters.Add("@FechaRegistro", SqlDbType.DateTime).Value = reqCab.FechaRegistro;
+                    cmd.Parameters.Add("@Observacion", SqlDbType.VarChar).Value = reqCab.Observacion;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void EliminarDetalle(int codRequerimiento)
+        {
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_eliminarDetallePorCodigoRequerimiento";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void ActualizarEstado(int codRequerimiento, int codEstado)
+        {
+            using (SqlConnection connection = cn.Conectar)
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandText = "usp_actualizarEstadoRequerimiento";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
+                    cmd.Parameters.Add("@CodEstado", SqlDbType.Int).Value = codEstado;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

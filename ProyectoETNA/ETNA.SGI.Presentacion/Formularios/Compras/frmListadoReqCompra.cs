@@ -26,7 +26,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void FrmRequerimientos_Load(object sender, EventArgs e)
         {
-            groupBox2.Text = Program.Usuario.Trim();
+            groupBox2.Text = Program.Nombre.Trim();
 
             var estados = new[] {
                 new { Estado = 0, Descripcion= "Seleccionar todos" },
@@ -54,11 +54,11 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             int estado = Convert.ToInt32(cboEstado.SelectedValue);
             if (estado == 0)
             {
-                //dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonal(Presentacion.Menu.Personal.Codigo);                 
+                dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonal(Program.CodPersonal);                 
             }
             else
             {
-                //dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonalYEstado(Presentacion.Menu.Personal.Codigo, estado);
+                dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonalYEstado(Program.CodPersonal, estado);
             }
            
         }

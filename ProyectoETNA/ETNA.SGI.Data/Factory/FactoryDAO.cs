@@ -19,6 +19,9 @@ namespace ETNA.SGI.Data.Factory
         public abstract OrdenCompraDAO getOrdenCompraDAO();
         public abstract ProveedorDAO getProveedorDAO();
         public abstract RequerimientoCompraDAO getRequerimientoCompraDAO();
+        public abstract MarcaDAO getMarcaDAO();
+        public abstract ProductoDAO getProductoDAO();
+        public abstract PersonaDAO getPersonaDAO();
 
         public static FactoryDAO getFactory(int keyFactory)
         {

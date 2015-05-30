@@ -7,11 +7,29 @@ using ETNA.SGI.Data.Compras;
 
 namespace ETNA.SGI.Bussiness.Compras
 {
-    public class BMarca
+    public class BMarca : BBase
     {
-        public static List<EMarca> Lista() 
+        private static BMarca bMarca;
+
+        public static BMarca getInstance()
         {
-            return null;// MarcaDAO.Lista();
+            if (bMarca == null)
+            {
+                bMarca = new BMarca();
+            }
+            return bMarca;
+        }
+
+        private MarcaDAO dMarca;
+
+        public BMarca()
+        {
+            this.dMarca = ObjFactoryDAO.getMarcaDAO();
+        } 
+
+        public List<EMarca> Lista() 
+        {
+            return dMarca.Lista();
         } 
     }
 }

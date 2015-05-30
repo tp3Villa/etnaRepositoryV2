@@ -26,8 +26,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void FrmRegistro_Load(object sender, EventArgs e)
         {
-            //groupBox2.Text = Presentacion.Menu.Usuario.Nom_Usuario;
-            groupBox2.Text = Program.Usuario.Trim();
+            groupBox2.Text = Program.Nombre.Trim();
             cboCategoria.DataSource = bCategoria.ObtenerListadoCategoria();
             cboCategoria.DisplayMember = "Descripcion";
             cboCategoria.ValueMember = "Codigo";
@@ -48,7 +47,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     reqDets.Add(reqDet);
                 }
                 ERequerimientoCompra reqCab = new ERequerimientoCompra();
-                //reqCab.IdPersona = Presentacion.Menu.Personal.Codigo;
+                reqCab.IdPersona = Program.CodPersonal;
                 reqCab.CodEstado = 600;
                 reqCab.CodCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
                 reqCab.FechaRegistro = dtFechaRegistro.Value;

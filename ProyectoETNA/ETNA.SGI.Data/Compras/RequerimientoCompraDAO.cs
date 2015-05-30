@@ -21,5 +21,24 @@ namespace ETNA.SGI.Data.Compras
 
         DataTable DGetAllDetalleByCodRequerimientoCompra(int codRequerimientoCompra);
 
+        /* METODOS RICHARD*/
+        List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal);
+
+        List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado);
+
+        List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento);
+
+        List<ECotizacionDetalle> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento);
+
+        int RegistrarCabecera(ERequerimientoCompra reqCab);
+
+        void RegistrarDetalle(ERequerimientoCompraDetalle reqDet);
+
+        void ActualizarCabecera(ERequerimientoCompra reqCab);
+
+        void EliminarDetalle(int codRequerimiento);
+
+        void ActualizarEstado(int codRequerimiento, int codEstado);
+
     }
 }

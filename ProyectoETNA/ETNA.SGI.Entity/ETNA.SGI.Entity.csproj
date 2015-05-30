@@ -53,6 +53,7 @@
     <Compile Include="Compras\ERequerimientoCompraDetalle.cs" />
     <Compile Include="Compras\ERquerimientoCompra.cs" />
     <Compile Include="Compras\EMarca.cs" />
+    <Compile Include="Compras\EPersona.cs" />
     <Compile Include="Exportacion\ELogin.cs" />
     <Compile Include="Exportacion\eReqCab.cs" />
     <Compile Include="Exportacion\EReqDetalle.cs" />

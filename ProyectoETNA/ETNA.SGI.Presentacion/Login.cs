@@ -11,11 +11,15 @@ using System.Windows.Forms;
 using ETNA.SGI.Entity.Exportacion;
 using ETNA.SGI.Bussiness.Exportacion;
 using System.Globalization;
+using ETNA.SGI.Entity.Compras;
+using ETNA.SGI.Bussiness.Compras;
 
 namespace ETNA.SGI.Presentacion
 {
     public partial class Login : Form
     {
+        private BPersona bPersonal = BPersona.getInstance();
+
         public Login()
         {
             InitializeComponent();
@@ -88,7 +92,11 @@ namespace ETNA.SGI.Presentacion
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            proLogin();           
+            proLogin();
+            EPersona personal = bPersonal.obtenerPersonalxUsuario(textBox1.Text);
+            if (personal != null) {
+                Program.CodPersonal = personal.IdPersona;
+            }
             
         }
 

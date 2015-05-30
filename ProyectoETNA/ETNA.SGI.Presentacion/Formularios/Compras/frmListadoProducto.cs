@@ -18,6 +18,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         public event SeleccionarArticulo EventoSeleccionarArticulo;
 
         private BProducto bProducto = BProducto.getInstance();
+        private BMarca bMarca = BMarca.getInstance();
 
         public frmListadoProducto()
         {
@@ -29,7 +30,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             txtCategoria.Text = this.vCategoria.DesCategoria;
 
             //carga la lista de marcas
-            List<EMarca> marcaList = BMarca.Lista();
+            List<EMarca> marcaList = bMarca.Lista();
             EMarca marca = new EMarca();
             marca.CodMarca = 0;
             marca.DesMarca = "--- TODOS ---";

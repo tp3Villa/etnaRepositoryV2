@@ -69,12 +69,29 @@ namespace ETNA.SGI.Entity.Compras
             set { observacion = value; }
         }
 
+        /* RICHARD */
         private int idPersona;
 
         public int IdPersona
         {
             get { return idPersona; }
             set { idPersona = value; }
+        }
+               
+        private string desEstado;
+
+        public string DesEstado
+        {
+            get { return desEstado; }
+            set { desEstado = value; }
+        }
+
+        private string desCategoria;
+
+        public string DesCategoria
+        {
+            get { return desCategoria; }
+            set { desCategoria = value; }
         }
 
     }

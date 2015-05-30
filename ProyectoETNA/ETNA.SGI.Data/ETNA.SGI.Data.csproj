@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compras\Impl\MsSQL\MarcaMsSQLDAO.cs" />
+    <Compile Include="Compras\Impl\MsSQL\PersonaMsSQLDAO.cs" />
+    <Compile Include="Compras\Impl\MsSQL\ProductoMsSQLDAO.cs" />
+    <Compile Include="Compras\MarcaDAO.cs" />
+    <Compile Include="Compras\PersonaDAO.cs" />
+    <Compile Include="Compras\ProductoDAO.cs" />
     <Compile Include="Compras\CategoriaDAO.cs" />
     <Compile Include="Compras\CondicionPagoDAO.cs" />
     <Compile Include="Compras\CotizacionDAO.cs" />

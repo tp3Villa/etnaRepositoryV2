@@ -51,6 +51,7 @@
     <Compile Include="Compras\BEstado.cs" />
     <Compile Include="Compras\BRequerimientoCompra.cs" />
     <Compile Include="Compras\BMarca.cs" />
+    <Compile Include="Compras\BPersona.cs" />
     <Compile Include="Exportacion\BLogin.cs" />
     <Compile Include="Exportacion\BTablas.cs" />
     <Compile Include="Exportacion\BTransaccion.cs" />

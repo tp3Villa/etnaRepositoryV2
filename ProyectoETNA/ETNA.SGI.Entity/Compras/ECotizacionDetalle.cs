@@ -46,5 +46,15 @@ namespace ETNA.SGI.Entity.Compras
             get { return descuento; }
             set { descuento = value; }
         }
+
+        /* RICHARD */
+        private string desProducto;
+
+        public string DesProducto
+        {
+            get { return desProducto; }
+            set { desProducto = value; }
+        }
+
     }
 }

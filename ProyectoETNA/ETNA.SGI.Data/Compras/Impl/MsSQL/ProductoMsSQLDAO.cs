@@ -32,7 +32,7 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarArticulosxCategoria";
+                    cmd.CommandText = "usp_listarProductosxCategoria";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = codCategoria;
 
@@ -66,7 +66,7 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarArticulosxCategoriaMarca";
+                    cmd.CommandText = "usp_listarProductosxCategoriaMarca";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = codCategoria;
                     cmd.Parameters.Add("@CodMarca", SqlDbType.Int).Value = codMarca;

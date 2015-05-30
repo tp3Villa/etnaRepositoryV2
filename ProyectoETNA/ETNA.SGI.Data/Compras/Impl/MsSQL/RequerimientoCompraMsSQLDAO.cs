@@ -196,7 +196,6 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                         }
                     }
                 }
-
             }
             return lista;
         }

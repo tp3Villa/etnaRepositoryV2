@@ -17,7 +17,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         //RCR
         public int vCodReq;
 
-        private BRequerimientoCompra bRequerimientoCompra = BRequerimientoCompra.getInstance();        
+        private BRequerimientoCompra bRequerimientoCompra = BRequerimientoCompra.getInstance();
+
+        private const int ESTADO_PENDIENTE = 1;
+        private const int ESTADO_ANULADA = 3;
 
         public frmListadoReqCompra()
         {
@@ -30,8 +33,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
             var estados = new[] {
                 new { Estado = 0, Descripcion= "Seleccionar todos" },
-                new { Estado = 600, Descripcion = "Pendiente" },
-                new { Estado = 601, Descripcion = "Anulado" }
+                new { Estado = ESTADO_PENDIENTE, Descripcion = "Pendiente Aprobación" },
+                new { Estado = ESTADO_ANULADA, Descripcion = "Anulado" }
             };
             cboEstado.DataSource = estados;
             cboEstado.DisplayMember = "Descripcion";
@@ -54,7 +57,9 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             int estado = Convert.ToInt32(cboEstado.SelectedValue);
             if (estado == 0)
             {
-                dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonal(Program.CodPersonal);                 
+                List<ERequerimientoCompra> listaReqCompra = bRequerimientoCompra.ListarPorCodigoPersonal(Program.CodPersonal);
+
+                dataGridView1.DataSource = listaReqCompra;
             }
             else
             {
@@ -92,7 +97,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 if (dataGridView1.CurrentRow.Index >= 0)
                 {
                     int codEstado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value);
-                    if (codEstado == 600)
+                    if (codEstado == ESTADO_PENDIENTE)
                     {
                         ERequerimientoCompra req = new ERequerimientoCompra();
                         req.CodRequerimiento = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
@@ -122,13 +127,13 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 if (dataGridView1.CurrentRow.Index >= 0)
                 {
                     int codEstado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value);
-                    if (codEstado == 600)
+                    if (codEstado == ESTADO_PENDIENTE)
                     {
                         int codRequerimiento = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                         DialogResult resultado = MessageBox.Show("¿Esta seguro que desea anular el requerimiento " + codRequerimiento.ToString("0000000") + "?", "Anular", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (resultado == DialogResult.Yes)
                         {
-                            bRequerimientoCompra.ActualizarEstado(codRequerimiento, 601);
+                            bRequerimientoCompra.ActualizarEstado(codRequerimiento, ESTADO_ANULADA);
                             listar();
                         }
                     }
@@ -178,7 +183,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             {
                 listar();
             }
-            catch (Exception ex)
+            catch
             { }
         }
 

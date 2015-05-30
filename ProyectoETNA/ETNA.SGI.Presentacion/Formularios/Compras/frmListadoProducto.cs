@@ -58,7 +58,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     dataGridView1.DataSource = bProducto.ListarPorCategoriaYMarca(this.vCategoria.CodCategoria, codMarca);
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
             }

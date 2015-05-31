@@ -28,16 +28,19 @@ namespace ETNA.SGI.Data.Compras
 
         DataTable ListarPorCodigoReqYEstado(int codRequerimiento, int codEstado);
 
-        int RegistrarCabecera(ERequerimientoCompra reqCab);
 
-        void RegistrarDetalle(ERequerimientoCompraDetalle reqDet);
-
-        void ActualizarCabecera(ERequerimientoCompra reqCab);
-
+        /* FALTANNNNNNN ACTUALIZAR */
         void EliminarDetalle(int codRequerimiento);
+        /* FALTANNNNNNN ACTUALIZAR */
 
-        void ActualizarEstado(int codRequerimiento, int codEstado);
+        int Registrar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle);
 
+        //Actualizar datos Cotizacion
+        int Actualizar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle);
+
+
+        //Actualiza estado Requerimiento
+        int ActualizarEstado(int ActualizarEstado, int CodEstado);
 
         DataTable ListaDetallePorCodigoRequerimiento(int codRequerimiento);
     }

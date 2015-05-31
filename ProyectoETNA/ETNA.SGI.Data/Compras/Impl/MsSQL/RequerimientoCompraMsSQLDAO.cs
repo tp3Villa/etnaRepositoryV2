@@ -261,69 +261,155 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             return tabla;
         }
 
-     
-        public int RegistrarCabecera(ERequerimientoCompra reqCab)
+
+        //Insertar datos Requerimiento
+        public int Registrar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {
-            int codigo = 0;
-            using (SqlConnection connection = cn.Conectar)
+            int i = 0;
+
+            cn.Conectar.Open();
+            SqlTransaction transaction = cn.Conectar.BeginTransaction();
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
+                // Se registra la cabecera de la Cotizacion
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                string sql = "INSERT INTO RequerimientoCompra (codRequerimiento ,codEstado ,codCategoria, fechaRegistro, fechaActualizacion, usuarioRegistro, usuarioModificacion, observacion) " +
+                " VALUES (@codRequerimiento, @codEstado, @codCategoria, @fechaRegistro, @fechaActualizacion, @usuarioRegistro, @usuarioActualizacion, @observacion)";
+
+                // Configurando los parametros
+                command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+                command.Parameters["@codRequerimiento"].Value = eRequerimientoCompra.CodRequerimiento;
+                command.Parameters.Add("@codEstado", SqlDbType.Int);
+                command.Parameters["@codEstado"].Value = eRequerimientoCompra.CodEstado;
+                command.Parameters.Add("@codCategoria", SqlDbType.Int);
+                command.Parameters["@codCategoria"].Value = eRequerimientoCompra.CodCategoria;
+                command.Parameters.Add("@fechaRegistro", SqlDbType.DateTime);
+                command.Parameters["@fechaRegistro"].Value = eRequerimientoCompra.FechaRegistro;
+                command.Parameters.Add("@fechaActualizacion", SqlDbType.DateTime);
+                command.Parameters["@fechaActualizacion"].Value = eRequerimientoCompra.FechaActualizacion;
+                command.Parameters.Add("@usuarioRegistro", SqlDbType.VarChar);
+                command.Parameters["@usuarioRegistro"].Value = eRequerimientoCompra.UsuarioRegistro;
+                command.Parameters.Add("@usuarioActualizacion", SqlDbType.VarChar);
+                command.Parameters["@usuarioActualizacion"].Value = eRequerimientoCompra.UsuarioModificacion;
+                command.Parameters.Add("@observacion", SqlDbType.VarChar);
+                command.Parameters["@observacion"].Value = eRequerimientoCompra.Observacion;
+
+                command.CommandText = sql;
+                command.Connection = cn.Conectar;
+                command.Transaction = transaction;
+                command.ExecuteNonQuery();
+
+                // Se obtiene el codigo de la requerimiento registrado
+
+                int codRequerimiento = eRequerimientoCompra.CodRequerimiento;
+
+                // Se registra el detalle de la Orden de Compra
+                foreach (ERequerimientoCompraDetalle eRequerimientoCompraDetalle in listaERequerimientoCompraDetalle)
                 {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_registrarRequerimiento";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodEstado", SqlDbType.Int).Value = reqCab.CodEstado;
-                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = reqCab.CodCategoria;
-                    cmd.Parameters.Add("@FechaRegistro", SqlDbType.DateTime).Value = reqCab.FechaRegistro;
-                    cmd.Parameters.Add("@FechaActualizacion", SqlDbType.DateTime).Value = reqCab.FechaActualizacion;
-                    cmd.Parameters.Add("@UsuarioRegistro", SqlDbType.VarChar).Value = reqCab.UsuarioRegistro;
-                    cmd.Parameters.Add("@UsuarioModificacion", SqlDbType.VarChar).Value = reqCab.UsuarioModificacion;
-                    cmd.Parameters.Add("@Observacion", SqlDbType.VarChar).Value = reqCab.Observacion;
-                    cmd.Parameters.Add("@CodPersonal", SqlDbType.Int).Value = reqCab.IdPersona;
-                    codigo = Convert.ToInt32(cmd.ExecuteScalar());
+                    command = new SqlCommand();
+                    command.CommandType = CommandType.Text;
+                    sql = "INSERT INTO RequerimientoDetalleCompra " +
+                              "(codRequerimiento,idProducto,cantidad) " +
+                          "VALUES " +
+                              "(@codRequerimiento,@idProducto,@cantidad) ";
+
+                    command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+                    command.Parameters["@codRequerimiento"].Value = codRequerimiento;
+                    command.Parameters.Add("@idProducto", SqlDbType.Int);
+                    command.Parameters["@idProducto"].Value = eRequerimientoCompraDetalle.IdProducto;
+                    command.Parameters.Add("@cantidad", SqlDbType.Int);
+                    command.Parameters["@cantidad"].Value = eRequerimientoCompraDetalle.Cantidad;
+    
+
+                    command.CommandText = sql;
+                    command.Connection = cn.Conectar;
+                    command.Transaction = transaction;
+                    command.ExecuteNonQuery();
                 }
+
+                transaction.Commit();
+                i = 1;
             }
-            return codigo;
+            catch
+            {
+                transaction.Rollback();
+            }
+            cn.Conectar.Close();
+            return i;
         }
 
-        public void RegistrarDetalle(ERequerimientoCompraDetalle reqDet)
+
+        //Actualizar datos Requerimiento
+        public int Actualizar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {
-            using (SqlConnection connection = cn.Conectar)
+            int i = 0;
+
+            cn.Conectar.Open();
+            SqlTransaction transaction = cn.Conectar.BeginTransaction();
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
+                // Se actualiza datos  la cabecera de Cotizacion
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                string sql = "UPDATE RequerimientoCompra " +
+               "SET codCategoria = @codCategoria " +
+                          ",observacion = @observacion " +
+                          ",fechaActualizacion = @fechaActualizacion " +
+                          ",usuarioModificacion = @usuarioModificacion " +
+                     " WHERE codRequerimiento = @codRequerimiento ";
+
+
+                // Configurando los parametros
+                command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+                command.Parameters["@codRequerimiento"].Value = eRequerimientoCompra.CodRequerimiento;
+                command.Parameters.Add("@codCategoria", SqlDbType.Int);
+                command.Parameters["@codCategoria"].Value = eRequerimientoCompra.CodCategoria;
+                command.Parameters.Add("@observacion", SqlDbType.VarChar);
+                command.Parameters["@observacion"].Value = eRequerimientoCompra.Observacion;
+                    command.Parameters.Add("@fechaActualizacion", SqlDbType.DateTime);
+                command.Parameters["@fechaActualizacion"].Value = eRequerimientoCompra.FechaActualizacion;
+                command.Parameters.Add("@usuarioModificacion", SqlDbType.VarChar);
+                command.Parameters["@usuarioModificacion"].Value = eRequerimientoCompra.UsuarioModificacion;
+
+                command.CommandText = sql;
+                command.Connection = cn.Conectar;
+                command.Transaction = transaction;
+                command.ExecuteNonQuery();
+
+                // Se actualiza el detalle de la cotizacion
+                foreach (ERequerimientoCompraDetalle eRequerimientoCompraDetalle in listaERequerimientoCompraDetalle)
                 {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_registrarRequetimientoDetalle";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = reqDet.CodRequerimiento;
-                    cmd.Parameters.Add("@CodArticulo", SqlDbType.Int).Value = reqDet.IdProducto;
-                    cmd.Parameters.Add("@Cantidad", SqlDbType.Int).Value = reqDet.Cantidad;
-                    cmd.ExecuteNonQuery();
+                    command = new SqlCommand();
+                    command.CommandType = CommandType.Text;
+                    sql = "UPDATE CotizacionDetalle " +
+                     "SET cantidad = @cantidad " +
+                    " WHERE codRequerimiento = @codRequerimiento AND idProducto = @idProducto ";
+
+                    command.Parameters.Add("@codCotizacion", SqlDbType.Int);
+                    command.Parameters["@codCotizacion"].Value = eRequerimientoCompraDetalle.CodRequerimiento;
+                    command.Parameters.Add("@idProducto", SqlDbType.Int);
+                    command.Parameters["@idProducto"].Value = eRequerimientoCompraDetalle.IdProducto;
+                    command.Parameters.Add("@cantidad", SqlDbType.Int);
+                    command.Parameters["@cantidad"].Value = eRequerimientoCompraDetalle.Cantidad;
+
+                    command.CommandText = sql;
+                    command.Connection = cn.Conectar;
+                    command.Transaction = transaction;
+                    command.ExecuteNonQuery();
                 }
+
+                transaction.Commit();
+                i = 1;
             }
+            catch
+            {
+                transaction.Rollback();
+            }
+            cn.Conectar.Close();
+            return i;
         }
 
-        public void ActualizarCabecera(ERequerimientoCompra reqCab)
-        {
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_actualizarRequerimiento";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = reqCab.CodRequerimiento;
-                    cmd.Parameters.Add("@CodPersonal", SqlDbType.Int).Value = reqCab.IdPersona;
-                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = reqCab.CodCategoria;
-                    cmd.Parameters.Add("@FechaRegistro", SqlDbType.DateTime).Value = reqCab.FechaRegistro;
-                    cmd.Parameters.Add("@Observacion", SqlDbType.VarChar).Value = reqCab.Observacion;
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
 
         public void EliminarDetalle(int codRequerimiento)
         {
@@ -341,21 +427,30 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             }
         }
 
-        public void ActualizarEstado(int codRequerimiento, int codEstado)
+ 
+        //Actualiza estado requerimiento
+        public int ActualizarEstado(int codRequerimiento, int codEstado)
         {
-            using (SqlConnection connection = cn.Conectar)
+            int i = 0;
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_actualizarEstadoRequerimiento";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
-                    cmd.Parameters.Add("@CodEstado", SqlDbType.Int).Value = codEstado;
-                    cmd.ExecuteNonQuery();
-                }
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+
+                string sql = "UPDATE RequerimientoCompra SET codEstado='" + codEstado + "'  WHERE codRequerimiento='" + codRequerimiento + "'";
+                cmd.CommandText = sql;
+                cmd.Connection = cn.Conectar;
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                i = 1;
+                cmd.Dispose();
+                //cn.Conectar.Dispose();
+                cn.Conectar.Close();
             }
+            catch { throw; }
+            return i;
         }
+
+
     }
 }

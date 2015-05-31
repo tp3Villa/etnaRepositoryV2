@@ -51,12 +51,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.CodigoRequerimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -79,7 +79,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(993, 399);
+            this.groupBox2.Size = new System.Drawing.Size(1062, 406);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -99,8 +99,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(989, 382);
-            this.splitContainer1.SplitterDistance = 217;
+            this.splitContainer1.Size = new System.Drawing.Size(1058, 389);
+            this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -112,7 +112,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(989, 160);
+            this.groupBox4.Size = new System.Drawing.Size(1058, 163);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
@@ -136,7 +136,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 143);
+            this.dataGridView1.Size = new System.Drawing.Size(1054, 146);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -144,14 +144,14 @@
             // 
             // CodRequerimiento
             // 
-            this.CodRequerimiento.DataPropertyName = "Codigo";
+            this.CodRequerimiento.DataPropertyName = "codRequerimiento";
             this.CodRequerimiento.HeaderText = "Codigo";
             this.CodRequerimiento.Name = "CodRequerimiento";
             this.CodRequerimiento.ReadOnly = true;
             // 
             // FechaRegistro
             // 
-            this.FechaRegistro.DataPropertyName = "FechaRegistro";
+            this.FechaRegistro.DataPropertyName = "fechaRegistro";
             this.FechaRegistro.HeaderText = "Fecha Registro";
             this.FechaRegistro.Name = "FechaRegistro";
             this.FechaRegistro.ReadOnly = true;
@@ -159,7 +159,7 @@
             // 
             // Observacion
             // 
-            this.Observacion.DataPropertyName = "Observacion";
+            this.Observacion.DataPropertyName = "observacion";
             this.Observacion.HeaderText = "Observación";
             this.Observacion.Name = "Observacion";
             this.Observacion.ReadOnly = true;
@@ -167,15 +167,15 @@
             // 
             // CodigoEstado
             // 
-            this.CodigoEstado.DataPropertyName = "CodigoEstado";
-            this.CodigoEstado.HeaderText = "CodigoEstado";
+            this.CodigoEstado.DataPropertyName = "codEstado";
+            this.CodigoEstado.HeaderText = "Codigo Estado";
             this.CodigoEstado.Name = "CodigoEstado";
             this.CodigoEstado.ReadOnly = true;
             this.CodigoEstado.Visible = false;
             // 
             // DescripcionEstado
             // 
-            this.DescripcionEstado.DataPropertyName = "DescripcionEstado";
+            this.DescripcionEstado.DataPropertyName = "desEstado";
             this.DescripcionEstado.HeaderText = "Estado";
             this.DescripcionEstado.Name = "DescripcionEstado";
             this.DescripcionEstado.ReadOnly = true;
@@ -183,15 +183,15 @@
             // 
             // CodigoCategoria
             // 
-            this.CodigoCategoria.DataPropertyName = "CodigoCategoria";
-            this.CodigoCategoria.HeaderText = "CodigoCategoria";
+            this.CodigoCategoria.DataPropertyName = "codCategoria";
+            this.CodigoCategoria.HeaderText = "Codigo Categoria";
             this.CodigoCategoria.Name = "CodigoCategoria";
             this.CodigoCategoria.Visible = false;
             // 
             // DescripcionCategoria
             // 
-            this.DescripcionCategoria.DataPropertyName = "DescripcionCategoria";
-            this.DescripcionCategoria.HeaderText = "Descripcioncategoria";
+            this.DescripcionCategoria.DataPropertyName = "desCategoria";
+            this.DescripcionCategoria.HeaderText = "Descripcion Categoria";
             this.DescripcionCategoria.Name = "DescripcionCategoria";
             this.DescripcionCategoria.Visible = false;
             // 
@@ -236,7 +236,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(989, 57);
+            this.groupBox3.Size = new System.Drawing.Size(1058, 57);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -267,6 +267,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(192, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label1
@@ -287,7 +288,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(989, 162);
+            this.groupBox1.Size = new System.Drawing.Size(1058, 166);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle ";
@@ -297,84 +298,80 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodigoRequerimiento,
-            this.CodigoArticulo,
-            this.Categoria,
-            this.Marca,
-            this.Descripcion,
-            this.Unidad,
+            this.idProducto,
+            this.descripcionProducto,
+            this.codCategoria,
+            this.desCategoria,
+            this.codMarca,
+            this.desMarca,
             this.Cantidad});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(2, 15);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(985, 145);
+            this.dataGridView2.Size = new System.Drawing.Size(1054, 149);
             this.dataGridView2.TabIndex = 0;
-            
             // 
-            // CodigoRequerimiento
+            // idProducto
             // 
-            this.CodigoRequerimiento.DataPropertyName = "CodigoRequerimiento";
-            this.CodigoRequerimiento.HeaderText = "Cod.Requerimiento";
-            this.CodigoRequerimiento.Name = "CodigoRequerimiento";
-            this.CodigoRequerimiento.ReadOnly = true;
-            this.CodigoRequerimiento.Width = 150;
+            this.idProducto.DataPropertyName = "idProducto";
+            this.idProducto.HeaderText = "Id Producto";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
             // 
-            // CodigoArticulo
+            // descripcionProducto
             // 
-            this.CodigoArticulo.DataPropertyName = "CodigoArticulo";
-            this.CodigoArticulo.HeaderText = "Cod.Producto";
-            this.CodigoArticulo.Name = "CodigoArticulo";
-            this.CodigoArticulo.ReadOnly = true;
-            this.CodigoArticulo.Width = 150;
+            this.descripcionProducto.DataPropertyName = "descripcionProducto";
+            this.descripcionProducto.HeaderText = "Desc. Producto";
+            this.descripcionProducto.MaxInputLength = 200;
+            this.descripcionProducto.Name = "descripcionProducto";
+            this.descripcionProducto.ReadOnly = true;
+            this.descripcionProducto.Width = 200;
             // 
-            // Categoria
+            // codCategoria
             // 
-            this.Categoria.DataPropertyName = "DescripcionCategoria";
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 200;
+            this.codCategoria.DataPropertyName = "codCategoria";
+            this.codCategoria.HeaderText = "Cod Categoria";
+            this.codCategoria.Name = "codCategoria";
+            this.codCategoria.ReadOnly = true;
             // 
-            // Marca
+            // desCategoria
             // 
-            this.Marca.DataPropertyName = "DescripcionMarca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            this.Marca.Width = 200;
+            this.desCategoria.DataPropertyName = "desCategoria";
+            this.desCategoria.HeaderText = "Descr. Categoria";
+            this.desCategoria.Name = "desCategoria";
+            this.desCategoria.Width = 200;
             // 
-            // Descripcion
+            // codMarca
             // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 400;
+            this.codMarca.DataPropertyName = "codMarca";
+            this.codMarca.HeaderText = "Cod Marca";
+            this.codMarca.Name = "codMarca";
+            this.codMarca.ReadOnly = true;
             // 
-            // Unidad
+            // desMarca
             // 
-            this.Unidad.DataPropertyName = "Unidad";
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
+            this.desMarca.DataPropertyName = "desMarca";
+            this.desMarca.HeaderText = "Descr.  Marca";
+            this.desMarca.Name = "desMarca";
+            this.desMarca.Width = 200;
             // 
             // Cantidad
             // 
-            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.DataPropertyName = "cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
-            // FrmRequerimientos
+            // frmListadoReqCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 399);
+            this.ClientSize = new System.Drawing.Size(1062, 406);
             this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmRequerimientos";
+            this.Name = "frmListadoReqCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Requerimientos de Compra";
             this.Load += new System.EventHandler(this.FrmRequerimientos_Load);
@@ -406,6 +403,11 @@
         private System.Windows.Forms.ToolStripMenuItem anularToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodRequerimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
@@ -413,17 +415,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionCategoria;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoRequerimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

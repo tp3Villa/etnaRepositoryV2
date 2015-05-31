@@ -22,6 +22,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private const int ESTADO_PENDIENTE = 1;
         private const int ESTADO_ANULADA = 3;
 
+        private BEstado bEstado = BEstado.getInstance();
+
+        DataTable dtEstado = new DataTable();
+
         public frmListadoReqCompra()
         {
             InitializeComponent();
@@ -31,7 +35,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         {
             groupBox2.Text = Program.Nombre.Trim();
 
-            var estados = new[] {
+            /*var estados = new[] {
                 new { Estado = 0, Descripcion= "Seleccionar todos" },
                 new { Estado = ESTADO_PENDIENTE, Descripcion = "Pendiente Aprobación" },
                 new { Estado = ESTADO_ANULADA, Descripcion = "Anulado" }
@@ -39,8 +43,21 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             cboEstado.DataSource = estados;
             cboEstado.DisplayMember = "Descripcion";
             cboEstado.ValueMember = "Estado";
+            */
 
-            listar();
+            dtEstado = bEstado.ObtenerListadoEstadoPorReqCompra();
+            cboEstado.DataSource = dtEstado;
+            cboEstado.DisplayMember = "desEstado";
+            cboEstado.ValueMember = "codEstado";
+
+            DataRow dr = dtEstado.NewRow();
+            dr["desEstado"] = "Todos";
+            dr["codEstado"] = 0;
+
+            dtEstado.Rows.InsertAt(dr, 0);
+            cboEstado.SelectedIndex = 0;
+
+           listar();
         }
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,20 +74,21 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             int estado = Convert.ToInt32(cboEstado.SelectedValue);
             if (estado == 0)
             {
-                List<ERequerimientoCompra> listaReqCompra = bRequerimientoCompra.ListarPorCodigoPersonal(Program.CodPersonal);
+                DataTable tblReqCompra= new DataTable();
+                tblReqCompra = bRequerimientoCompra.ListarPorCodigoPersonal(Program.Usuario);
 
-                dataGridView1.DataSource = listaReqCompra;
+                dataGridView1.DataSource = tblReqCompra;
             }
             else
             {
-                dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonalYEstado(Program.CodPersonal, estado);
+                dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonalYEstado(Program.Usuario, estado);
             }
            
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+           if (dataGridView1.Rows.Count > 0)
             {
                 int codRequerimiento = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                 dataGridView2.DataSource = bRequerimientoCompra.ListaDetallePorCodigoRequerimiento(codRequerimiento);
@@ -79,7 +97,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+           if (e.Button == MouseButtons.Right)
             {
                 DataGridView.HitTestInfo hitTest = dataGridView1.HitTest(e.X, e.Y);
                 if (hitTest.Type == DataGridViewHitTestType.Cell)
@@ -92,7 +110,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+          /*  if (dataGridView1.Rows.Count > 0)
             {
                 if (dataGridView1.CurrentRow.Index >= 0)
                 {
@@ -117,7 +135,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                         MessageBox.Show("Estado no permite modificar el requerimiento", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
+            }*/
         }
 
         private void anularToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,7 +165,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar) || e.KeyChar == (Char)Keys.Back)
+           if (Char.IsNumber(e.KeyChar) || e.KeyChar == (Char)Keys.Back)
             {
                 e.Handled = false;
             }
@@ -189,7 +207,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+          if (e.ColumnIndex == 0)
             {
                 try
                 {
@@ -198,10 +216,22 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 }
                 catch { }
             }
-
+         
         }
 
-
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            int estado = Convert.ToInt32(cboEstado.SelectedValue);
+            if  (txtCodigo.Text != "")
+            {         
+            int codreq = Convert.ToInt32(txtCodigo.Text);
+            dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoReqYEstado(codreq , estado);
+            }else {
+                DataTable tblReqCompra = new DataTable();
+                tblReqCompra = bRequerimientoCompra.ListarPorCodigoPersonal(Program.Usuario);
+                dataGridView1.DataSource = tblReqCompra;
+            }
+        }
 
  
     }

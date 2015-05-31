@@ -78,29 +78,24 @@ namespace ETNA.SGI.Bussiness.Compras
 
         
 
-        public void Registrar(ERequerimientoCompra reqCab, List<ERequerimientoCompraDetalle> reqDets)
+        // Registrar Requerimiento
+        public int Registrar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {
-            int codigo = dRequerimientoCompra.RegistrarCabecera(reqCab);
-            foreach (ERequerimientoCompraDetalle reqDet in reqDets)
-            {
-                reqDet.CodRequerimiento = codigo;
-                dRequerimientoCompra.RegistrarDetalle(reqDet);
-            }
+            return dRequerimientoCompra.Registrar(eRequerimientoCompra, listaERequerimientoCompraDetalle);
         }
 
-        public void Actualizar(ERequerimientoCompra reqCab, List<ERequerimientoCompraDetalle> reqDets)
+
+        // Actualizar Requerimiento
+        public int Actualizar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {
-            dRequerimientoCompra.ActualizarCabecera(reqCab);
-            dRequerimientoCompra.EliminarDetalle(reqCab.CodRequerimiento);
-            foreach (ERequerimientoCompraDetalle reqDet in reqDets)
-            {
-                dRequerimientoCompra.RegistrarDetalle(reqDet);
-            }
+            return dRequerimientoCompra.Actualizar(eRequerimientoCompra, listaERequerimientoCompraDetalle);
         }
 
-        public void ActualizarEstado(int codRequerimiento, int codEstado)
+
+        //Actualiza estado Requerimiento
+        public int ActualizarEstado(int CodCotizacion, int CodEstado)
         {
-            dRequerimientoCompra.ActualizarEstado(codRequerimiento, codEstado);
+            return dRequerimientoCompra.ActualizarEstado(CodCotizacion, CodEstado);
         }
     }
 }

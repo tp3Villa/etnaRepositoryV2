@@ -21,6 +21,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         ECotizacion cotizacion = new ECotizacion();
         BCotizacion bCotizacion = BCotizacion.getInstance();
         ECotizacionDetalle cotizacionDetalle = new ECotizacionDetalle();
+
+        EProveedor proveedor = new EProveedor();
+        BProveedor bProveedor = BProveedor.getInstance();
+
         public frmCotizacion()
         {
             InitializeComponent();
@@ -44,6 +48,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 btnFindProv.Enabled = false;
                 btnFindReq.Enabled = false;
                 txtDescripcion.Enabled = false;
+                dtExpiracion.Enabled = false;
 
                 DataTable tblDetalle2 = new DataTable();
 
@@ -157,6 +162,16 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frm.ShowDialog();
 
             txtProveedor.Text = frm.vCodigo;
+
+            if  (txtProveedor.Text != "")
+            {
+            DataTable tblDetalle = new DataTable();
+
+            proveedor.CodProveedor = Convert.ToInt32(txtProveedor.Text);
+            tblDetalle = bProveedor.DGetProveedorById(proveedor);
+
+            txtDescProveedor.Text = tblDetalle.Rows[0]["razonSocial"].ToString();
+            }
         }
         
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -173,16 +188,17 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
             string fecha;
             FechaSis = DateTime.Now;
-
-            if (dtExpiracion.Value <= DateTime.Today)
+            if (sOpcion != "UPD")
             {
+                if (dtExpiracion.Value <= DateTime.Today)
+                {
     
-                MessageBox.Show("Debe seleccionar una fecha de expiracìón mayor a la actual", "Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dtExpiracion.Focus();
-                this.Cursor = Cursors.Default;
-                return; 
+                    MessageBox.Show("Debe seleccionar una fecha de expiracìón mayor a la actual", "Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtExpiracion.Focus();
+                    this.Cursor = Cursors.Default;
+                    return; 
+                }
             }
-
 
             if (txtRequerimiento.Text == "") 
             { 
@@ -334,6 +350,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 }
                 
         }
+
 
    
     }

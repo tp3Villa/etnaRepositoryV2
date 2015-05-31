@@ -17,7 +17,9 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private BCotizacion bCotizacion = BCotizacion.getInstance();
         private BEstado bEstado = BEstado.getInstance();
-        DataTable dtCotizacion = new DataTable();
+        DataTable dtEstado = new DataTable();
+
+        ECotizacion cotizacion = new ECotizacion();
 
         public frmListadoCotizacion()
         {
@@ -50,20 +52,20 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            ECotizacion eCotizacion = new ECotizacion();
+        
             if (!"".Equals(txtCotizacion.Text))
             {
-                eCotizacion.CodCotizacion = Int32.Parse(txtCotizacion.Text);
+                cotizacion.CodCotizacion = Int32.Parse(txtCotizacion.Text);
             }
             if (!"".Equals(txtRequerimiento.Text))
             {
-                eCotizacion.CodRequerimiento = Int32.Parse(txtRequerimiento.Text);
+                cotizacion.CodRequerimiento = Int32.Parse(txtRequerimiento.Text);
             }
 
-            eCotizacion.CodEstado = (int)cboEstado.SelectedValue;
+            cotizacion.CodEstado = (int)cboEstado.SelectedValue;
 
             DataTable tblDetalle = new DataTable();
-            tblDetalle = bCotizacion.ObtenerListadoCotizacion(eCotizacion);
+            tblDetalle = bCotizacion.ObtenerListadoCotizacion(cotizacion);
             dtGridCot.DataSource = tblDetalle;
 
         }
@@ -79,16 +81,19 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Formularios.Compras.frmCotizacion frm = new Formularios.Compras.frmCotizacion();
-            frm.Show();
+            frm.ShowDialog();
             //this.Cursor = Cursors.Default;
 
             /* Listado de nuevo */
             // Carga de Grilla
-            ECotizacion eCotizacion = new ECotizacion();
-            eCotizacion.CodEstado = (int)cboEstado.SelectedValue;
+            cboEstado.SelectedIndex = 0;
 
+            txtCotizacion.Text = "";
+            txtRequerimiento.Text = "";
+
+            // Carga de Grilla
             DataTable tblDetalle = new DataTable();
-            tblDetalle = bCotizacion.ObtenerListadoCotizacion(eCotizacion);
+            tblDetalle = bCotizacion.ObtenerListadoCotizacion(cotizacion);
             dtGridCot.DataSource = tblDetalle;
 
 
@@ -97,7 +102,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private void frmListadoCotizacion_Load(object sender, EventArgs e)
         {
             // Carga de Combo Estado
-            DataTable dtEstado = bEstado.ObtenerListadoEstadoPorCotizacion();
+            dtEstado = bEstado.ObtenerListadoEstadoPorCotizacion();
             cboEstado.DataSource = dtEstado;
             cboEstado.DisplayMember = "desEstado";
             cboEstado.ValueMember = "codEstado";
@@ -114,7 +119,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
             // Carga de Grilla
             DataTable tblDetalle = new DataTable();
-            tblDetalle = bCotizacion.ObtenerListadoCotizacion(new ECotizacion());
+            tblDetalle = bCotizacion.ObtenerListadoCotizacion(cotizacion);
             dtGridCot.DataSource = tblDetalle;
         }
 

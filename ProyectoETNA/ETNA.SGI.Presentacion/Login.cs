@@ -93,11 +93,7 @@ namespace ETNA.SGI.Presentacion
         {
 
             proLogin();
-            EPersona personal = bPersonal.obtenerPersonalxUsuario(textBox1.Text);
-            if (personal != null) {
-                Program.CodPersonal = personal.IdPersona;
-            }
-            
+                      
         }
 
         private void Login_Load(object sender, EventArgs e)

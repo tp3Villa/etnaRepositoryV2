@@ -13,5 +13,7 @@ namespace ETNA.SGI.Data.Compras
         DataTable DGetAllEstadoByOrdenCompra();
 
         DataTable DGetAllEstadoByCotizacion();
+
+        DataTable DGetAllEstadoByReqCompra();
     }
 }

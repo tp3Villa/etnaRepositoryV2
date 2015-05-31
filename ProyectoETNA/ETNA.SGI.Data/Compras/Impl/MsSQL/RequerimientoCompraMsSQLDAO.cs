@@ -166,140 +166,102 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
 
 
         /* METODOS RICHARD */
-        public List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal)
+        public DataTable ListarPorCodigoPersonal(string usuarioRegistro)
         {
-            List<ERequerimientoCompra> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarRequerimientoxCodPersonal";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@idPersona", SqlDbType.Int).Value = codPersonal;
+            string sql = "select a.codRequerimiento,a.fechaRegistro, a.observacion, a.codEstado, b.desEstado, a.codCategoria, c.desCategoria " +
+                  " from RequerimientoCompra a, Estado b, Categoria c where " +
+                  " b.codEstado = a.codEstado and c.codCategoria = a.codCategoria " +
+                  " and a.usuarioRegistro = @usuarioRegistro ";
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<ERequerimientoCompra>();
-                        while (reader.Read())
-                        {
-                            ERequerimientoCompra req = new ERequerimientoCompra();
-                            req.CodRequerimiento = reader.GetInt32(0);
-                            req.FechaRegistro = reader.GetDateTime(1);
-                            req.Observacion = reader.GetString(2);
-                            req.CodEstado = reader.GetInt32(3);
-                            req.DesEstado = reader.GetString(4);
-                            req.CodCategoria = reader.GetInt32(5);
-                            req.DesCategoria = reader.GetString(6);
-                            lista.Add(req);
-                        }
-                    }
-                }
-            }
-            return lista;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@usuarioRegistro", SqlDbType.VarChar);
+            command.Parameters["@usuarioRegistro"].Value = usuarioRegistro;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
 
-        public List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado)
+        public DataTable ListarPorCodigoPersonalYEstado(string usuarioRegistro, int codEstado)
         {
-            List<ERequerimientoCompra> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarRequerimientoxCodPersonalyEstado";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@idPersona", SqlDbType.Int).Value = codPersonal;
-                    cmd.Parameters.Add("@codEstado", SqlDbType.Int).Value = codEstado;
+            string sql = "select a.codRequerimiento,a.fechaRegistro, a.observacion, a.codEstado, b.desEstado, a.codCategoria, c.desCategoria " +
+          " from RequerimientoCompra a, Estado b, Categoria c where " +
+          " b.codEstado = a.codEstado and c.codCategoria = a.codCategoria " +
+          " and a.usuarioRegistro = @usuarioRegistro AND a.codEstado = @codEstado";
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<ERequerimientoCompra>();
-                        while (reader.Read())
-                        {
-                            ERequerimientoCompra req = new ERequerimientoCompra();
-                            req.CodRequerimiento = reader.GetInt32(0);
-                            req.FechaRegistro = reader.GetDateTime(1);
-                            req.Observacion = reader.GetString(2);
-                            req.CodEstado = reader.GetInt32(3);
-                            req.DesEstado = reader.GetString(4);
-                            req.CodCategoria = reader.GetInt32(5);
-                            req.DesCategoria = reader.GetString(6);
-                            lista.Add(req);
-                        }
-                    }
-                }
+ 
+            SqlDataAdapter adapter = new SqlDataAdapter();
 
-            }
-            return lista;
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@usuarioRegistro", SqlDbType.VarChar);
+            command.Parameters["@usuarioRegistro"].Value = usuarioRegistro;
+            command.Parameters.Add("@codEstado", SqlDbType.Int);
+            command.Parameters["@codEstado"].Value = codEstado;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
 
-        public List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento)
-        {
-            List<ERequerimientoCompraDetalle> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarRequerimientoDetalle";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<ERequerimientoCompraDetalle>();
-                        while (reader.Read())
-                        {
-                            ERequerimientoCompraDetalle reqDet = new ERequerimientoCompraDetalle();
-                            reqDet.CodRequerimiento = reader.GetInt32(0);
-                            reqDet.IdProducto = reader.GetInt32(1);
-                            reqDet.DesCategoria = reader.GetString(2);
-                            reqDet.DesMarca = reader.GetString(3);
-                            reqDet.Descripcion = reader.GetString(4);
-                            reqDet.TipoUnidad = reader.GetString(5);
-                            reqDet.Cantidad = reader.GetInt32(6);
-                            lista.Add(reqDet);
-                        }
-                    }
-                }
-            }
-            return lista;
+        public DataTable ListarPorCodigoReqYEstado(int codRequerimiento, int codEstado)
+        {
+            string sql = "select a.codRequerimiento,a.fechaRegistro, a.observacion, a.codEstado, b.desEstado, a.codCategoria, c.desCategoria " +
+          " from RequerimientoCompra a, Estado b, Categoria c where " +
+          " b.codEstado = a.codEstado and c.codCategoria = a.codCategoria " +
+          " and a.codRequerimiento = @codRequerimiento AND ( @codEstado = 0 OR a.codEstado = @codEstado)";
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+            command.Parameters["@codRequerimiento"].Value = codRequerimiento;
+            command.Parameters.Add("@codEstado", SqlDbType.Int);
+            command.Parameters["@codEstado"].Value = codEstado;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
 
-        public List<ECotizacionDetalle> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento)
-        {
-            List<ECotizacionDetalle> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarRequerimientoDetalleCotizacion";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<ECotizacionDetalle>();
-                        while (reader.Read())
-                        {
-                            ECotizacionDetalle reqDet = new ECotizacionDetalle();
-                            reqDet.IdProducto = reader.GetInt32(0);
-                            reqDet.DesProducto = reader.GetString(1);
-                            reqDet.Cantidad = reader.GetInt32(2);
-                            lista.Add(reqDet);
-                        }
-                    }
-                }
-            }
-            return lista;
+        public DataTable ListaDetallePorCodigoRequerimiento(int codRequerimiento)
+        {
+            string sql = "select a.idProducto, b.descripcionProducto, b.codCategoria, c.desCategoria, b.codMarca, d.desMarca, a.cantidad " +
+          " from RequerimientoDetalleCompra a, producto b, Categoria c, Marca d " +
+          " where b.idProducto = a.idProducto and c.codCategoria = b.codCategoria and d.codMarca = b.codMarca " +
+          " and a.codRequerimiento = @codRequerimiento";
+
+             SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+            command.Parameters["@codRequerimiento"].Value = codRequerimiento;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
 
+     
         public int RegistrarCabecera(ERequerimientoCompra reqCab)
         {
             int codigo = 0;

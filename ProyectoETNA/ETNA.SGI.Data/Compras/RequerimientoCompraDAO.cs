@@ -22,13 +22,11 @@ namespace ETNA.SGI.Data.Compras
         DataTable DGetAllDetalleByCodRequerimientoCompra(int codRequerimientoCompra);
 
         /* METODOS RICHARD*/
-        List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal);
+        DataTable ListarPorCodigoPersonal(string usuarioRegistro);
 
-        List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado);
+        DataTable ListarPorCodigoPersonalYEstado(string usuarioRegistro, int codEstado);
 
-        List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento);
-
-        List<ECotizacionDetalle> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento);
+        DataTable ListarPorCodigoReqYEstado(int codRequerimiento, int codEstado);
 
         int RegistrarCabecera(ERequerimientoCompra reqCab);
 
@@ -40,5 +38,7 @@ namespace ETNA.SGI.Data.Compras
 
         void ActualizarEstado(int codRequerimiento, int codEstado);
 
+
+        DataTable ListaDetallePorCodigoRequerimiento(int codRequerimiento);
     }
 }

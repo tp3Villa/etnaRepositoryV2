@@ -54,5 +54,21 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             adapter.Fill(tabla);
             return tabla;
         }
+
+        public DataTable DGetAllEstadoByReqCompra()
+        {
+            string sql = "SELECT codEstado,desEstado FROM Estado where codEstado in (1,3,2)";
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            // Create the SelectCommand.
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
+        }
     }
 }

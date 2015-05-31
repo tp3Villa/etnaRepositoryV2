@@ -35,16 +35,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         {
             groupBox2.Text = Program.Nombre.Trim();
 
-            /*var estados = new[] {
-                new { Estado = 0, Descripcion= "Seleccionar todos" },
-                new { Estado = ESTADO_PENDIENTE, Descripcion = "Pendiente Aprobación" },
-                new { Estado = ESTADO_ANULADA, Descripcion = "Anulado" }
-            };
-            cboEstado.DataSource = estados;
-            cboEstado.DisplayMember = "Descripcion";
-            cboEstado.ValueMember = "Estado";
-            */
-
             dtEstado = bEstado.ObtenerListadoEstadoPorReqCompra();
             cboEstado.DataSource = dtEstado;
             cboEstado.DisplayMember = "desEstado";
@@ -65,7 +55,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             frmReqCompra nuevo = SingletonFormProvider.GetInstance<frmReqCompra>(this);
             nuevo.EventoActualizarLista += listar;
             nuevo.MdiParent = this.MdiParent;
-            nuevo.Show();
+            nuevo.ShowDialog();
         }
 
         private void listar()

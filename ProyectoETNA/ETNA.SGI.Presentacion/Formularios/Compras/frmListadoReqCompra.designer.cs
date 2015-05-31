@@ -202,27 +202,27 @@
             this.modificarToolStripMenuItem,
             this.anularToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 70);
             // 
             // adicionarToolStripMenuItem
             // 
             this.adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.adicionarToolStripMenuItem.Text = "Adicionar";
+            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.adicionarToolStripMenuItem.Text = "Nuevo Requerimiento";
             this.adicionarToolStripMenuItem.Click += new System.EventHandler(this.adicionarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.modificarToolStripMenuItem.Text = "Modificar Requerimiento";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // anularToolStripMenuItem
             // 
             this.anularToolStripMenuItem.Name = "anularToolStripMenuItem";
-            this.anularToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.anularToolStripMenuItem.Text = "Anular";
+            this.anularToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.anularToolStripMenuItem.Text = "Anular Requerimiento";
             this.anularToolStripMenuItem.Click += new System.EventHandler(this.anularToolStripMenuItem_Click);
             // 
             // groupBox3

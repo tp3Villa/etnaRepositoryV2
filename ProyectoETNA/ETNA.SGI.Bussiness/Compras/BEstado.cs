@@ -18,6 +18,7 @@ namespace ETNA.SGI.Bussiness.Compras
             if (bEstado == null)
             {
                 bEstado = new BEstado();
+
             }
             return bEstado;
         }
@@ -37,6 +38,11 @@ namespace ETNA.SGI.Bussiness.Compras
         public DataTable ObtenerListadoEstadoPorCotizacion()
         {
             return dEstado.DGetAllEstadoByCotizacion();
+        }
+
+        public DataTable ObtenerListadoEstadoPorReqCompra()
+        {
+            return dEstado.DGetAllEstadoByReqCompra();
         }
     }
 }

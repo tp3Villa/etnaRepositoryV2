@@ -55,25 +55,28 @@ namespace ETNA.SGI.Bussiness.Compras
         }
         
         /* METODOS RICHARD */
-        public List<ERequerimientoCompra> ListarPorCodigoPersonal(int codPersonal)
+        public DataTable ListarPorCodigoPersonal(string usuarioRegistro)
         {
-            return dRequerimientoCompra.ListarPorCodigoPersonal(codPersonal);
+            return dRequerimientoCompra.ListarPorCodigoPersonal(usuarioRegistro);
         }
 
-        public List<ERequerimientoCompra> ListarPorCodigoPersonalYEstado(int codPersonal, int codEstado)
+        public DataTable ListarPorCodigoPersonalYEstado(string usuarioRegistro, int codEstado)
         {
-            return dRequerimientoCompra.ListarPorCodigoPersonalYEstado(codPersonal, codEstado);
+            return dRequerimientoCompra.ListarPorCodigoPersonalYEstado(usuarioRegistro, codEstado);
         }
 
-        public List<ERequerimientoCompraDetalle> ListaDetallePorCodigoRequerimiento(int codRequerimiento)
+        public DataTable ListaDetallePorCodigoRequerimiento(int codRequerimiento)
         {
             return dRequerimientoCompra.ListaDetallePorCodigoRequerimiento(codRequerimiento);
         }
 
-        public List<ECotizacionDetalle> ListaDetallePorCodigoRequerimientoCotizacion(int codRequerimiento)
+        public DataTable ListarPorCodigoReqYEstado(int codRequerimiento, int codEstado)
         {
-            return dRequerimientoCompra.ListaDetallePorCodigoRequerimientoCotizacion(codRequerimiento);
+            return dRequerimientoCompra.ListarPorCodigoReqYEstado(codRequerimiento, codEstado);
         }
+
+
+        
 
         public void Registrar(ERequerimientoCompra reqCab, List<ERequerimientoCompraDetalle> reqDets)
         {

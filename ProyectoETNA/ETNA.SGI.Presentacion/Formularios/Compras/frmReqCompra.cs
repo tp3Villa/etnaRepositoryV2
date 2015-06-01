@@ -113,8 +113,11 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 if (EventoActualizarLista != null){
                     EventoActualizarLista();
                     }
-                }
+
                 this.Close();
+
+                }
+                
             
         }
 

@@ -106,10 +106,11 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Se procederá a cerrar la ventana, desea continuar?", "Compras", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            /*if (MessageBox.Show("Se procederá a cerrar la ventana, desea continuar?", "Compras", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 this.Close();
-            }
+            }*/
+            this.Close();
         }
 
 

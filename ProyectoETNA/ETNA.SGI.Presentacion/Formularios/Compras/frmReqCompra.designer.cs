@@ -86,7 +86,7 @@
             this.dtFechaRegistro.Location = new System.Drawing.Point(116, 29);
             this.dtFechaRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.dtFechaRegistro.Name = "dtFechaRegistro";
-            this.dtFechaRegistro.Size = new System.Drawing.Size(184, 20);
+            this.dtFechaRegistro.Size = new System.Drawing.Size(214, 20);
             this.dtFechaRegistro.TabIndex = 9;
             // 
             // label5
@@ -107,7 +107,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(116, 52);
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(184, 21);
+            this.cboCategoria.Size = new System.Drawing.Size(214, 21);
             this.cboCategoria.TabIndex = 7;
             this.cboCategoria.SelectedIndexChanged += new System.EventHandler(this.cboCategoria_SelectedIndexChanged);
             // 

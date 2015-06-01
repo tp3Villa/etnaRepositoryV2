@@ -104,7 +104,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          /*  if (dataGridView1.Rows.Count > 0)
+           if (dataGridView1.Rows.Count > 0)
             {
                 if (dataGridView1.CurrentRow.Index >= 0)
                 {
@@ -117,11 +117,14 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                         req.FechaRegistro = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[1].Value);
                         req.Observacion = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
-                        //FrmActualizarReq actualizar = SingletonFormProvider.GetInstance<FrmActualizarReq>(this);
                         frmReqCompra actualizar = SingletonFormProvider.GetInstance<frmReqCompra>(this);
-                        //actualizar.vRequerimiento = req;
                         actualizar.EventoActualizarLista += listar;
                         actualizar.MdiParent = this.MdiParent;
+                        actualizar.sActionMode = "U";
+                        actualizar.icodReq = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                        actualizar.iCodCategoria = Convert.ToInt32(dataGridView1.CurrentRow.Cells[5].Value);
+                        actualizar.dFechaRegistro = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[1].Value);
+                        actualizar.sObservacion = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                         actualizar.Show();
                     }
                     else
@@ -129,7 +132,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                         MessageBox.Show("Estado no permite modificar el requerimiento", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }*/
+            }
+           
         }
 
         private void anularToolStripMenuItem_Click(object sender, EventArgs e)

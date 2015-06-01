@@ -241,10 +241,19 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
 
         public DataTable ListaDetallePorCodigoRequerimiento(int codRequerimiento)
         {
-            string sql = "select a.idProducto, b.descripcionProducto, b.codCategoria, c.desCategoria, b.codMarca, d.desMarca, a.cantidad " +
+            /*string sql = "select a.idProducto, b.descripcionProducto, b.codCategoria, c.desCategoria, b.codMarca, d.desMarca, a.cantidad " +
           " from RequerimientoDetalleCompra a, producto b, Categoria c, Marca d " +
           " where b.idProducto = a.idProducto and c.codCategoria = b.codCategoria and d.codMarca = b.codMarca " +
-          " and a.codRequerimiento = @codRequerimiento";
+          " and a.codRequerimiento = @codRequerimiento";*/
+
+
+          string sql =  "  select a.codRequerimiento, a.idProducto, c.desCategoria,d.desMarca, " +
+                        " b.descripcionProducto, b.tipounidadMedida, a.cantidad  " +
+                        " from RequerimientoDetalleCompra a inner join producto b " +
+                        " on a.idProducto = b.idProducto inner join Categoria c on " +
+                        " b.codCategoria = c.codCategoria inner join Marca d on " +
+                        " b.codMarca = d.codMarca  " +
+                        " where a.codRequerimiento = @codRequerimiento";
 
              SqlDataAdapter adapter = new SqlDataAdapter();
 
@@ -377,21 +386,33 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                 command.Transaction = transaction;
                 command.ExecuteNonQuery();
 
-                // Se actualiza el detalle de la cotizacion
+                /* Se elimina todo el detalle */
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+
+                sql = "delete from RequerimientoDetalleCompra WHERE codRequerimiento='" + eRequerimientoCompra.CodRequerimiento + "'";
+                cmd.CommandText = sql;
+                cmd.Connection = cn.Conectar;
+                cmd.Transaction = transaction;
+                cmd.ExecuteNonQuery();
+
+                /* Se ingresa todo el detalle */
                 foreach (ERequerimientoCompraDetalle eRequerimientoCompraDetalle in listaERequerimientoCompraDetalle)
                 {
                     command = new SqlCommand();
                     command.CommandType = CommandType.Text;
-                    sql = "UPDATE CotizacionDetalle " +
-                     "SET cantidad = @cantidad " +
-                    " WHERE codRequerimiento = @codRequerimiento AND idProducto = @idProducto ";
+                    sql = "INSERT INTO RequerimientoDetalleCompra " +
+                              "(codRequerimiento,idProducto,cantidad) " +
+                          "VALUES " +
+                              "(@codRequerimiento,@idProducto,@cantidad) ";
 
-                    command.Parameters.Add("@codCotizacion", SqlDbType.Int);
-                    command.Parameters["@codCotizacion"].Value = eRequerimientoCompraDetalle.CodRequerimiento;
+                    command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
+                    command.Parameters["@codRequerimiento"].Value = eRequerimientoCompraDetalle.CodRequerimiento;
                     command.Parameters.Add("@idProducto", SqlDbType.Int);
                     command.Parameters["@idProducto"].Value = eRequerimientoCompraDetalle.IdProducto;
                     command.Parameters.Add("@cantidad", SqlDbType.Int);
                     command.Parameters["@cantidad"].Value = eRequerimientoCompraDetalle.Cantidad;
+
 
                     command.CommandText = sql;
                     command.Connection = cn.Conectar;
@@ -413,18 +434,21 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
 
         public void EliminarDetalle(int codRequerimiento)
         {
-            using (SqlConnection connection = cn.Conectar)
+           
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_eliminarDetallePorCodigoRequerimiento";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodRequerimiento", SqlDbType.Int).Value = codRequerimiento;
-                    cmd.ExecuteNonQuery();
-                }
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+
+                string sql = "delete from RequerimientoDetalleCompra WHERE codRequerimiento='" + codRequerimiento + "'";
+                cmd.CommandText = sql;
+                cmd.Connection = cn.Conectar;
+                //cmd.Transaction = transaction;
+                cmd.ExecuteNonQuery();
+
             }
+            catch { throw; }
+          
         }
 
  

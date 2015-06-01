@@ -13,6 +13,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 {
     public partial class frmReqCompra : Form
     {
+        public ERequerimientoCompra vRequerimiento { get; set; }
         public delegate void ActualizarLista();
         public event ActualizarLista EventoActualizarLista;
 
@@ -20,6 +21,13 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private BRequerimientoCompra bRequerimientoCompra = BRequerimientoCompra.getInstance();
 
         private const int ESTADO_PENDIENTE = 1;
+
+        /* Variable que maneja la acción de ingreso al componente */
+        public string sActionMode = "";
+        public int icodReq = 0;
+        public int iCodCategoria;
+        public DateTime dFechaRegistro;
+        public string sObservacion;
 
         public frmReqCompra()
         {
@@ -32,6 +40,24 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             cboCategoria.DataSource = bCategoria.ObtenerListadoCategoria();
             cboCategoria.DisplayMember = "desCategoria";
             cboCategoria.ValueMember = "codCategoria";
+
+            /* Se evalúa el modo de ingreso */
+            if (sActionMode == "U") {
+
+                btnRegistrar.Text = "Guardar";
+                cboCategoria.SelectedValue = iCodCategoria;
+                dtFechaRegistro.Value = dFechaRegistro;
+                txtObservacion.Text = sObservacion;
+
+                DataTable dtReqCabecera = new DataTable();
+
+                dtReqCabecera = bRequerimientoCompra.ListaDetallePorCodigoRequerimiento(icodReq);
+
+                foreach (DataRow row in dtReqCabecera.Rows)
+                {
+                    dataGridView1.Rows.Add(row["idProducto"], row["desCategoria"], row["desMarca"], row["descripcionProducto"], row["tipounidadMedida"], row["cantidad"]); 
+                }
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -40,6 +66,29 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 
             if (validarRegistro())
             {
+                if(sActionMode == "U") {
+                    List<ERequerimientoCompraDetalle> reqDets = new List<ERequerimientoCompraDetalle>();
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        ERequerimientoCompraDetalle reqDet = new ERequerimientoCompraDetalle();
+                        reqDet.CodRequerimiento = icodReq;
+                        reqDet.IdProducto = Convert.ToInt32(fila.Cells[0].Value);
+                        reqDet.Cantidad = Convert.ToInt32(fila.Cells[5].Value);
+                        reqDets.Add(reqDet);
+                    }
+
+                    ERequerimientoCompra reqCab = new ERequerimientoCompra();
+                    reqCab.CodRequerimiento = icodReq;
+                    reqCab.CodCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
+                    reqCab.Observacion = txtObservacion.Text;
+                    reqCab.FechaActualizacion = DateTime.Now;
+                    reqCab.UsuarioModificacion = Program.Usuario.Trim();
+
+                    bRequerimientoCompra.Actualizar(reqCab, reqDets);
+                    MessageBox.Show("Se actualizo con éxito", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else {
                 List<ERequerimientoCompraDetalle> reqDets = new List<ERequerimientoCompraDetalle>();
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
@@ -59,14 +108,14 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                 reqCab.Observacion = txtObservacion.Text;
                 bRequerimientoCompra.Registrar(reqCab, reqDets);
                 MessageBox.Show("Se ha grabado el registro con exito", "Registrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                               
-                if (EventoActualizarLista != null)
-                {
+                }
+                             
+                if (EventoActualizarLista != null){
                     EventoActualizarLista();
-                    
+                    }
                 }
                 this.Close();
-            }
+            
         }
 
         private bool validarRegistro()

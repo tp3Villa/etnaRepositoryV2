@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ETNA.SGI.Entity.Compras;
 using ETNA.SGI.Data.Compras;
+using System.Data;
 
 namespace ETNA.SGI.Bussiness.Compras
 {
@@ -25,9 +26,9 @@ namespace ETNA.SGI.Bussiness.Compras
         public BMarca()
         {
             this.dMarca = ObjFactoryDAO.getMarcaDAO();
-        } 
+        }
 
-        public List<EMarca> Lista() 
+        public DataTable Lista() 
         {
             return dMarca.Lista();
         } 

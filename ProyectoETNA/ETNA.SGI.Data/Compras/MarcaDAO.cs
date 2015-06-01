@@ -11,6 +11,6 @@ namespace ETNA.SGI.Data.Compras
 {
     public interface MarcaDAO
     {
-        List<EMarca> Lista();
+        DataTable Lista();
     }
 }

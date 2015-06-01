@@ -75,16 +75,12 @@ namespace ETNA.SGI.Bussiness.Compras
             return dRequerimientoCompra.ListarPorCodigoReqYEstado(codRequerimiento, codEstado);
         }
 
-
-        
-
         // Registrar Requerimiento
         public int Registrar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {
             return dRequerimientoCompra.Registrar(eRequerimientoCompra, listaERequerimientoCompraDetalle);
         }
-
-
+        
         // Actualizar Requerimiento
         public int Actualizar(ERequerimientoCompra eRequerimientoCompra, List<ERequerimientoCompraDetalle> listaERequerimientoCompraDetalle)
         {

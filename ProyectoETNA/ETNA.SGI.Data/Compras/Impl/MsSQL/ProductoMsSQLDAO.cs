@@ -23,73 +23,50 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             return dProducto;
         }
 
-        public List<EProducto> ListarPorCategoria(int codCategoria)
+        public DataTable ListarPorCategoria(int codCategoria)
         {
-            List<EProducto> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarProductosxCategoria";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = codCategoria;
+           string sql = "select a.idProducto, a.codCategoria, b.desCategoria, a.codMarca, c.desMarca, a.descripcionProducto, a.tipounidadMedida " +
+                         "from producto a inner join Categoria b " +
+                         "on a.codCategoria = b.codCategoria inner join Marca c on a.codMarca = c.codMarca " +
+                         "where a.codCategoria = @CodCategoria";
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<EProducto>();
-                        while (reader.Read())
-                        {
-                            EProducto art = new EProducto();
-                            art.IdProducto = reader.GetInt32(0);
-                            art.CodCategoria = reader.GetInt32(1);
-                            art.DesCategoria = reader.GetString(2);
-                            art.CodMarca = reader.GetInt32(3);
-                            art.DesMarca = reader.GetString(4);
-                            art.DescripcionProducto = reader.GetString(5);
-                            art.TipoUnidadMedida = reader.GetString(6);
-                            lista.Add(art);
-                        }
-                    }
-                }
-            }
-            return lista;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@CodCategoria", SqlDbType.Int);
+            command.Parameters["@CodCategoria"].Value = codCategoria;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
 
-        public List<EProducto> ListarPorCategoriaYMarca(int codCategoria, int codMarca)
+        public DataTable ListarPorCategoriaYMarca(int codCategoria, int codMarca)
         {
-            List<EProducto> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarProductosxCategoriaMarca";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@CodCategoria", SqlDbType.Int).Value = codCategoria;
-                    cmd.Parameters.Add("@CodMarca", SqlDbType.Int).Value = codMarca;
+            string sql = "select a.idProducto, a.codCategoria, b.desCategoria, a.codMarca, c.desMarca, a.descripcionProducto, a.tipounidadMedida " +
+                         "from producto a inner join Categoria b " +
+                         "on a.codCategoria = b.codCategoria inner join Marca c on a.codMarca = c.codMarca " +
+                         "where a.codCategoria = @CodCategoria and a.codMarca = @CodMarca";
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<EProducto>();
-                        while (reader.Read())
-                        {
-                            EProducto art = new EProducto();
-                            art.IdProducto = reader.GetInt32(0);
-                            art.CodCategoria = reader.GetInt32(1);
-                            art.DesCategoria = reader.GetString(2);
-                            art.CodMarca = reader.GetInt32(3);
-                            art.DesMarca = reader.GetString(4);
-                            art.DescripcionProducto = reader.GetString(5);
-                            art.TipoUnidadMedida = reader.GetString(6);
-                            lista.Add(art);
-                        }
-                    }
-                }
-            }
-            return lista;   
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            // Configurando los parametros
+            command.Parameters.Add("@CodCategoria", SqlDbType.Int);
+            command.Parameters["@CodCategoria"].Value = codCategoria;
+            command.Parameters.Add("@CodMarca", SqlDbType.Int);
+            command.Parameters["@CodMarca"].Value = codMarca;
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;  
         }
     }
 }

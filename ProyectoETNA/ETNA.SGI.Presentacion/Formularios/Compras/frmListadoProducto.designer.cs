@@ -33,6 +33,9 @@
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +43,6 @@
             this.DescripcionMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -79,7 +79,7 @@
             // txtCategoria
             // 
             this.txtCategoria.Enabled = false;
-            this.txtCategoria.Location = new System.Drawing.Point(67, 8);
+            this.txtCategoria.Location = new System.Drawing.Point(77, 8);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(237, 20);
@@ -88,15 +88,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(7, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Categoria:";
+            this.label2.Text = "Categoría:";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -116,64 +119,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(794, 246);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // CodigoCategoria
-            // 
-            this.CodigoCategoria.DataPropertyName = "CodigoCategoria";
-            this.CodigoCategoria.HeaderText = "Codigo Categoria";
-            this.CodigoCategoria.Name = "CodigoCategoria";
-            this.CodigoCategoria.ReadOnly = true;
-            this.CodigoCategoria.Visible = false;
-            // 
-            // DescripcionCategoria
-            // 
-            this.DescripcionCategoria.DataPropertyName = "DescripcionCategoria";
-            this.DescripcionCategoria.HeaderText = "Categoria";
-            this.DescripcionCategoria.Name = "DescripcionCategoria";
-            this.DescripcionCategoria.ReadOnly = true;
-            this.DescripcionCategoria.Width = 200;
-            // 
-            // CodigoMarca
-            // 
-            this.CodigoMarca.DataPropertyName = "CodigoMarca";
-            this.CodigoMarca.HeaderText = "Codigo Marca";
-            this.CodigoMarca.Name = "CodigoMarca";
-            this.CodigoMarca.ReadOnly = true;
-            this.CodigoMarca.Visible = false;
-            // 
-            // DescripcionMarca
-            // 
-            this.DescripcionMarca.DataPropertyName = "DescripcionMarca";
-            this.DescripcionMarca.HeaderText = "Marca";
-            this.DescripcionMarca.Name = "DescripcionMarca";
-            this.DescripcionMarca.ReadOnly = true;
-            this.DescripcionMarca.Width = 200;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 350;
-            // 
-            // Unidad
-            // 
-            this.Unidad.DataPropertyName = "Unidad";
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
-            // 
             // cboMarca
             // 
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(67, 35);
+            this.cboMarca.Location = new System.Drawing.Point(77, 38);
             this.cboMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(237, 21);
@@ -183,10 +132,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(7, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marca: ";
             // 
@@ -200,6 +151,60 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(812, 373);
             this.tabControl1.TabIndex = 0;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "idProducto";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // CodigoCategoria
+            // 
+            this.CodigoCategoria.DataPropertyName = "codCategoria";
+            this.CodigoCategoria.HeaderText = "Codigo Categoria";
+            this.CodigoCategoria.Name = "CodigoCategoria";
+            this.CodigoCategoria.ReadOnly = true;
+            this.CodigoCategoria.Visible = false;
+            // 
+            // DescripcionCategoria
+            // 
+            this.DescripcionCategoria.DataPropertyName = "desCategoria";
+            this.DescripcionCategoria.HeaderText = "Categoria";
+            this.DescripcionCategoria.Name = "DescripcionCategoria";
+            this.DescripcionCategoria.ReadOnly = true;
+            this.DescripcionCategoria.Width = 200;
+            // 
+            // CodigoMarca
+            // 
+            this.CodigoMarca.DataPropertyName = "codMarca";
+            this.CodigoMarca.HeaderText = "Codigo Marca";
+            this.CodigoMarca.Name = "CodigoMarca";
+            this.CodigoMarca.ReadOnly = true;
+            this.CodigoMarca.Visible = false;
+            // 
+            // DescripcionMarca
+            // 
+            this.DescripcionMarca.DataPropertyName = "desMarca";
+            this.DescripcionMarca.HeaderText = "Marca";
+            this.DescripcionMarca.Name = "DescripcionMarca";
+            this.DescripcionMarca.ReadOnly = true;
+            this.DescripcionMarca.Width = 200;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "descripcionProducto";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 350;
+            // 
+            // Unidad
+            // 
+            this.Unidad.DataPropertyName = "tipounidadMedida";
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.Name = "Unidad";
+            this.Unidad.ReadOnly = true;
             // 
             // frmListadoProducto
             // 
@@ -227,6 +232,9 @@
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionCategoria;
@@ -234,9 +242,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.ComboBox cboMarca;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
 
     }
 }

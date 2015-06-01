@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ETNA.SGI.Entity.Compras;
 using ETNA.SGI.Data.Compras;
+using System.Data;
 
 namespace ETNA.SGI.Bussiness.Compras
 {
@@ -27,12 +28,12 @@ namespace ETNA.SGI.Bussiness.Compras
             this.dProducto = ObjFactoryDAO.getProductoDAO();
         } 
 
-        public List<EProducto> ListarPorCategoria(int codCategoria)
+        public DataTable ListarPorCategoria(int codCategoria)
         {
             return dProducto.ListarPorCategoria(codCategoria);
         }
 
-        public List<EProducto> ListarPorCategoriaYMarca(int codCategoria, int codMarca)
+        public DataTable ListarPorCategoriaYMarca(int codCategoria, int codMarca)
         {
             return dProducto.ListarPorCategoriaYMarca(codCategoria, codMarca);
         }

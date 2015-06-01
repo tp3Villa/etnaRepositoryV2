@@ -10,8 +10,8 @@ namespace ETNA.SGI.Data.Compras
 {
     public interface ProductoDAO
     {
-        List<EProducto> ListarPorCategoria(int codCategoria);
+        DataTable ListarPorCategoria(int codCategoria);
 
-        List<EProducto> ListarPorCategoriaYMarca(int codCategoria, int codMarca);
+        DataTable ListarPorCategoriaYMarca(int codCategoria, int codMarca);
     }
 }

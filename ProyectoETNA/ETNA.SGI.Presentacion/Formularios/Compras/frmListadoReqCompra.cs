@@ -61,17 +61,21 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private void listar()
         {
             
-            int estado = Convert.ToInt32(cboEstado.SelectedValue);
+            int estado = Convert.ToInt32(cboEstado.SelectedValue);            
             if (estado == 0)
             {
                 DataTable tblReqCompra= new DataTable();
                 tblReqCompra = bRequerimientoCompra.ListarPorCodigoPersonal(Program.Usuario);
 
-                dataGridView1.DataSource = tblReqCompra;
+                dataGridView1.DataSource = tblReqCompra;                
             }
             else
             {
                 dataGridView1.DataSource = bRequerimientoCompra.ListarPorCodigoPersonalYEstado(Program.Usuario, estado);
+            }
+
+            if (dataGridView1.RowCount == 0) {
+                dataGridView2.DataSource = null;
             }
            
         }

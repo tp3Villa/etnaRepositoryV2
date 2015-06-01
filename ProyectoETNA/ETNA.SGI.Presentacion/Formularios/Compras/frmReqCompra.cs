@@ -19,6 +19,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         private BCategoria bCategoria = BCategoria.getInstance();
         private BRequerimientoCompra bRequerimientoCompra = BRequerimientoCompra.getInstance();
 
+        private const int ESTADO_PENDIENTE = 1;
+
         public frmReqCompra()
         {
             InitializeComponent();
@@ -28,8 +30,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
         {
             groupBox2.Text = Program.Nombre.Trim();
             cboCategoria.DataSource = bCategoria.ObtenerListadoCategoria();
-            cboCategoria.DisplayMember = "Descripcion";
-            cboCategoria.ValueMember = "Codigo";
+            cboCategoria.DisplayMember = "desCategoria";
+            cboCategoria.ValueMember = "codCategoria";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -47,11 +49,11 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
                     reqDets.Add(reqDet);
                 }
                 ERequerimientoCompra reqCab = new ERequerimientoCompra();
-                reqCab.IdPersona = Program.CodPersonal;
-                reqCab.CodEstado = 600;
+                //reqCab.IdPersona = Program.CodPersonal;
+                reqCab.CodEstado = ESTADO_PENDIENTE;
                 reqCab.CodCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
                 reqCab.FechaRegistro = dtFechaRegistro.Value;
-                reqCab.FechaActualizacion = dtFechaRegistro.Value;
+                //reqCab.FechaActualizacion = dtFechaRegistro.Value;
                 reqCab.UsuarioRegistro = Program.Usuario.Trim();
 
                 reqCab.Observacion = txtObservacion.Text;

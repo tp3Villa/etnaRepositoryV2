@@ -30,16 +30,18 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             txtCategoria.Text = this.vCategoria.DesCategoria;
 
             //carga la lista de marcas
-            List<EMarca> marcaList = bMarca.Lista();
-            EMarca marca = new EMarca();
-            marca.CodMarca = 0;
-            marca.DesMarca = "--- TODOS ---";
-            marcaList.Insert(0, marca);
-            cboMarca.DataSource = marcaList;
-            cboMarca.ValueMember = "Codigo";
-            cboMarca.DisplayMember = "Descripcion";
+            DataTable dtMarca = bMarca.Lista();
+            DataRow dr = dtMarca.NewRow();
+            dr["desMarca"] = "Todos";
+            dr["codMarca"] = 0;
 
-            //carga los articulos por categoria
+            dtMarca.Rows.InsertAt(dr, 0);
+
+            cboMarca.DataSource = dtMarca;
+            cboMarca.ValueMember = "codMarca";
+            cboMarca.DisplayMember = "desMarca";
+
+            //carga los productos por categoria
             dataGridView1.DataSource = bProducto.ListarPorCategoria(this.vCategoria.CodCategoria);
         }
 

@@ -274,24 +274,18 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                 // Se registra la cabecera de la Cotizacion
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.Text;
-                string sql = "INSERT INTO RequerimientoCompra (codRequerimiento ,codEstado ,codCategoria, fechaRegistro, fechaActualizacion, usuarioRegistro, usuarioModificacion, observacion) " +
-                " VALUES (@codRequerimiento, @codEstado, @codCategoria, @fechaRegistro, @fechaActualizacion, @usuarioRegistro, @usuarioActualizacion, @observacion)";
+                string sql = "INSERT INTO RequerimientoCompra (codEstado,codCategoria,fechaRegistro,usuarioRegistro,observacion) " +
+                             "VALUES (@codEstado,@codCategoria,@fechaRegistro,@usuarioRegistro,@observacion)";
 
                 // Configurando los parametros
-                command.Parameters.Add("@codRequerimiento", SqlDbType.Int);
-                command.Parameters["@codRequerimiento"].Value = eRequerimientoCompra.CodRequerimiento;
                 command.Parameters.Add("@codEstado", SqlDbType.Int);
                 command.Parameters["@codEstado"].Value = eRequerimientoCompra.CodEstado;
                 command.Parameters.Add("@codCategoria", SqlDbType.Int);
                 command.Parameters["@codCategoria"].Value = eRequerimientoCompra.CodCategoria;
                 command.Parameters.Add("@fechaRegistro", SqlDbType.DateTime);
-                command.Parameters["@fechaRegistro"].Value = eRequerimientoCompra.FechaRegistro;
-                command.Parameters.Add("@fechaActualizacion", SqlDbType.DateTime);
-                command.Parameters["@fechaActualizacion"].Value = eRequerimientoCompra.FechaActualizacion;
+                command.Parameters["@fechaRegistro"].Value = eRequerimientoCompra.FechaRegistro;                
                 command.Parameters.Add("@usuarioRegistro", SqlDbType.VarChar);
                 command.Parameters["@usuarioRegistro"].Value = eRequerimientoCompra.UsuarioRegistro;
-                command.Parameters.Add("@usuarioActualizacion", SqlDbType.VarChar);
-                command.Parameters["@usuarioActualizacion"].Value = eRequerimientoCompra.UsuarioModificacion;
                 command.Parameters.Add("@observacion", SqlDbType.VarChar);
                 command.Parameters["@observacion"].Value = eRequerimientoCompra.Observacion;
 
@@ -301,8 +295,14 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                 command.ExecuteNonQuery();
 
                 // Se obtiene el codigo de la requerimiento registrado
+                command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                sql = "SELECT Max(rc.codRequerimiento) AS corr FROM RequerimientoCompra rc";
 
-                int codRequerimiento = eRequerimientoCompra.CodRequerimiento;
+                command.CommandText = sql;
+                command.Connection = cn.Conectar;
+                command.Transaction = transaction;
+                int codRequerimiento = (int)command.ExecuteScalar();
 
                 // Se registra el detalle de la Orden de Compra
                 foreach (ERequerimientoCompraDetalle eRequerimientoCompraDetalle in listaERequerimientoCompraDetalle)

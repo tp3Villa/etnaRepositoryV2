@@ -25,33 +25,20 @@ namespace ETNA.SGI.Data.Compras
         }
 
 
-        public List<EMarca> Lista()
+        public DataTable Lista()
         {
-            List<EMarca> lista = null;
-            using (SqlConnection connection = cn.Conectar)
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandText = "usp_listarMarcas";
-                    cmd.CommandType = CommandType.StoredProcedure;
+            string sql = "SELECT codMarca,desMarca FROM Marca";
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        lista = new List<EMarca>();
-                        while (reader.Read())
-                        {
-                            EMarca mar = new EMarca();
-                            mar.CodMarca = reader.GetInt32(0);
-                            mar.DesMarca = reader.GetString(1);
-                            lista.Add(mar);
-                        }
-                    }
-                }
+            SqlDataAdapter adapter = new SqlDataAdapter();
 
-            }
-            return lista;
+            // Create the SelectCommand.
+            SqlCommand command = new SqlCommand(sql, cn.Conectar);
+
+            adapter.SelectCommand = command;
+
+            DataTable tabla = new DataTable();
+            adapter.Fill(tabla);
+            return tabla;
         }
     }
 }

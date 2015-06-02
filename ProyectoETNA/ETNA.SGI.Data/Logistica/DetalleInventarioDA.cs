@@ -10,6 +10,11 @@ namespace ETNA.SGI.Data.Logistica
 {
     public class DetalleInventarioDA
     {
+        /// <summary>
+        /// Retorna los productos de un almacén que se encuentra en proceso de inventario
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public List<DetalleInventarioBE> ObtenerDetalleInventario(DetalleInventarioBE oBe)
         {
             Dictionary<string, object> parameter = new Dictionary<string, object>();
@@ -35,7 +40,11 @@ namespace ETNA.SGI.Data.Logistica
             }
             return listDetalle;
         }
-
+        /// <summary>
+        /// Actualiza el estado del inventario para indicar su finalización
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int FinalizarTomaInventario(DetalleInventarioBE oBe)
         {
             try
@@ -51,7 +60,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Permite registrar la cantidad ingresada para un producto de un inventario en proceso
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int EditarTomaInventario(DetalleInventarioBE oBe)
         {
             try

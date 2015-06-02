@@ -10,6 +10,11 @@ namespace ETNA.SGI.Data.Logistica
 {
     public class ProgramacionInventarioDA
     {
+        /// <summary>
+        /// Retorna la relación de inventarios programados en el sistema
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public List<ProgramacionInventarioBE> ObtenerInventariosProgramados(ProgramacionInventarioBE oBe)
         {
             List<ProgramacionInventarioBE> listProgInventario = new List<ProgramacionInventarioBE>();
@@ -39,7 +44,11 @@ namespace ETNA.SGI.Data.Logistica
             }
             return listProgInventario;
         }
-
+        /// <summary>
+        /// Obtiene relación de inventarios
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public List<ProgramacionInventarioBE> ObtenerInventarios(ProgramacionInventarioBE oBe)
         {
             List<ProgramacionInventarioBE> listProgInventario = new List<ProgramacionInventarioBE>();
@@ -69,7 +78,11 @@ namespace ETNA.SGI.Data.Logistica
             }
             return listProgInventario;
         }
-
+        /// <summary>
+        /// Agrega un nuevo inventario programado en el sistema
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int RegistrarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
             try
@@ -88,7 +101,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Cambia los datos de un inventario programado
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int ActualizarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
             try
@@ -107,7 +124,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Eliminar un inventario programado
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int EliminarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
             try
@@ -123,7 +144,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Actualizar el inventario con el estado INICIADO
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int IniciarInventario(ProgramacionInventarioBE oBe)
         {
             try
@@ -139,7 +164,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Ejecuta el proceso de Ajuste de Inventario
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int AjustarInventario(ProgramacionInventarioBE oBe)
         {
             try

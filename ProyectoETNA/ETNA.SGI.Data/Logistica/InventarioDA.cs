@@ -10,6 +10,11 @@ namespace ETNA.SGI.Data.Logistica
 {
     public class InventarioDA
     {
+        /// <summary>
+        /// Retorna los inventarios programados para un usuario y almacén específicos
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public InventarioBE ObtenerInventario(InventarioBE oBe)
         {
             Dictionary<string, object> parameter = new Dictionary<string, object>();

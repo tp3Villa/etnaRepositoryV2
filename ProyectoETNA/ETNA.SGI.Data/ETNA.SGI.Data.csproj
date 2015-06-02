@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,8 +68,19 @@
     <Compile Include="Exportacion\DLogin.cs" />
     <Compile Include="Exportacion\DTablas.cs" />
     <Compile Include="Exportacion\DTransaccion.cs" />
+    <Compile Include="Logistica\DbProvider.cs" />
     <Compile Include="Factory\FactoryDAO.cs" />
     <Compile Include="Factory\MsSQLFactoryDAO.cs" />
+    <Compile Include="Logistica\DetalleInventarioDA.cs" />
+    <Compile Include="Logistica\InventarioDA.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenDA.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenDetalleDA.cs" />
+    <Compile Include="Logistica\ProgramacionInventarioDA.cs" />
+    <Compile Include="Logistica\ReposicionStockDA.cs" />
+    <Compile Include="Logistica\SqlHelper.cs" />
+    <Compile Include="Logistica\TipoDA.cs" />
+    <Compile Include="Logistica\UsuarioAlmacenDA.cs" />
+    <Compile Include="Logistica\UsuarioDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

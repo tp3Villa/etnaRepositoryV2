@@ -1,68 +1,54 @@
-﻿using ETNA.BusinessEntity.Logistica;
-using ETNA.DataAccess.Logistica;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using ETNA.SGI.Data.Logistica;
+using ETNA.SGI.Entity.Logistica;
 
-namespace ETNA.BusinessLogic.Logistica
+namespace ETNA.SGI.Bussiness.Logistica
 {
     public class ProgramacionInventarioBL
     {
-        public List<ProgramacionInventarioBE> Listar(int paramIdProgInventario = 0, int paramTipoInventario=-1)
+        private static ProgramacionInventarioDA objProgInventario;
+
+        public ProgramacionInventarioBL()
         {
-            try
-            {
-                ProgramacionInventarioDA objProgramacionInventarioDA = new ProgramacionInventarioDA();
-                return objProgramacionInventarioDA.Listar(paramIdProgInventario, paramTipoInventario);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            objProgInventario = new ProgramacionInventarioDA();
         }
 
-        public bool Insertar(ProgramacionInventarioBE objProgramacionInventarioBE)
+        public List<ProgramacionInventarioBE> ObtenerInventariosProgramados(ProgramacionInventarioBE oBe)
         {
-            try
-            {
-                ProgramacionInventarioDA objProgramacionInventarioDA = new ProgramacionInventarioDA();
-                return objProgramacionInventarioDA.Insertar(objProgramacionInventarioBE);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return objProgInventario.ObtenerInventariosProgramados(oBe);
         }
 
-        public bool Actualizar(ProgramacionInventarioBE objProgramacionInventarioBE)
+        public List<ProgramacionInventarioBE> ObtenerInventarios(ProgramacionInventarioBE oBe)
         {
-            try
-            {
-                ProgramacionInventarioDA objProgramacionInventarioDA = new ProgramacionInventarioDA();
-                return objProgramacionInventarioDA.Actualizar(objProgramacionInventarioBE);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return objProgInventario.ObtenerInventarios(oBe);
         }
 
-        public bool Eliminar(int paramIdProgInventario)
+        public int RegistrarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
-            try
-            {
-                ProgramacionInventarioDA objProgramacionInventarioDA = new ProgramacionInventarioDA();
-                bool ExisteReferencia = objProgramacionInventarioDA.Existe_Inventario(paramIdProgInventario);
-                if (ExisteReferencia == true)
-                    return false;                    
-                else
-                    return objProgramacionInventarioDA.Eliminar(paramIdProgInventario);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return objProgInventario.RegistrarInventariosProgramados(oBe);
         }
 
+        public int ActualizarInventariosProgramados(ProgramacionInventarioBE oBe)
+        {
+            return objProgInventario.ActualizarInventariosProgramados(oBe);
+        }
+
+        public int EliminarInventariosProgramados(ProgramacionInventarioBE oBe)
+        {
+            return objProgInventario.EliminarInventariosProgramados(oBe);
+        }
+
+        public int IniciarInventario(ProgramacionInventarioBE oBe)
+        {
+            return objProgInventario.IniciarInventario(oBe);
+        }
+
+        public int AjustarInventario(ProgramacionInventarioBE oBe)
+        {
+            return objProgInventario.AjustarInventario(oBe);
+        }
     }
 }

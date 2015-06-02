@@ -1,4 +1,0 @@
-D:\SGR\SGR.BusinessEntity\bin\Debug\SGR.BusinessEntity.dll
-D:\SGR\SGR.BusinessEntity\bin\Debug\SGR.BusinessEntity.pdb
-D:\SGR\SGR.BusinessEntity\obj\Debug\SGR.BusinessEntity.dll
-D:\SGR\SGR.BusinessEntity\obj\Debug\SGR.BusinessEntity.pdb

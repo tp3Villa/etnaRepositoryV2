@@ -57,6 +57,16 @@
     <Compile Include="Exportacion\ELogin.cs" />
     <Compile Include="Exportacion\eReqCab.cs" />
     <Compile Include="Exportacion\EReqDetalle.cs" />
+    <Compile Include="Logistica\DetalleInventarioBE.cs" />
+    <Compile Include="Logistica\InventarioBE.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenBE.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenDetalleBE.cs" />
+    <Compile Include="Logistica\PersonaBE.cs" />
+    <Compile Include="Logistica\ProgramacionInventarioBE.cs" />
+    <Compile Include="Logistica\ReposicionStockBE.cs" />
+    <Compile Include="Logistica\TipoBE.cs" />
+    <Compile Include="Logistica\UsuarioAlmacenBE.cs" />
+    <Compile Include="Logistica\UsuarioBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

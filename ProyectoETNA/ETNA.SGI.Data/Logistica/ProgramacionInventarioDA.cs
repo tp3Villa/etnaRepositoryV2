@@ -1,61 +1,87 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using ETNA.BusinessEntity;
-using ETNA.BusinessEntity.Logistica;
-using System.Data.SqlClient;
 using System.Data;
-using ETNA.DataAccess.Base;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ETNA.SGI.Entity.Logistica;
 
-namespace ETNA.DataAccess.Logistica
+namespace ETNA.SGI.Data.Logistica
 {
     public class ProgramacionInventarioDA
     {
+        public List<ProgramacionInventarioBE> ObtenerInventariosProgramados(ProgramacionInventarioBE oBe)
+        {
+            List<ProgramacionInventarioBE> listProgInventario = new List<ProgramacionInventarioBE>();
 
-        public List<ProgramacionInventarioBE> Listar(int paramIdProgInventario, int paramTipoInventario)
+            Dictionary<string, object> parameter = new Dictionary<string, object>();
+
+            parameter.Add("@IN_TIPOINVENTARIO", oBe.In_tipoInventario);
+            parameter.Add("@IN_IDALMACEN", oBe.In_idAlmacen);
+
+            ProgramacionInventarioBE objProgInventario;
+
+            using (IDataReader dr = SqlHelper.Instance.ExecuteReader("SP_OBTENER_INVENTARIOS_PROGRAMADOS", parameter))
+            {
+                while (dr.Read())
+                {
+                    objProgInventario = new ProgramacionInventarioBE();
+                    objProgInventario.In_idProgInventario = dr.GetInt32(dr.GetOrdinal("id"));
+                    objProgInventario.Dt_fechaProgramada = dr.GetDateTime(dr.GetOrdinal("fecha"));
+                    objProgInventario.In_tipoInventario = dr.GetInt32(dr.GetOrdinal("idTipo"));
+                    objProgInventario.Vc_tipoInventario = dr.GetString(dr.GetOrdinal("tipo"));
+                    objProgInventario.In_idAlmacen = dr.GetInt32(dr.GetOrdinal("idAlmacen"));
+                    objProgInventario.Vc_almacen = dr.GetString(dr.GetOrdinal("almacen"));
+                    objProgInventario.Vc_usuario = dr.GetString(dr.GetOrdinal("usuario"));
+                    objProgInventario.Vc_estado = dr.GetString(dr.GetOrdinal("estado"));
+                    listProgInventario.Add(objProgInventario);
+                }
+            }
+            return listProgInventario;
+        }
+
+        public List<ProgramacionInventarioBE> ObtenerInventarios(ProgramacionInventarioBE oBe)
+        {
+            List<ProgramacionInventarioBE> listProgInventario = new List<ProgramacionInventarioBE>();
+
+            Dictionary<string, object> parameter = new Dictionary<string, object>();
+
+            parameter.Add("@IN_ESTADOINVENTARIO", oBe.In_idEstadoInventario);
+            parameter.Add("@IN_IDALMACEN", oBe.In_idAlmacen);
+
+            ProgramacionInventarioBE objProgInventario;
+
+            using (IDataReader dr = SqlHelper.Instance.ExecuteReader("SP_OBTENER_INVENTARIOS", parameter))
+            {
+                while (dr.Read())
+                {
+                    objProgInventario = new ProgramacionInventarioBE();
+                    objProgInventario.In_idProgInventario = dr.GetInt32(dr.GetOrdinal("id"));
+                    objProgInventario.Dt_fechaProgramada = dr.GetDateTime(dr.GetOrdinal("fecha"));
+                    objProgInventario.In_tipoInventario = dr.GetInt32(dr.GetOrdinal("idTipo"));
+                    objProgInventario.Vc_tipoInventario = dr.GetString(dr.GetOrdinal("tipo"));
+                    objProgInventario.In_idAlmacen = dr.GetInt32(dr.GetOrdinal("idAlmacen"));
+                    objProgInventario.Vc_almacen = dr.GetString(dr.GetOrdinal("almacen"));
+                    objProgInventario.Vc_usuario = dr.GetString(dr.GetOrdinal("usuario"));
+                    objProgInventario.Vc_estado = dr.GetString(dr.GetOrdinal("estado"));
+                    listProgInventario.Add(objProgInventario);
+                }
+            }
+            return listProgInventario;
+        }
+
+        public int RegistrarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
             try
             {
-                List<ProgramacionInventarioBE> objResult = new List<ProgramacionInventarioBE>();
-
-                using (SqlConnection cn = ConexionBD.ObtenerConexion())
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_programacionInventario_Listar", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 0;
-                        cn.Open();
-
-                        if (paramIdProgInventario>0)
-                            cmd.Parameters.AddWithValue("@idProgInventario", paramIdProgInventario);
-
-                        if (paramTipoInventario != -1)
-                            cmd.Parameters.AddWithValue("@tipoInventario", paramTipoInventario);
-
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            while (dr.Read())
-                            {
-                                ProgramacionInventarioBE objEntidad = new ProgramacionInventarioBE();
-                                objEntidad.idProgInventario = dr.GetInt32(dr.GetOrdinal("idProgInventario"));
-                                objEntidad.tipoInventario = dr.GetInt32(dr.GetOrdinal("tipoInventario"));
-                                objEntidad.fechaProgramada = dr.GetDateTime(dr.GetOrdinal("fechaProgramada"));
-                                objEntidad.frecuencia = dr.GetInt32(dr.GetOrdinal("frecuencia"));
-                                objEntidad.idAlmacen = dr.GetInt32(dr.GetOrdinal("idAlmacen"));
-                                objEntidad.idPersona = dr.GetInt32(dr.GetOrdinal("idPersona"));
-                                objEntidad.idEstadoInventario = dr.GetInt32(dr.GetOrdinal("idEstadoInventario"));
-
-                                objEntidad.descripcionTipoInventario = dr.GetString(dr.GetOrdinal("descripcionTipoInventario"));
-                                objEntidad.Responsable = dr.GetString(dr.GetOrdinal("Responsable"));
-                                objEntidad.descripcionAlmacen = dr.GetString(dr.GetOrdinal("descripcionAlmacen"));
-                                objEntidad.descripcionEstadoInventario = dr.GetString(dr.GetOrdinal("descripcionEstadoInventario"));
-
-                                objResult.Add(objEntidad);
-                            }
-                        }
-                        return objResult;
-                    }
-                }
+                int rpta = 0;
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
+                parameter.Add("@DT_FechaProgramada", oBe.Dt_fechaProgramada);
+                parameter.Add("@IN_TipoInventario", oBe.In_tipoInventario);
+                parameter.Add("@CH_Cod_Usuario", oBe.Ch_Cod_Usuario);
+                parameter.Add("@IN_idAlmacen", oBe.In_idAlmacen);
+                rpta = int.Parse(SqlHelper.Instance.ExecuteScalar("SP_INSERTAR_INVENTARIO_PROGRAMADO", parameter).ToString());
+                return rpta;
             }
             catch (Exception ex)
             {
@@ -63,135 +89,71 @@ namespace ETNA.DataAccess.Logistica
             }
         }
 
-        public bool Insertar(ProgramacionInventarioBE objProgramacionInventarioBE)
+        public int ActualizarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
-            bool OperacionExitosa = true;
             try
             {
-                using (SqlConnection cn = ConexionBD.ObtenerConexion())
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_programacionInventario_Insertar", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 0;
-                        cn.Open();
-
-                        cmd.Parameters.AddWithValue("@tipoInventario", objProgramacionInventarioBE.tipoInventario);
-                        cmd.Parameters.AddWithValue("@fechaProgramada", objProgramacionInventarioBE.fechaProgramada);
-                        cmd.Parameters.AddWithValue("@frecuencia", objProgramacionInventarioBE.frecuencia);
-                        cmd.Parameters.AddWithValue("@idAlmacen", objProgramacionInventarioBE.idAlmacen);
-                        cmd.Parameters.AddWithValue("@idPersona", objProgramacionInventarioBE.idPersona);
-                        cmd.Parameters.AddWithValue("@idEstadoInventario", objProgramacionInventarioBE.idEstadoInventario);
-                        cmd.Parameters.AddWithValue("idUsuario", objProgramacionInventarioBE.idUsuario);
-                        
-                        cmd.ExecuteNonQuery();
-
-                    }
-                }
+                int rpta = 0;
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
+                parameter.Add("@IN_idProgInventario", oBe.In_idProgInventario);
+                parameter.Add("@DT_FechaProgramada", oBe.Dt_fechaProgramada);
+                parameter.Add("@IN_TipoInventario", oBe.In_tipoInventario);
+                parameter.Add("@IN_idAlmacen", oBe.In_idAlmacen);
+                rpta = int.Parse(SqlHelper.Instance.ExecuteScalar("SP_ACTUALIZAR_INVENTARIO_PROGRAMADO", parameter).ToString());
+                return rpta;
             }
             catch (Exception ex)
             {
-                OperacionExitosa = false;
                 throw ex;
             }
-            return OperacionExitosa;
         }
 
-        public bool Actualizar(ProgramacionInventarioBE objProgramacionInventarioBE)
+        public int EliminarInventariosProgramados(ProgramacionInventarioBE oBe)
         {
-            bool OperacionExitosa = true;
             try
             {
-                using (SqlConnection cn = ConexionBD.ObtenerConexion())
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_programacionInventario_Actualizar", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 0;
-                        cn.Open();
-
-                        cmd.Parameters.AddWithValue("@idProgInventario", objProgramacionInventarioBE.idProgInventario);
-                        cmd.Parameters.AddWithValue("@tipoInventario", objProgramacionInventarioBE.tipoInventario);
-                        cmd.Parameters.AddWithValue("@fechaProgramada", objProgramacionInventarioBE.fechaProgramada);                        
-                        cmd.Parameters.AddWithValue("@idAlmacen", objProgramacionInventarioBE.idAlmacen);
-                        cmd.Parameters.AddWithValue("@idPersona", objProgramacionInventarioBE.idPersona);                                                
-
-                        cmd.ExecuteNonQuery();
-
-                    }
-                }
+                int rpta = 0;
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
+                parameter.Add("@IN_idProgInventario", oBe.In_idProgInventario);
+                rpta = int.Parse(SqlHelper.Instance.ExecuteScalar("SP_ELIMINAR_INVENTARIO_PROGRAMADO", parameter).ToString());
+                return rpta;
             }
             catch (Exception ex)
             {
-                OperacionExitosa = false;
                 throw ex;
             }
-            return OperacionExitosa;
         }
 
-        public bool Eliminar(int paramIdProgInventario)
+        public int IniciarInventario(ProgramacionInventarioBE oBe)
         {
-            bool OperacionExitosa = true;
             try
             {
-                using (SqlConnection cn = ConexionBD.ObtenerConexion())
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_programacionInventario_Eliminar", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 0;
-                        cn.Open();
-
-                        cmd.Parameters.AddWithValue("@idProgInventario", paramIdProgInventario);
-                        
-                        cmd.ExecuteNonQuery();
-
-                    }
-                }
+                int rpta = 0;
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
+                parameter.Add("@IN_idProgInventario", oBe.In_idProgInventario);
+                rpta = int.Parse(SqlHelper.Instance.ExecuteScalar("SP_INICIAR_INVENTARIO", parameter).ToString());
+                return rpta;
             }
             catch (Exception ex)
             {
-                OperacionExitosa = false;
                 throw ex;
             }
-            return OperacionExitosa;
         }
 
-        public bool Existe_Inventario(int paramIdProgInventario)
+        public int AjustarInventario(ProgramacionInventarioBE oBe)
         {
-            int idProgInventario = 0;
-            bool Existe = false;
             try
             {
-                using (SqlConnection cn = ConexionBD.ObtenerConexion())
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_programacionInventario_ConsultarReferencia", cn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandTimeout = 0;
-                        cn.Open();
-
-                        if (paramIdProgInventario > 0)
-                            cmd.Parameters.AddWithValue("@idProgInventario", paramIdProgInventario);
-
-                        using (SqlDataReader dr = cmd.ExecuteReader())
-                        {
-                            if (dr.Read())
-                            {                                
-                                 idProgInventario = dr.GetInt32(dr.GetOrdinal("idProgInventario"));                              
-                            }
-                        }
-                        if (idProgInventario > 0)
-                            Existe = true;
-                    }
-                }
+                int rpta = 0;
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
+                parameter.Add("@IN_idProgInventario", oBe.In_idProgInventario);
+                rpta = int.Parse(SqlHelper.Instance.ExecuteScalar("SP_AJUSTAR_INVENTARIO", parameter).ToString());
+                return rpta;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-            return Existe;
         }
     }
 }

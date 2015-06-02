@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // La información general sobre un ensamblado se controla mediante el siguiente 
-// conjunto de atributos. Cambie estos atributos para modificar la información
-// asociada con un ensamblado.
-[assembly: AssemblyTitle("ETNA")]
+// conjunto de atributos. Cambie los valores de estos atributos para modificar la información
+// asociada a un ensamblado.
+[assembly: AssemblyTitle("ProyectoETNA")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MCCPR")]
-[assembly: AssemblyProduct("ETNA")]
-[assembly: AssemblyCopyright("© MCCPR 2010")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ProyectoETNA")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Si establece ComVisible como false hace que los tipos de este ensamblado no sean visibles 
-// a los componentes COM. Si necesita obtener acceso a un tipo en este ensamblado desde 
-// COM, establezca el atributo ComVisible como true en este tipo.
+// Si ComVisible se establece en false, los componentes COM no verán los 
+// tipos de este ensamblado. Si necesita obtener acceso a un tipo de este ensamblado desde 
+// COM, establezca el atributo ComVisible en true en este tipo.
 [assembly: ComVisible(false)]
 
-// El siguiente GUID sirve como identificador de la biblioteca de tipos si este proyecto se expone a COM
-[assembly: Guid("3d5900ae-111a-45be-96b3-d9e4606ca793")]
+// El siguiente GUID sirve como ID de la biblioteca de tipos si este proyecto se expone a COM.
+[assembly: Guid("235bb60c-9ebe-4c47-9421-ef29a1896966")]
 
-// La información de versión de un ensamblado consta de los cuatro valores siguientes:
+// La información de versión de un ensamblado consta de los siguientes cuatro valores:
 //
 //      Versión principal
 //      Versión secundaria 
-//      Número de versión de compilación
+//      Número de compilación
 //      Revisión
 //
-// Puede especificar todos los valores o puede establecer como valores predeterminados los números de revisión y generación 
-// mediante el asterisco ('*'), como se muestra a continuación:
+// Puede especificar todos los valores o usar los valores predeterminados de número de compilación y de revisión 
+// mediante el carácter '*', como se muestra a continuación:
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

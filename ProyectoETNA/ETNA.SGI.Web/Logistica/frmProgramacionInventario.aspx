@@ -1,167 +1,262 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPrincipal.master" Theme="empresas"  AutoEventWireup="true" CodeBehind="frmProgramacionInventario.aspx.cs" Inherits="ETNA.Logistica.frmProgramacionInventario" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphMaster" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmProgramacionInventario.aspx.cs" Inherits="ETNA.SGI.Web.Logistica.frmProgramacionInventario" %>
 
-    <fieldset>
-        <legend class="camposempresas">
-            <img alt="" height="9" src="../Imagenes/flecha_submenu_e.gif" 
-                width="10" />Programación de Inventario</legend>
-        <table border="0" cellpadding="1" cellspacing="2" 
-            style="MARGIN: auto; WIDTH: 868px">
-            <tr>
-                <td align="left" class="texto" style="width: 145px" valign="middle">
-                </td>
-                <td align="right" style="height: 23px" valign="middle">
-                    
-                </td>
-            </tr>
-            
-            <tr style="height: 28px">
-                <td align="left" class="texto" style="width: 145px" valign="middle">
-                    <asp:Label ID="Label9" runat="server" Text="Tipo de Inventario"></asp:Label></td>
-                <td align="left" class="texto" valign="middle">
-                    <asp:DropDownList ID="ddlTipoInventario" runat="server">
-                        <asp:ListItem Value="-1">Todos</asp:ListItem>
-                        <asp:ListItem Value="36">ANUAL</asp:ListItem>
-                        <asp:ListItem Value="37">MENSUAL</asp:ListItem>
-                        <asp:ListItem Value="38">CICLICO</asp:ListItem>
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr style="height: 28px">
-                <td align="left" class="texto" style="width: 145px" valign="middle">
-                </td>
-                <td align="left" class="texto" valign="middle">
-                    <asp:Button ID="btnBuscar" runat="server" CssClass="boton" 
-                            Text="Buscar" Width="130px" TabIndex="7" OnClick="btnBuscar_Click"  />
-                    <asp:Button ID="btnAgregar" runat="server" CssClass="boton" 
-                            Text="Agregar" Width="130px" TabIndex="7" OnClick="btnAgregar_Click"  />
-                </td>
-            </tr>
-            <tr style="height: 28px">
-                <td align="left" class="texto" style="width: 145px" valign="middle">
-                </td>
-                <td align="left" class="texto" valign="middle">
-                    <asp:UpdatePanel ID="upMensaje" runat="server">
-                        <ContentTemplate>
-                            <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" Width="698px"></asp:Label>
-                        </ContentTemplate>
-                        <Triggers>
-                            
-                            <asp:AsyncPostBackTrigger ControlID="btnBuscar" EventName="Click" />
-                            
-                        </Triggers>
-                    </asp:UpdatePanel>
-                </td>
-            </tr>
-        </table>
-        </fieldset>
-        
-       
-   
-<asp:UpdatePanel ID="upListadoPlanillaConcepto" runat="server">
-    <ContentTemplate>
-    <fieldset>
-        <legend class="camposempresas">
-            <img alt="" height="9" src="../Imagenes/flecha_submenu_e.gif" 
-                width="10" />Resultados de la Búsqueda</legend>
-            <table cellspacing="0" class="pager">
-            <tbody><tr><td style="height: 19px"><asp:Label ID="lblResultado" Runat="Server" 
-                CssClass="textoresultado"></asp:Label> </td><td class="textoresultado2" style="height: 19px"></td></tr></tbody>
-        </TABLE>
-    <table border="0" cellpadding="1" cellspacing="2"   style="MARGIN: auto; WIDTH: 900px">    
-    <tr>
-        <td>
-    <asp:GridView ID="gvListado" 
-                runat="server" 
-                AllowPaging="True"
-                CellPadding="0" 
-                AutoGenerateColumns="False" 
-                CssClass="Grilla" 
-                DataKeyNames="idProgInventario"
-                Width="100%" 
-        >         
-        <PagerSettings FirstPageImageUrl="~/Imagenes/e_btn_first.png"                                 
-        LastPageImageUrl="~/Imagenes/e_btn_last.png" Mode="NextPreviousFirstLast" 
-        NextPageImageUrl="~/Imagenes/e_btn_next.png" 
-        PreviousPageImageUrl="~/Imagenes/e_btn_previous.png" />   
-                                    
-        <Columns>  
-                                                                                                
-                                        
-            <asp:TemplateField HeaderText="Id Programación">
-                <ItemTemplate>
-                    <%#DataBinder.Eval(Container, "DataItem.idProgInventario")%>                                                
-                </ItemTemplate>                                             
-                <ItemStyle HorizontalAlign="Left" Wrap="False" />
-                    <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>                                                                         
-                                       
-            <asp:TemplateField HeaderText="Fecha Programada">
-                <ItemTemplate>
-                    <%# string.Format("{0:dd/MM/yyyy}", DataBinder.Eval(Container, "DataItem.fechaProgramada"))%>
-                </ItemTemplate> 
-                    <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>                                        
-                
-           <asp:TemplateField HeaderText="Tipo Inventario">
-                <ItemTemplate>
-                    <%#DataBinder.Eval(Container, "DataItem.descripcionTipoInventario")%>
-                </ItemTemplate> 
-                    <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="frmProgramacionInventario.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-            <asp:TemplateField HeaderText="Almacén">
-                <ItemTemplate>
-                    <%#DataBinder.Eval(Container, "DataItem.descripcionAlmacen")%>
-                </ItemTemplate> 
-                    <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>
+    <div class="row" style="margin-bottom: 4%">
+        <div class="col-md-12">
+            <fieldset>
+                <legend>Programación de Inventario</legend>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Tipo de inventario</label>
+                            <asp:DropDownList ID="ddlTipoInventario" CssClass="form-control" runat="server">
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Almacén</label>
+                            <asp:DropDownList ID="ddlAlmacen" CssClass="form-control" runat="server">
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <button class="btn btn-primary" onclick="return Buscar()" style="width: 100%;">BUSCAR</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <button class="btn btn-info" onclick="return Nuevo()" style="width: 100%;">NUEVO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div id="divgvInventarios">
+                                <asp:GridView ID="gvInventarios" AutoGenerateColumns="False" runat="server" CssClass="table table-striped table-bordered table-hover">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="id" Visible="false">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.In_idProgInventario")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Fecha Programada">
+                                            <ItemTemplate>
+                                                <%# string.Format("{0:dd/MM/yyyy}", DataBinder.Eval(Container, "DataItem.Dt_fechaProgramada"))%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="idTipo" Visible="false">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.In_tipoInventario")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Tipo Inventario">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.Vc_tipoInventario")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="idAlmacen" Visible="false">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.In_idAlmacen")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Almacén">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.Vc_almacen")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Responsable">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.Vc_usuario")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Estado">
+                                            <ItemTemplate>
+                                                <%#DataBinder.Eval(Container, "DataItem.Vc_estado")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Act.">
+                                            <ItemTemplate>
+                                                <a class="glyphicon glyphicon-pencil" href="javascript:Editar('<%#DataBinder.Eval(Container, "DataItem.In_idProgInventario")%>',
+                                                                                                              '<%# string.Format("{0:dd/MM/yyyy}", DataBinder.Eval(Container, "DataItem.Dt_fechaProgramada"))%>', 
+                                                                                                              '<%#DataBinder.Eval(Container, "DataItem.In_tipoInventario")%>',
+                                                                                                              '<%#DataBinder.Eval(Container, "DataItem.In_idAlmacen")%>')"></a>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Eli.">
+                                            <ItemTemplate>
+                                                <a class="glyphicon glyphicon-trash" href="javascript:Eliminar('<%#DataBinder.Eval(Container, "DataItem.In_idProgInventario")%>')"></a>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <div id="divgvInventariosEmpty">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead style="background-color: white;">
+                                        <tr>
+                                            <th>Fecha Programada
+                                            </th>
+                                            <th>Tipo Inventario
+                                            </th>
+                                            <th>Almacén
+                                            </th>
+                                            <th>Responsable
+                                            </th>
+                                            <th>Estado
+                                            </th>
+                                            <th>Act.
+                                            </th>
+                                            <th>Eli.
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="7" style="text-align: center;">
+                                                <label id="lblInventarioVacio">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
 
-            <asp:TemplateField HeaderText="Responsable">
-                <ItemTemplate>
-                    <%#DataBinder.Eval(Container, "DataItem.Responsable")%>
-                </ItemTemplate> 
-                    <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>
+    <div class="modal fade" id="modalMensaje">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ETNA - PROGRAMACION INVENTARIO</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mensaje"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">ACEPTAR</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
-            
-            <asp:TemplateField HeaderText="Acción Actualizar">
-                <ItemTemplate>
-                        <a id="lnkEditar"  href="frmMantenimientoProgramacionInventario.aspx?idProgInventario=<%#DataBinder.Eval(Container,"DataItem.idProgInventario")%> &IdAccion=2" >
-                          Editar                                  
-                    </a>                
-                </ItemTemplate> 
-                 <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>
+    <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="modalNuevoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modalNuevoLabel">NUEVA PROGRAMACIÓN</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Fecha Programada</label>
+                                <input type="text" class="form-control" id="txtFechaProgramadaNuevo" style="background-color: #fff; cursor: pointer;" readonly="true"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo Inventario</label>
+                                <asp:DropDownList ID="ddlTipoInventarioNuevo" CssClass="form-control" runat="server">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label>Responsable</label>
+                                <asp:TextBox ID="txtResponsableNuevo" runat="server" ReadOnly="true" CssClass="form-control form-read"></asp:TextBox>
+                                <asp:HiddenField ID="idResponsableNuevo" runat="server"></asp:HiddenField>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Almacén</label>
+                                <asp:DropDownList ID="ddlAlmacenNuevo" CssClass="form-control" runat="server">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <input type="text" class="form-control form-read" id="txtEstadoNuevo" value="PENDIENTE" readonly="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary" onclick="return Registrar()">REGISTRAR</button>&nbsp;&nbsp;
+                                <button type="button" class="btn btn-info" data-dismiss="modal">CANCELAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <asp:TemplateField HeaderText="Acción Eliminar">
-                 <ItemTemplate>
-                        <a id="lnkEliminar"  href="frmMantenimientoProgramacionInventario.aspx?idProgInventario=<%#DataBinder.Eval(Container,"DataItem.idProgInventario")%> &IdAccion=3" >
-                          Eliminar                                  
-                    </a>                
-                </ItemTemplate> 
-              <HeaderStyle ForeColor="White" /> 
-            </asp:TemplateField>
-                                                                                                                     
-        </Columns>                                        
-                                                                                                               
-        <EmptyDataTemplate>"No hay registros"</EmptyDataTemplate>                                                                                                                    
-        <RowStyle CssClass="celdaimpar" />
-        <PagerStyle CssClass="celdapagina" HorizontalAlign="Center" />
-        <HeaderStyle CssClass="celdatitulo" />
-        <AlternatingRowStyle CssClass="celdapar" />
-                                    
-    </asp:GridView>
-                               
-    </td>
-    </tr>
-    </table>
-    </fieldset>
-    </ContentTemplate>
-        <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="btnBuscar" EventName="Click" />
-        </Triggers>
-    </asp:UpdatePanel>
-
-
+    <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modalEditLabel">ACTUALIZAR PROGRAMACIÓN</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Fecha Programada</label>
+                                <input type="hidden" id="idProgInventario" />
+                                <input type="text" class="form-control" id="txtFechaProgramadaEdit" style="background-color: #fff; cursor: pointer;" readonly="true"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo Inventario</label>
+                                <asp:DropDownList ID="ddlTipoInventarioEdit" CssClass="form-control" runat="server">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label>Responsable</label>
+                                <asp:TextBox ID="txtResponsableEdit" runat="server" ReadOnly="true" CssClass="form-control form-read"></asp:TextBox>
+                                <asp:HiddenField ID="idResponsableEdit" runat="server"></asp:HiddenField>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Almacén</label>
+                                <asp:DropDownList ID="ddlAlmacenEdit" CssClass="form-control" runat="server">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <input type="text" class="form-control form-read" id="txtEstadoEdit" value="PENDIENTE" readonly="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary" onclick="return Actualizar()">ACTUALIZAR</button>&nbsp;&nbsp;
+                                <button type="button" class="btn btn-info" data-dismiss="modal">CANCELAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>

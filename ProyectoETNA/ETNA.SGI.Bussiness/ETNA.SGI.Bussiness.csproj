@@ -55,7 +55,16 @@
     <Compile Include="Exportacion\BLogin.cs" />
     <Compile Include="Exportacion\BTablas.cs" />
     <Compile Include="Exportacion\BTransaccion.cs" />
+    <Compile Include="Logistica\InventarioBL.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenBL.cs" />
+    <Compile Include="Logistica\MovimientosAlmacenDetalleBL.cs" />
+    <Compile Include="Logistica\ProgramacionInventarioBL.cs" />
+    <Compile Include="Logistica\ReposicionStockBL.cs" />
+    <Compile Include="Logistica\TipoBL.cs" />
+    <Compile Include="Logistica\UsuarioAlmacenBL.cs" />
+    <Compile Include="Logistica\UsuarioBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logistica\DetalleInventarioBL.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -470,11 +470,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ETNA.SGI.Bussiness\ETNA.SGI.Bussiness.csproj">
-      <Project>{A9FE44E1-5459-43C5-8493-8B2BBFE85F23}</Project>
+      <Project>{a9fe44e1-5459-43c5-8493-8b2bbfe85f23}</Project>
       <Name>ETNA.SGI.Bussiness</Name>
     </ProjectReference>
     <ProjectReference Include="..\ETNA.SGI.Entity\ETNA.SGI.Entity.csproj">
-      <Project>{9D5B3824-833F-413A-B2F7-15F37A5E645F}</Project>
+      <Project>{9d5b3824-833f-413a-b2f7-15f37a5e645f}</Project>
       <Name>ETNA.SGI.Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\ETNA.SGI.Utils\ETNA.SGI.Utils.vbproj">

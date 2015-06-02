@@ -7,19 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ETNA.Logistica {
+namespace ETNA.SGI.Web.Logistica {
     
     
     public partial class frmProgramacionInventario {
-        
-        /// <summary>
-        /// Control Label9.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
         /// Control ddlTipoInventario.
@@ -31,66 +22,93 @@ namespace ETNA.Logistica {
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoInventario;
         
         /// <summary>
-        /// Control btnBuscar.
+        /// Control ddlAlmacen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAlmacen;
         
         /// <summary>
-        /// Control btnAgregar.
+        /// Control gvInventarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.GridView gvInventarios;
         
         /// <summary>
-        /// Control upMensaje.
+        /// Control ddlTipoInventarioNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upMensaje;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoInventarioNuevo;
         
         /// <summary>
-        /// Control lblMensaje.
+        /// Control txtResponsableNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.TextBox txtResponsableNuevo;
         
         /// <summary>
-        /// Control upListadoPlanillaConcepto.
+        /// Control idResponsableNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upListadoPlanillaConcepto;
+        protected global::System.Web.UI.WebControls.HiddenField idResponsableNuevo;
         
         /// <summary>
-        /// Control lblResultado.
+        /// Control ddlAlmacenNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResultado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAlmacenNuevo;
         
         /// <summary>
-        /// Control gvListado.
+        /// Control ddlTipoInventarioEdit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvListado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoInventarioEdit;
+        
+        /// <summary>
+        /// Control txtResponsableEdit.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtResponsableEdit;
+        
+        /// <summary>
+        /// Control idResponsableEdit.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField idResponsableEdit;
+        
+        /// <summary>
+        /// Control ddlAlmacenEdit.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlAlmacenEdit;
     }
 }

@@ -23,6 +23,10 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             return dOrdenCompra;
         }
 
+        /* @Autor GPC
+           Modificación: Se agregó filtro de lugar de entrega en el listado de orden de compra
+           Fecha: 04/06/2015
+         */
         public DataTable DGetAllOrdenCompra(EOrdenCompra EOrdenCompra)
         {
             string sql = "SELECT oc.codOrdenCompra,oc.codRequerimiento,oc.codCotizacion,p.razonSocial,oc.codEstado,e.desEstado,oc.fechaEntrega,oc.lugarEntrega, oc.observacion " +

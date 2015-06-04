@@ -22,6 +22,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             InitializeComponent();
         }
 
+        /*@Autor GPC
+          Modificación: Se agregó filtro de lugar de entrega en el listado de orden de compra
+          Fecha: 04/06/2015
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             EOrdenCompra eOrdenCompra = new EOrdenCompra();

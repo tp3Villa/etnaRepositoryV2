@@ -9,6 +9,11 @@ namespace ETNA.SGI.Data.Logistica
 {
     public class MovimientosAlmacenDetalleDA
     {
+        /// <summary>
+        /// Obtiene los productos registrados en un documento para movimiento de almacén
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public List<MovimientosAlmacenDetalleBE> ObtenerDetalleMovimientos(int id)
         {
             List<MovimientosAlmacenDetalleBE> listDetalleMovimientos = new List<MovimientosAlmacenDetalleBE>();
@@ -35,7 +40,11 @@ namespace ETNA.SGI.Data.Logistica
             }
             return listDetalleMovimientos;
         }
-
+        /// <summary>
+        /// Actualiza la cantidad del producto, de un documento pendiente, que está siendo atendido
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int EditarDetalleMovimiento(MovimientosAlmacenDetalleBE oBe)
         {
             try
@@ -53,7 +62,11 @@ namespace ETNA.SGI.Data.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Actualiza el detalle del documento pendiente
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public int GuardarDetalleMovimiento(MovimientosAlmacenDetalleBE oBe)
         {
             try

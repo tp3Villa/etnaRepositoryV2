@@ -10,6 +10,11 @@ namespace ETNA.SGI.Data.Logistica
 {
     public class MovimientosAlmacenDA
     {
+        /// <summary>
+        /// Retorna los documentos que se encuentran pendientes de atención por el almacén
+        /// </summary>
+        /// <param name="oBe"></param>
+        /// <returns></returns>
         public List<MovimientosAlmacenBE> ObtenerMovimientosAlmacen(MovimientosAlmacenBE oBe)
         {
             List<MovimientosAlmacenBE> listMovimientosAlmacen = new List<MovimientosAlmacenBE>();
@@ -39,7 +44,11 @@ namespace ETNA.SGI.Data.Logistica
             }
             return listMovimientosAlmacen;
         }
-
+        /// <summary>
+        /// Retorna los datos de un documento pendiente específico
+        /// </summary>
+        /// <param name="cod"></param>
+        /// <returns></returns>
         public MovimientosAlmacenBE ObtenerDocumentoPendiente(int cod)
         {
             MovimientosAlmacenBE objDocumento = new MovimientosAlmacenBE();

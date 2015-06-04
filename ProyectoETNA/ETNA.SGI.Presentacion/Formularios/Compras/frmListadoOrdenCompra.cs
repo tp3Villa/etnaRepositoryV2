@@ -34,7 +34,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             }
             
             eOrdenCompra.CodEstado = (int)cboEstado.SelectedValue;
-
+            eOrdenCompra.LugarEntrega = txtLugarEntrega.Text;
             cargaGrilla(eOrdenCompra);
         }
               

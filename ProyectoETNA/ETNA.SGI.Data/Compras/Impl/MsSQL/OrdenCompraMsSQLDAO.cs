@@ -35,7 +35,7 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                               "ON oc.codEstado = e.codEstado " +
                           "WHERE  ( @codOrdenCompra = 0 OR oc.codOrdenCompra = @codOrdenCompra ) " +
                           "AND ( @codRequerimiento = 0 OR oc.codRequerimiento = @codRequerimiento ) " +
-                          "AND ( @codEstado = 0 OR oc.codEstado = @codEstado )";
+                          "AND ( @codEstado = 0 OR oc.codEstado = @codEstado ) AND oc.lugarEntrega like @lugarEntrega ";
             
             SqlDataAdapter adapter = new SqlDataAdapter();
            
@@ -48,6 +48,8 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             command.Parameters["@codRequerimiento"].Value = EOrdenCompra.CodRequerimiento;
             command.Parameters.Add("@codEstado", SqlDbType.Int);
             command.Parameters["@codEstado"].Value = EOrdenCompra.CodEstado;
+            command.Parameters.Add("@lugarEntrega", SqlDbType.VarChar);
+            command.Parameters["@lugarEntrega"].Value = "%" + EOrdenCompra.LugarEntrega + "%";
 
             adapter.SelectCommand = command;
 

@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ETNA.SGI.Web.MasterPage {
+namespace ProyectoETNA.MasterPage {
     
     
     public partial class PaginaPrincipal {
@@ -38,6 +38,15 @@ namespace ETNA.SGI.Web.MasterPage {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+        
+        /// <summary>
+        /// Control btnCerrarSesion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnCerrarSesion;
         
         /// <summary>
         /// Control ToolkitScriptManager1.

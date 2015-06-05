@@ -7,6 +7,9 @@ using ETNA.SGI.Entity.Logistica;
 
 namespace ETNA.SGI.Bussiness.Logistica
 {
+    /// <summary>
+    /// Clase de interface entre lógica de negocio y datos de la tabla inventario
+    /// </summary>
     public class InventarioBL
     {
         private static InventarioDA objInventario;

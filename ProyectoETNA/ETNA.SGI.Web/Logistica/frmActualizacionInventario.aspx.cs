@@ -15,12 +15,20 @@ namespace ETNA.SGI.Web.Logistica
 {
     public partial class ActualizacionInventario : System.Web.UI.Page
     {
+        /// <summary>
+        /// Inicializa la carga de la página
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
                 LoadMetodos();
         }
-
+        /// <summary>
+        /// Procedimiento de registro de los manejadores de eventos de la página
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnInit(EventArgs e)
         {
             CallbackManager.Register(ObtenerInventariosEventHandler);
@@ -28,13 +36,17 @@ namespace ETNA.SGI.Web.Logistica
             CallbackManager.Register(AjustarInventarioEventHandler);
             base.OnInit(e);
         }
-
+        /// <summary>
+        /// Carga de las listas de control de los formularios de la página
+        /// </summary>
         protected void LoadMetodos()
         {
             CargarTipoInventarios();
             CargarAlmacenes();
         }
-
+        /// <summary>
+        /// Carga la lista de tipos de inventarios
+        /// </summary>
         protected void CargarTipoInventarios()
         {
             try
@@ -51,7 +63,9 @@ namespace ETNA.SGI.Web.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Carga la relación de almacenes autorizadas para el usuario autorizado
+        /// </summary>
         protected void CargarAlmacenes()
         {
             try
@@ -70,7 +84,11 @@ namespace ETNA.SGI.Web.Logistica
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Manejador para iniciar el inventario programado
+        /// </summary>
+        /// <param name="arg"></param>
+        /// <returns></returns>
         public string IniciarInventarioEventHandler(string arg)
         {
             string result = string.Empty;
@@ -92,7 +110,11 @@ namespace ETNA.SGI.Web.Logistica
 
             return result.ToString();
         }
-
+        /// <summary>
+        /// Manejador para el control de ajuste de inventario
+        /// </summary>
+        /// <param name="arg"></param>
+        /// <returns></returns>
         public string AjustarInventarioEventHandler(string arg)
         {
             string result = string.Empty;
@@ -114,7 +136,11 @@ namespace ETNA.SGI.Web.Logistica
 
             return result.ToString();
         }
-
+        /// <summary>
+        /// Manejador para obtener la lista de inventarios
+        /// </summary>
+        /// <param name="arg"></param>
+        /// <returns></returns>
         public string ObtenerInventariosEventHandler(string arg)
         {
             try

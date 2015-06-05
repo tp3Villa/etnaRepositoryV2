@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmConsultaMovimientosAlmacen.aspx.cs" Inherits="ETNA.SGI.Web.Logistica.frmConsultaMovimientosAlmacen" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmConsultaMovimientosAlmacen.aspx.cs" Inherits="ProyectoETNA.Logistica.frmConsultaMovimientosAlmacen" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="frmConsultaMovimientosAlmacen.js"></script>
@@ -6,7 +6,7 @@
     <div class="row" style="margin-bottom: 4%">
         <div class="col-md-12">
             <fieldset>
-                <legend>Generar Movimientos de Almacén</legend>
+                <legend>Movimientos de Almacén</legend>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">

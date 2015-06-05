@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ETNA.SGI.Entity.Logistica;
+using ETNA.BusinessEntity;
 
-namespace ETNA.SGI.Web.MasterPage
+namespace ProyectoETNA.MasterPage
 {
     public partial class PaginaPrincipal : System.Web.UI.MasterPage
     {
@@ -26,7 +26,7 @@ namespace ETNA.SGI.Web.MasterPage
                 if (Session["LogUsuario"] != null)
                 {
                     PersonaBE UsuarioObj = Session["LogUsuario"] as PersonaBE;
-                    lblNombreUsuario.Text = "Bienvenido(a) :  " + UsuarioObj.Vc_nombres + " " + UsuarioObj.Vc_apellidoPaterno + " - " + UsuarioObj.Vc_tipoUsuario;
+                    lblNombreUsuario.Text = "Bienvenido(a) :  " + UsuarioObj.Vc_nombres + " - " + UsuarioObj.Vc_tipoUsuario;
                 }
                 else
                 {

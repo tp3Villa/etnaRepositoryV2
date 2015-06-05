@@ -70,8 +70,6 @@ C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Data\obj\Debug
 C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.pdb
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.pdb
-C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.dll.CodeAnalysisLog.xml
-C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.dll.lastcodeanalysissucceeded
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Entity.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Entity.pdb
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.csprojResolveAssemblyReference.cache

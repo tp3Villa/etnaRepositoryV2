@@ -378,3 +378,17 @@ C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\x86\Debug\ETNA.SGI.Presentacion.Menu.resources
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\x86\Debug\ETNA.SGI.Presentacion.Properties.Resources.resources
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\x86\Debug\ETNA.SGI.Presentacion.csproj.GenerateResource.Cache
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Presentacion.exe.config
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Presentacion.exe
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Presentacion.pdb
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Bussiness.dll
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Entity.dll
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Utils.dll
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Data.dll
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Bussiness.pdb
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Entity.pdb
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Utils.pdb
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Utils.xml
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\bin\Debug\ETNA.SGI.Data.pdb
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\x86\Debug\ETNA.SGI.Presentacion.exe
+C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Presentacion\obj\x86\Debug\ETNA.SGI.Presentacion.pdb

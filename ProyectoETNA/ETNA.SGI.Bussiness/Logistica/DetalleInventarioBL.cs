@@ -7,6 +7,9 @@ using ETNA.SGI.Entity.Logistica;
 
 namespace ETNA.SGI.Bussiness.Logistica
 {
+    /// <summary>
+    /// Clase de interface entre Lógica de Negocio y Lógica de Datos
+    /// </summary>
     public class DetalleInventarioBL
     {
         private static DetalleInventarioDA objDetalleInventario;

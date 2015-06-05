@@ -8,10 +8,13 @@ using ETNA.SGI.Entity.Logistica;
 
 namespace ETNA.SGI.Data.Logistica
 {
-    // Clase y métodos para obtener las listas (combobox, listbox) usadas en el sistema
-    // Los métodos invocan al método genérico ObtenerTipo para acceder a la tabla de listas
-    // La tabla de listas (TablaTipo) contiene los identificadores de cada elemento,
-    // el nombre de la lista y la descripción de cada identificador de la lista
+    
+    /// <summary>
+    /// Clase y métodos para obtener las listas (combobox, listbox) usadas en el sistema
+    /// Los métodos invocan al método genérico ObtenerTipo para acceder a la tabla de listas
+    /// La tabla de listas (TablaTipo) contiene los identificadores de cada elemento,
+    /// el nombre de la lista y la descripción de cada identificador de la lista
+    /// </summary>
     public class TipoDA
     {
         public List<TipoBE> ObtenerTipoInventario()

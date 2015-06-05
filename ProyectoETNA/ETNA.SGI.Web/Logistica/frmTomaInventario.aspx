@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmTomaInventario.aspx.cs" Inherits="ETNA.SGI.Web.Logistica.frmTomaInventario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmTomaInventario.aspx.cs" Inherits="ProyectoETNA.Logistica.frmTomaInventario" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="frmTomaInventario.js"></script>
@@ -152,7 +152,8 @@
                     <div id="mensaje"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" onclick="return HideMensaje()">ACEPTAR</button>
+                    <button type="button" class="btn btn-info pull-right" id="btnAceptarOk" onclick="return HideMensaje()" style="display: none">ACEPTAR</button>
+                    <button type="button" class="btn btn-info pull-right" id="btnAceptarError" data-dismiss="modal" style="display: none">ACEPTAR</button>
                 </div>
             </div>
             <!-- /.modal-content -->

@@ -7,6 +7,9 @@ using ETNA.SGI.Entity.Logistica;
 
 namespace ETNA.SGI.Bussiness.Logistica
 {
+    /// <summary>
+    /// Clase para interface lógica de negocio y datos para la obtención de los tipos usados en las listas de control
+    /// </summary>
     public class TipoBL
     {
         private static TipoDA objTipo;

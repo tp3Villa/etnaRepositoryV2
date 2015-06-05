@@ -23,6 +23,10 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             return dOrdenCompra;
         }
 
+        /* @Autor GPC
+           Modificación: Se agregó filtro de lugar de entrega en el listado de orden de compra
+           Fecha: 04/06/2015
+         */
         public DataTable DGetAllOrdenCompra(EOrdenCompra EOrdenCompra)
         {
             string sql = "SELECT oc.codOrdenCompra,oc.codRequerimiento,oc.codCotizacion,p.razonSocial,oc.codEstado,e.desEstado,oc.fechaEntrega,oc.lugarEntrega, oc.observacion " +
@@ -35,7 +39,7 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
                               "ON oc.codEstado = e.codEstado " +
                           "WHERE  ( @codOrdenCompra = 0 OR oc.codOrdenCompra = @codOrdenCompra ) " +
                           "AND ( @codRequerimiento = 0 OR oc.codRequerimiento = @codRequerimiento ) " +
-                          "AND ( @codEstado = 0 OR oc.codEstado = @codEstado )";
+                          "AND ( @codEstado = 0 OR oc.codEstado = @codEstado ) AND oc.lugarEntrega like @lugarEntrega ";
             
             SqlDataAdapter adapter = new SqlDataAdapter();
            
@@ -48,6 +52,8 @@ namespace ETNA.SGI.Data.Compras.Impl.MsSQL
             command.Parameters["@codRequerimiento"].Value = EOrdenCompra.CodRequerimiento;
             command.Parameters.Add("@codEstado", SqlDbType.Int);
             command.Parameters["@codEstado"].Value = EOrdenCompra.CodEstado;
+            command.Parameters.Add("@lugarEntrega", SqlDbType.VarChar);
+            command.Parameters["@lugarEntrega"].Value = "%" + EOrdenCompra.LugarEntrega + "%";
 
             adapter.SelectCommand = command;
 

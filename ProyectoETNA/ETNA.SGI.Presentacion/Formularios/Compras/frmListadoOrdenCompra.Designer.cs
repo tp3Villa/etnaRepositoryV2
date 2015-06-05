@@ -37,10 +37,6 @@
             this.txtCodReq = new System.Windows.Forms.TextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.dtGridOC = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGenerarOC = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.codOrdenCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codRequerimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +46,16 @@
             this.lugarEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnGenerarOC = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anular = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtLugarEntrega = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOC)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -94,7 +98,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(376, 81);
+            this.label2.Location = new System.Drawing.Point(392, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 102;
@@ -105,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(177, 81);
+            this.label3.Location = new System.Drawing.Point(206, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 103;
@@ -113,7 +117,7 @@
             // 
             // txtCodOC
             // 
-            this.txtCodOC.Location = new System.Drawing.Point(79, 77);
+            this.txtCodOC.Location = new System.Drawing.Point(114, 78);
             this.txtCodOC.Name = "txtCodOC";
             this.txtCodOC.Size = new System.Drawing.Size(79, 20);
             this.txtCodOC.TabIndex = 104;
@@ -121,7 +125,7 @@
             // 
             // txtCodReq
             // 
-            this.txtCodReq.Location = new System.Drawing.Point(271, 77);
+            this.txtCodReq.Location = new System.Drawing.Point(300, 78);
             this.txtCodReq.Name = "txtCodReq";
             this.txtCodReq.Size = new System.Drawing.Size(79, 20);
             this.txtCodReq.TabIndex = 105;
@@ -134,7 +138,7 @@
             this.cboEstado.Items.AddRange(new object[] {
             "GENERADA",
             "ANULADA"});
-            this.cboEstado.Location = new System.Drawing.Point(431, 77);
+            this.cboEstado.Location = new System.Drawing.Point(447, 77);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 106;
@@ -161,64 +165,13 @@
             this.observacion,
             this.modificar,
             this.anular});
-            this.dtGridOC.Location = new System.Drawing.Point(12, 133);
+            this.dtGridOC.Location = new System.Drawing.Point(12, 154);
             this.dtGridOC.Name = "dtGridOC";
             this.dtGridOC.ReadOnly = true;
             this.dtGridOC.RowHeadersVisible = false;
             this.dtGridOC.Size = new System.Drawing.Size(686, 229);
             this.dtGridOC.TabIndex = 107;
             this.dtGridOC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridOC_CellContentClick);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnGenerarOC);
-            this.groupBox2.Controls.Add(this.btnClose);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(273, 368);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 81);
-            this.groupBox2.TabIndex = 111;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Opciones";
-            // 
-            // btnGenerarOC
-            // 
-            this.btnGenerarOC.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
-            this.btnGenerarOC.Location = new System.Drawing.Point(11, 18);
-            this.btnGenerarOC.Name = "btnGenerarOC";
-            this.btnGenerarOC.Size = new System.Drawing.Size(81, 57);
-            this.btnGenerarOC.TabIndex = 6;
-            this.btnGenerarOC.Text = "Generar OC";
-            this.btnGenerarOC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGenerarOC.UseVisualStyleBackColor = true;
-            this.btnGenerarOC.Click += new System.EventHandler(this.btnGenerarOC_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
-            this.btnClose.Location = new System.Drawing.Point(98, 18);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 57);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Salir";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Buscar;
-            this.button1.Location = new System.Drawing.Point(584, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 49);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // codOrdenCompra
             // 
@@ -288,6 +241,73 @@
             this.observacion.ReadOnly = true;
             this.observacion.Visible = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnGenerarOC);
+            this.groupBox2.Controls.Add(this.btnClose);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.Location = new System.Drawing.Point(273, 389);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(163, 81);
+            this.groupBox2.TabIndex = 111;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Opciones";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "modificar";
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Edit;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 40;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.DataPropertyName = "anular";
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Cancel_Red_mini;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 40;
+            // 
+            // btnGenerarOC
+            // 
+            this.btnGenerarOC.Image = global::ETNA.SGI.Presentacion.Properties.Resources.FACTURAR12;
+            this.btnGenerarOC.Location = new System.Drawing.Point(11, 18);
+            this.btnGenerarOC.Name = "btnGenerarOC";
+            this.btnGenerarOC.Size = new System.Drawing.Size(81, 57);
+            this.btnGenerarOC.TabIndex = 6;
+            this.btnGenerarOC.Text = "Generar OC";
+            this.btnGenerarOC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGenerarOC.UseVisualStyleBackColor = true;
+            this.btnGenerarOC.Click += new System.EventHandler(this.btnGenerarOC_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
+            this.btnClose.Location = new System.Drawing.Point(98, 18);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 57);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Salir";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Buscar;
+            this.button1.Location = new System.Drawing.Point(584, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 49);
+            this.button1.TabIndex = 108;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // modificar
             // 
             this.modificar.DataPropertyName = "modificar";
@@ -306,11 +326,31 @@
             this.anular.ReadOnly = true;
             this.anular.Width = 40;
             // 
+            // txtLugarEntrega
+            // 
+            this.txtLugarEntrega.Location = new System.Drawing.Point(114, 104);
+            this.txtLugarEntrega.Name = "txtLugarEntrega";
+            this.txtLugarEntrega.Size = new System.Drawing.Size(265, 20);
+            this.txtLugarEntrega.TabIndex = 113;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(17, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 112;
+            this.label4.Text = "Lugar Entrega:";
+            // 
             // frmListadoOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 457);
+            this.ClientSize = new System.Drawing.Size(710, 477);
+            this.Controls.Add(this.txtLugarEntrega);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtGridOC);
@@ -360,6 +400,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
         private System.Windows.Forms.DataGridViewImageColumn modificar;
         private System.Windows.Forms.DataGridViewImageColumn anular;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.TextBox txtLugarEntrega;
+        private System.Windows.Forms.Label label4;
 
     }
 }

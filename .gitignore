@@ -214,3 +214,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.dll
+*.pdb
+ProyectoETNA/ETNA.SGI.Bussiness/obj/Debug/ETNA.SGI.Bussiness.csproj.FileListAbsolute.txt
+*.cache

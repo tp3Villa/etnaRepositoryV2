@@ -96,7 +96,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
             /* Validar duplicidad de RUC */
             string SqlString,strErrorMsg;
 
-            SqlString = "Select 'X' as existe from proveedor where ruc =" + txtRUC.Text;
+            SqlString = "Select 'X' as existe from proveedor where codEstado =5 and ruc =" + txtRUC.Text;
             strErrorMsg = "RUC ingresado ya esta registrado, por favor ingrese otro.";
 
             if (sOpcion == "UPD")            {

@@ -9,7 +9,7 @@ using EasyCallback;
 using ETNA.SGI.Entity.Logistica;
 using ETNA.SGI.Bussiness.Logistica;
 using Json;
-using ETNA.SGI.Web.MasterPage;
+using ETNA.SGI.Web.Logistica;
 
 namespace ETNA.SGI.Web.Logistica
 {

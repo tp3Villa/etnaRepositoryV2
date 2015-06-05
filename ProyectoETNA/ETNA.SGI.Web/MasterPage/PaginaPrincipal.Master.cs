@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ETNA.BusinessEntity;
+using ETNA.SGI.Entity.Logistica;
 
-namespace ProyectoETNA.MasterPage
+namespace ETNA.SGI.Web.Logistica
 {
     public partial class PaginaPrincipal : System.Web.UI.MasterPage
     {

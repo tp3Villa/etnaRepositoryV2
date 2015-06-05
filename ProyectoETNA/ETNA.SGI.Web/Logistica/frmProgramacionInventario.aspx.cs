@@ -6,12 +6,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using EasyCallback;
-using ETNA.BusinessEntity;
-using ETNA.BusinessLogic;
+using ETNA.SGI.Entity.Logistica;
+using ETNA.SGI.Bussiness.Logistica;
 using Json;
-using ProyectoETNA.MasterPage;
+using ETNA.SGI.Web.Logistica;
 
-namespace ProyectoETNA.Logistica
+namespace ETNA.SGI.Web.Logistica
 {
     public partial class frmProgramacionInventario : System.Web.UI.Page
     {

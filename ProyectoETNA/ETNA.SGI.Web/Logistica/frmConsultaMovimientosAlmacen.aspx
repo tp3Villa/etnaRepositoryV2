@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmConsultaMovimientosAlmacen.aspx.cs" Inherits="ProyectoETNA.Logistica.frmConsultaMovimientosAlmacen" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="frmConsultaMovimientosAlmacen.aspx.cs" Inherits="ETNA.SGI.Web.Logistica.frmConsultaMovimientosAlmacen" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="frmConsultaMovimientosAlmacen.js"></script>

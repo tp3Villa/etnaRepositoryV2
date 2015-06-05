@@ -90,8 +90,6 @@ C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Bussiness\obj\
 C:\Users\hitss\Source\Repos\etnaRepository6\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.pdb
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.pdb
-C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.dll.CodeAnalysisLog.xml
-C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.dll.lastcodeanalysissucceeded
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Data.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Entity.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Data.pdb

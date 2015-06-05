@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ProyectoETNA.MasterPage {
+namespace ETNA.SGI.Web.Logistica {
     
     
     public partial class PaginaPrincipal {

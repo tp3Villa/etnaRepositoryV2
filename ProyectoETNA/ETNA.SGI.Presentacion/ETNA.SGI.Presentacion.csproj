@@ -38,8 +38,11 @@
     <ApplicationIcon>APLICAC.ICO</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -134,71 +137,89 @@
     <Compile Include="Formularios\Compras\frmReqCompra.designer.cs">
       <DependentUpon>frmReqCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Exportacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmActualizarInfoRequerimiento.designer.cs">
       <DependentUpon>frmActualizarInfoRequerimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmAprobacionDetaSolicitud.designer.cs">
       <DependentUpon>frmAprobacionDetaSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmAprobacionSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmAprobacionSolicitud.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmAprobacionSolicitud.designer.cs">
       <DependentUpon>frmAprobacionSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmAtencionSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmAtencionSolicitud.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmAtencionSolicitud.designer.cs">
       <DependentUpon>frmAtencionSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmBusquedaFormatoComercial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmBusquedaFormatoComercial.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmBusquedaFormatoComercial.designer.cs">
       <DependentUpon>frmBusquedaFormatoComercial.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\FrmBusquedaGRAL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\FrmBusquedaGRAL.Designer.cs">
+    <Compile Include="Formularios\Exportacion\FrmBusquedaGRAL.designer.cs">
       <DependentUpon>FrmBusquedaGRAL.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmBusquedaRequerimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmBusquedaRequerimiento.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmBusquedaRequerimiento.designer.cs">
       <DependentUpon>frmBusquedaRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmCronogramaDespacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\frmCronogramaDespacho.designer.cs">
+      <DependentUpon>frmCronogramaDespacho.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmFormatoComercial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmFormatoComercial.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmFormatoComercial.designer.cs">
       <DependentUpon>frmFormatoComercial.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmListadocumentosAsociados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmListadocumentosAsociados.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmListadocumentosAsociados.designer.cs">
       <DependentUpon>frmListadocumentosAsociados.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmNuevoRequerimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmNuevoRequerimiento.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmNuevoRequerimiento.designer.cs">
       <DependentUpon>frmNuevoRequerimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.Designer.cs">
+    <Compile Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.designer.cs">
       <DependentUpon>frmRegistroSolicitudAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\Reporte\frmReporteCronograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exportacion\Reporte\frmReporteCronograma.Designer.cs">
+      <DependentUpon>frmReporteCronograma.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConfiguracion.cs">
       <SubType>Form</SubType>
@@ -296,6 +317,9 @@
     <EmbeddedResource Include="Formularios\Exportacion\frmBusquedaRequerimiento.resx">
       <DependentUpon>frmBusquedaRequerimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\frmCronogramaDespacho.resx">
+      <DependentUpon>frmCronogramaDespacho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Exportacion\frmFormatoComercial.resx">
       <DependentUpon>frmFormatoComercial.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +331,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Exportacion\frmRegistroSolicitudAtencion.resx">
       <DependentUpon>frmRegistroSolicitudAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exportacion\Reporte\CronogramaDespacho.rdlc" />
+    <EmbeddedResource Include="Formularios\Exportacion\Reporte\frmReporteCronograma.resx">
+      <DependentUpon>frmReporteCronograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TablasPrincipales\frmPaises.resx">
       <DependentUpon>frmPaises.cs</DependentUpon>

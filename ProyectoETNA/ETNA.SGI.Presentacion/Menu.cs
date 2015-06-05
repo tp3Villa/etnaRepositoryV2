@@ -21,11 +21,18 @@ namespace ETNA.SGI.Presentacion
             InitializeComponent();
         }
 
+
         Process pr = new Process();
-        BTablas objBusTab = new BTablas();
+
+        //BTablas objBusTab = new BTablas();
 
         DataTable dtOcpionesxUsuario = new DataTable();
         DataView dvOpcionesxUsuario = new DataView();
+
+        private BTablas objBusTab = BTablas.getInstance();
+
+
+
 
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -33,8 +40,8 @@ namespace ETNA.SGI.Presentacion
             stStrip01.Text = "Sistema ETNA      ";
             stStrip02.Text = "Usuario: " + Program.Usuario.Trim();
 
-            objBusTab = new BTablas();
-            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select * from dbo.UsuMenu");
+            //objBusTab = new BTablas();
+            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select COD_USUARIO AS COD_USU,COD_OPCIONMENU AS cod_men from dbo.UsuMenu");
             dvOpcionesxUsuario = new DataView(dtOcpionesxUsuario, "cod_usu = '" + Program.Usuario.Trim() + "'", "", DataViewRowState.OriginalRows);
 
             CargaAutorizaciones();
@@ -217,6 +224,14 @@ namespace ETNA.SGI.Presentacion
         {
             Formularios.Compras.frmListadoReqCompra frm = SingletonFormProvider.GetInstance<Formularios.Compras.frmListadoReqCompra>(this);
             frm.Show();
+        }
+
+        private void ETN09S_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Formularios.Exportacion.frmCronogramaDespacho frm = new Formularios.Exportacion.frmCronogramaDespacho();
+            frm.ShowDialog();
+            this.Cursor = Cursors.Default;
         }
     }
 }

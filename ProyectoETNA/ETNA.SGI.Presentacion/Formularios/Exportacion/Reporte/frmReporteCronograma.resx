@@ -117,40 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="cod_solicitud.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cod_cab_req_solicitud.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="razon_social.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fec_reg_solicitud.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Deta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Anular.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="eCronograma.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
-        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAAAAAACqoA
-        AAAAAAAAAAAAAAAAAAqqoAAAAAAAAAAAAAAAAACqqqoAAAAAAAAAAAAAAAAAqqqqAAAAAAAAAAAAAAAA
-        CqqqqqAAAAAAAAAAAAAAAAqqoKqgAAAAAAAAAAAAAACqqgAKqgAAAAAAAAAAAAAKqqAAAKqgAAAAAAAA
-        AAAAqqqgAACqqgAAAAAAAAAACqqqAAAACqoAAAAAAAAAAAAKqgAAAACqoAAAAAAAAAAAAAAAAAAAqqoA
-        AAAAAAAAAAAAAAAAAAqqAAAAAAAAAAAAAAAAAAAAqqAAAAAAAAAAAAAAAAAAAAqqAAAAAAAAAAAAAAAA
-        AAAAqqAAAAAAAAAAAAAAAAAAAAqgAAAAAAAAAAAAAAAAAAAAqgAAAAAAAAAAAAAAAAAAAKqgAAAAAAAA
-        AAAAAAAAAAAKqgAAAAAAAAAAAAAAAAAAAKqgAAAAAAAAAAAAAAAAAAAKqgAAAAAAAAAAAAAAAAAAAAqg
-        AAAAAAAAAAAAAAAAAAAAqgAAAAAAAAAAAAAAAAAAAAqgAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAA
-        AAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////n////w////8D////A////gH
-        ///4B///8AP///AD///gQf//wOD//4Dgf/8B8H//gfg//+P4H////B////4P////B////4P////D////
-        4f///+D////wf///+D////wf///+D////4f////D////4f////j////8/////w==
+        AAD///8AAAAIiIiIiIiIiIiIiIgAAAAIiIAIiIiIiIiIiIgAgAAAiAAAAAAAAAAAAAAAAAAACIAAf///
+        ///////////wAIiAgId3d3d3d3d3d3d3cACIgICIiIiIiIiIiIiIiIAAiAgAAAAAAAAAAAAAAAAABwCA
+        h3d3d3d3d3d3d3d3d/AAgIcHBwcHBwcHBwcHBwfwAICHd3d3d3d3d3d3d3d38ACAh3d3d3d0R3d3d3dE
+        d/AAgId3d3d3fud3d3d37nfwAICHd3d3d3d3d3d3d3d38AAAf/////////////////AAAAAAAAAAAAAA
+        AAAAAAAAAABwAAAAAAAAAAAAB/AAAAAAeAd3d3d3d3d3dwfwAAAAB3gHeIiHiIh4iH8PAAAAAAd4B3d3
+        d3d3d3d/DwAAAAB3iAd4eIh4h4iI/wAAAAAA/4gP//////////DwAAAAAAAA/3f393f3d3/wAAAAAAAA
+        AP//////////8AAAAAAAAA/3f3d/d/d3/wAAAAAAAAAP//////////8AAAAAAAAA/3d/d39393/wAAAA
+        AAAAAP//////////8AAAAAAAAA/3f3d39393/wAAAAAAAAAP//////////8AAAAAAAAA/3d/d39/d3/w
+        AAAAAAAAAHd3d3d3d3d3cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4AAAP4AAAB8AAAAOAAAADAAAAAwAA
+        AAMAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAwAAAAMAAAAHgAAAP4AAAD8AAAB/AAAAfgAAAP4AA
+        AD+AAAA/+AAA//AAAf/wAAH/4AAD/+AAA//AAAf/wAAH/4AAD/+AAA//gAAf/w==
 </value>
   </data>
 </root>

@@ -4,11 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ETNA.SGI.Data.Exportacion;
+using ETNA.SGI.Data.Exportacion.Impl.MsSQL;
 
 namespace ETNA.SGI.Data.Factory
 {
     class MsSQLFactoryDAO : FactoryDAO
     {
+        //Compras FACTORY
         public override CategoriaDAO getCategoriaDAO()
         {
             CategoriaDAO objeto = CategoriaMsSQLDAO.getInstance();
@@ -73,6 +76,26 @@ namespace ETNA.SGI.Data.Factory
         {
             PersonaDAO objeto = PersonaMsSQLDAO.getInstance();
             return objeto;
-        }   
+        }
+        //Exportacion
+
+        public override daoILogin obtenerLogin()
+        {
+            daoILogin objeto = (daoILogin)(new daoLoginSQL());
+            return objeto;
+        }
+
+        public override daoITablas obtenerTablas()
+        {
+            daoITablas objeto = (daoITablas)(new daoTablasSQL());
+            return objeto;
+        }
+
+        public override daoITransaccion obtenerTransaccion()
+        {
+            daoITransaccion objeto = (daoITransaccion)(new daoTransaccionSQL());
+            return objeto;
+        }
+
     }
 }

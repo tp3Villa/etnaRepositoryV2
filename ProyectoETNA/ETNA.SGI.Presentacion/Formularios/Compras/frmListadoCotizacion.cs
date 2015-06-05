@@ -13,8 +13,6 @@ namespace ETNA.SGI.Presentacion.Formularios.Compras
 {
     public partial class frmListadoCotizacion : Form
     {
-      
-
         private BCotizacion bCotizacion = BCotizacion.getInstance();
         private BEstado bEstado = BEstado.getInstance();
         DataTable dtEstado = new DataTable();

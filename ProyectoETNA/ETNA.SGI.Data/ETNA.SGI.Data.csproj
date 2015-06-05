@@ -65,9 +65,12 @@
     <Compile Include="Compras\Impl\MsSQL\RequerimientoCompraMsSQLDAO.cs" />
     <Compile Include="Compras\RequerimientoCompraDAO.cs" />
     <Compile Include="DConexion.cs" />
-    <Compile Include="Exportacion\DLogin.cs" />
-    <Compile Include="Exportacion\DTablas.cs" />
-    <Compile Include="Exportacion\DTransaccion.cs" />
+    <Compile Include="Exportacion\daoILogin.cs" />
+    <Compile Include="Exportacion\daoITablas.cs" />
+    <Compile Include="Exportacion\daoITransaccion.cs" />
+    <Compile Include="Exportacion\Impl\MsSQL\daoLoginSQL.cs" />
+    <Compile Include="Exportacion\Impl\MsSQL\daoTablasSQL.cs" />
+    <Compile Include="Exportacion\Impl\MsSQL\daoTransaccionSQL.cs" />
     <Compile Include="Logistica\DbProvider.cs" />
     <Compile Include="Factory\FactoryDAO.cs" />
     <Compile Include="Factory\MsSQLFactoryDAO.cs" />

@@ -114,8 +114,10 @@
             this.txtRazon.BackColor = System.Drawing.Color.White;
             this.txtRazon.Location = new System.Drawing.Point(11, 16);
             this.txtRazon.Name = "txtRazon";
+            this.txtRazon.ShortcutsEnabled = false;
             this.txtRazon.Size = new System.Drawing.Size(523, 20);
             this.txtRazon.TabIndex = 0;
+            this.txtRazon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazon_KeyPress);
             // 
             // groupBox1
             // 
@@ -147,6 +149,7 @@
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(126, 20);
             this.dtDesde.TabIndex = 2;
+            this.dtDesde.ValueChanged += new System.EventHandler(this.dtDesde_ValueChanged);
             // 
             // label2
             // 
@@ -289,7 +292,6 @@
             // fec_reg_solicitud
             // 
             this.fec_reg_solicitud.DataPropertyName = "fec_reg_solicitud";
-            dataGridViewCellStyle4.Format = "0000/00/00";
             dataGridViewCellStyle4.NullValue = null;
             this.fec_reg_solicitud.DefaultCellStyle = dataGridViewCellStyle4;
             this.fec_reg_solicitud.HeaderText = "Fecha Registro";

@@ -8,10 +8,12 @@ using System.Text;
 using System.Windows.Forms;
 
 
-using ETNA.SGI.Bussiness.Exportacion;
 using ETNA.SGI.Entity.Exportacion;
 using ETNA.SGI.Utils;
 using System.Globalization;
+using ETNA.SGI.Bussiness.Exportacion;
+
+
 
 namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 {
@@ -22,12 +24,15 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             InitializeComponent();
         }
 
+        private BTablas bTablas = BTablas.getInstance();
+        private BTransaccion bTransaccion = BTransaccion.getInstance();
+
 
         public string Opcion = "";
         public string CorrReqUPD = "";
         TControlVB oControl = new TControlVB();
-        BTablas objBus = new BTablas();
-        BTransaccion objtra = new BTransaccion();
+        //BTablas objBus = new BTablas();
+        //BTransaccion objtra = new BTransaccion();
 
         DateTime FechaSis = DateTime.Now;
 
@@ -39,28 +44,28 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             string fecha;
             FechaSis = DateTime.Now;
 
-            if (txtPai.Text == "") { MessageBox.Show("Seleccionar Pais", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); button1.Focus(); this.Cursor = Cursors.Default; return; }
-            if (txtdir.Text == "") { MessageBox.Show("Ingresar Direccion", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); txtdir.Focus(); this.Cursor = Cursors.Default; return; }
-            if (dgvDetReq.Rows.Count == 0) { MessageBox.Show("Ingresar Items", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); TxtCodProd.Focus(); this.Cursor = Cursors.Default; return; }
+            if (txtPai.Text == "") { MessageBox.Show("Debe Seleccionar Pais!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); button1.Focus(); this.Cursor = Cursors.Default; return; }
+            if (txtdir.Text == "") { MessageBox.Show("Debe Ingresar Dirección!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); txtdir.Focus(); this.Cursor = Cursors.Default; return; }
+            if (dgvDetReq.Rows.Count == 0) { MessageBox.Show("Debe Ingresar Item's!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error); TxtCodProd.Focus(); this.Cursor = Cursors.Default; return; }
 
-            if (MessageBox.Show("Se Procedera a Grabar Req.", "Exportación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Desea grabar Requerimiento?", "Exportación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 string corr = "";
                 if (CorrReqUPD == "")
                 {
-                    corr = objBus.BCorrelativo().Rows[0][0].ToString();
+                    corr = bTablas.BCorrelativo().Rows[0][0].ToString();
                 }
                 else
                 {
                     corr = CorrReqUPD;
                 }
 
-                objtra = new BTransaccion();
-                int U = objtra.DDeleteCabReq(corr);
-                objtra = new BTransaccion();
-                int F = objtra.DDeleteDetReq(corr);
+                //objtra = new BTransaccion();                
+                int U = bTransaccion.DDeleteCabReq(corr);
+                //objtra = new BTransaccion();
+                int F = bTransaccion.DDeleteDetReq(corr);
 
-                objBus = new BTablas();                
+                //objBus = new BTablas();                
                 fecha = FechaSis.ToShortDateString().Substring(6, 4) + FechaSis.ToShortDateString().Substring(3, 2) + FechaSis.ToShortDateString().Substring(0, 2);
 
                 cabReq = new eReqCab();
@@ -75,8 +80,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 cabReq.Est_Cab_Req = "A";
                 cabReq.Obs_Cab_Req = richTextBox1.Text.Trim();
 
-                objtra = new BTransaccion();
-                int h = objtra.BInsertCabReq(cabReq);
+                //objtra = new BTransaccion();
+                int h = bTransaccion.BInsertCabReq(cabReq);
 
 
                 for (int i = 0; i <= dgvDetReq.Rows.Count - 1; i++)
@@ -88,8 +93,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                     detReq.Cod_Prod_Det_Req = Convert.ToDecimal(dgvDetReq["codProd", i].Value.ToString());
                     detReq.FOB = 0;
                     detReq.CIF = 0;
-                    objtra = new BTransaccion();
-                    int j = objtra.BInsertDetReq(detReq);
+                    //objtra = new BTransaccion();
+                    int j = bTransaccion.BInsertDetReq(detReq);
                 }
 
                 MessageBox.Show("Requerimiento Ingresado Correctamente ", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -124,6 +129,9 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 
         private void frmNuevoRequerimiento_Load(object sender, EventArgs e)
         {
+            dtp1.MinDate = DateTime.Now;
+            txtdir.CharacterCasing = CharacterCasing.Upper;
+            
             dgvDetReq.GridColor = Color.Red;  
             FormatoGrilla();
             txtCliente.Text = Program.Nombre;
@@ -131,8 +139,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             if (Opcion == "UPD")
             {
                 DataTable dt = new DataTable();
-                objBus = new BTablas();
-                dt = objBus.BRequerimientoCabeceraXCodREQ(CorrReqUPD);
+                //objBus = new BTablas();
+                dt = bTablas.BRequerimientoCabeceraXCodREQ(CorrReqUPD);
                 codPais = dt.Rows[0]["PAIS_CAB_REQ"].ToString();
                 nomPais = dt.Rows[0]["nompais"].ToString();
                 txtPai.Text = nomPais;
@@ -141,8 +149,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 
                 //COD_CAB_REQ,,,OBS_CAB_REQ,FEC_ESP_CAB_REQ,FEC_REG_CAB_REQ
 
-                objBus = new BTablas();
-                dt = objBus.BRequerimientoDetalleXCodREQ(CorrReqUPD);
+                //objBus = new BTablas();
+                dt = bTablas.BRequerimientoDetalleXCodREQ(CorrReqUPD);
                 
 
                 for (int i = 0; i <= dt.Rows.Count - 1; i++)
@@ -213,9 +221,9 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 {
                     if (TxtCodProd.Text != "")
                     {
-                        objBus = new BTablas();
+                        //objBus = new BTablas();
                         DataTable dtProdBusq = new DataTable();
-                        dtProdBusq = objBus.BProductoBusquedaXCodigo(TxtCodProd.Text.Trim());
+                        dtProdBusq = bTablas.BProductoBusquedaXCodigo(TxtCodProd.Text.Trim());
                         if (dtProdBusq.Rows.Count > 0)
                         {
                             codPrd = dtProdBusq.Rows[0]["Cod_Prod"].ToString();
@@ -256,7 +264,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             }
             catch { }
             /****Validar para ingresar decimales o no segun el tipo de Unidad Medida*/
-            oControl.NumeroDec(e, txtCantidad);
+            oControl.Numero(e, txtCantidad);
             /****Validar para ingresar decimales o no segun el tipo de Unidad Medida*/
         }
 
@@ -370,7 +378,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             dgvDetReq.DataSource = tbldetalle;
 
             dgvDetReq.Columns["codProd"].HeaderText = "Producto";
-            dgvDetReq.Columns["desProd"].HeaderText = "Descripcion";
+            dgvDetReq.Columns["desProd"].HeaderText = "Descripción";
             dgvDetReq.Columns["Cantidad"].HeaderText = "Cantidad";
             dgvDetReq.Columns["PrecioS"].HeaderText = "Precio S/.";
             dgvDetReq.Columns["subPrecioS"].HeaderText = "Precio S/.";
@@ -427,6 +435,23 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 }
             }
             catch { }
+        }
+
+        private void txtdir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (!(char.IsNumber(e.KeyChar)) && !(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            //{
+            //    MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    e.Handled = true;
+            //    return;
+            //}
+            oControl.ValidarCajaTexto(e, e.KeyChar);
+            
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oControl.ValidarCajaTexto(e, e.KeyChar);
         }
 
 

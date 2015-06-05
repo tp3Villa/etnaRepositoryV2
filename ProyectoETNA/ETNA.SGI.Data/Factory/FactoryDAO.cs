@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ETNA.SGI.Data.Exportacion;
 
 namespace ETNA.SGI.Data.Factory
 {
@@ -11,6 +12,8 @@ namespace ETNA.SGI.Data.Factory
         public const int MSSQL_FACTORY = 1;
         public const int ORACLE_FACTORY = 2;
 
+
+        //Compras
         public abstract CategoriaDAO getCategoriaDAO();
         public abstract CondicionPagoDAO getCondicionPagoDAO();
         public abstract CotizacionDAO getCotizacionDAO();
@@ -22,6 +25,16 @@ namespace ETNA.SGI.Data.Factory
         public abstract MarcaDAO getMarcaDAO();
         public abstract ProductoDAO getProductoDAO();
         public abstract PersonaDAO getPersonaDAO();
+
+
+        //Exportacion
+        public abstract daoILogin obtenerLogin();
+        public abstract daoITablas obtenerTablas();
+        public abstract daoITransaccion obtenerTransaccion();
+
+
+
+
 
         public static FactoryDAO getFactory(int keyFactory)
         {

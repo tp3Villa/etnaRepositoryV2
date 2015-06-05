@@ -67,7 +67,7 @@ namespace ETNA.SGI.Presentacion.Formularios
             }
 
             objBusTab = new BTablas();
-            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select * from dbo.UsuMenu");
+            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select COD_USUARIO AS cod_usu,COD_OPCIONMENU AS cod_men from dbo.UsuMenu");
         }
 
 
@@ -364,7 +364,7 @@ namespace ETNA.SGI.Presentacion.Formularios
                 MessageBox.Show("Ingreso Correcto", "Alm. Ing.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             objBusTab = new BTablas();
-            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select * from dbo.UsuMenu");
+            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select COD_USUARIO AS cod_usu,COD_OPCIONMENU AS cod_men from dbo.UsuMenu");
         }       
        
 
@@ -462,7 +462,7 @@ namespace ETNA.SGI.Presentacion.Formularios
                 }
             } 
             objBusTab = new BTablas();
-            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select * from dbo.UsuMenu");
+            dtOcpionesxUsuario = objBusTab.getSELECTLIBRE("select COD_USUARIO AS cod_usu,COD_OPCIONMENU AS cod_men from dbo.UsuMenu");
         }
     }
 }

@@ -8,63 +8,83 @@ using ETNA.SGI.Entity.Exportacion;
 
 namespace ETNA.SGI.Bussiness.Exportacion
 {
-    public class BTransaccion
+    public class BTransaccion:BBase
     {
-        DTransaccion oDatTab = new DTransaccion();
+        
+        private static BTransaccion bTransaccion;
+
+        public static BTransaccion getInstance()
+        {
+            if (bTransaccion == null)
+            {
+                bTransaccion = new BTransaccion();
+            }
+            return bTransaccion;
+        }        
+
+        private daoITransaccion dTransaccion;
+
+        public BTransaccion()
+        {
+            this.dTransaccion = ObjFactoryDAO.obtenerTransaccion();
+        }
+
 
         public int BTransaccionVarias(string sql)
         {
-            return oDatTab.DTransaccionVarias(sql);
+            //return oDatTab.DTransaccionVarias(sql);
+            return dTransaccion.DTransaccionVarias(sql);
         }
 
         public int BInsertCabReq(eReqCab eReqCab)
         {
-            return oDatTab.DInsertCabReq(eReqCab);
+            return dTransaccion.DInsertCabReq(eReqCab);
         }
 
         public int BInsertDetReq(EReqDetalle eReqDet)
         {
-            return oDatTab.DInsertDetReq(eReqDet);
+            return dTransaccion.DInsertDetReq(eReqDet);
         }
 
         public int DDeleteCabReq(string REQ)
         {
-            return oDatTab.DDeleteCabReq(REQ);
+            return dTransaccion.DDeleteCabReq(REQ);
         }
 
         public int DDeleteDetReq(string REQ)
         {
-            return oDatTab.DDeleteDetReq(REQ);
+            return dTransaccion.DDeleteDetReq(REQ);
         }
 
         public int BUpdateEstadoReq(string REQ)
         {
-            return oDatTab.DUpdateEstadoReq(REQ);
+            return dTransaccion.DUpdateEstadoReq(REQ);
         }
 
         public int BInserUsuario(ELogin eLogin)
         {
-            return oDatTab.DInserUsuario(eLogin);
+            return dTransaccion.DInserUsuario(eLogin);
         }
 
         public int DDeleteUSUARIO(string Usuario)
         {
-            return oDatTab.DDeleteUSUARIO(Usuario);
+            return dTransaccion.DDeleteUSUARIO(Usuario);
         }
 
-        public int DUpdateUSUARIO(string Usuario,string set)
+        public int DUpdateUSUARIO(string Usuario, string set)
         {
-            return oDatTab.DUpdateUSUARIO(Usuario, set);
+            return dTransaccion.DUpdateUSUARIO(Usuario, set);
         }
 
         public int BInserUsuMenu(string Usu, string opc)
         {
-            return oDatTab.DInserUsuMenu(Usu, opc);
+            return dTransaccion.DInserUsuMenu(Usu, opc);
         }
 
         public int BDeleteUsuMenu(string Usu)
         {
-            return oDatTab.DDeleteUsuMenu(Usu);
+            return dTransaccion.DDeleteUsuMenu(Usu);
         }
+
     }
 }

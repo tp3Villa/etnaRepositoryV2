@@ -146,7 +146,9 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(7, 16);
+            this.txtCantidad.MaxLength = 9;
             this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ShortcutsEnabled = false;
             this.txtCantidad.Size = new System.Drawing.Size(107, 20);
             this.txtCantidad.TabIndex = 17;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -193,6 +195,7 @@
             this.TxtCodProd.Location = new System.Drawing.Point(6, 15);
             this.TxtCodProd.MaxLength = 7;
             this.TxtCodProd.Name = "TxtCodProd";
+            this.TxtCodProd.ShortcutsEnabled = false;
             this.TxtCodProd.Size = new System.Drawing.Size(92, 20);
             this.TxtCodProd.TabIndex = 14;
             this.TxtCodProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodProd_KeyPress);
@@ -301,9 +304,9 @@
             this.dgvDetReq.AllowUserToOrderColumns = true;
             this.dgvDetReq.AllowUserToResizeColumns = false;
             this.dgvDetReq.AllowUserToResizeRows = false;
-            this.dgvDetReq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDetReq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetReq.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetReq.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dgvDetReq.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -351,9 +354,11 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(10, 19);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ShortcutsEnabled = false;
             this.richTextBox1.Size = new System.Drawing.Size(591, 47);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
             // 
             // groupBox8
             // 
@@ -409,8 +414,10 @@
             this.txtdir.Location = new System.Drawing.Point(6, 16);
             this.txtdir.MaxLength = 99;
             this.txtdir.Name = "txtdir";
+            this.txtdir.ShortcutsEnabled = false;
             this.txtdir.Size = new System.Drawing.Size(595, 20);
             this.txtdir.TabIndex = 0;
+            this.txtdir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdir_KeyPress);
             // 
             // frmNuevoRequerimiento
             // 

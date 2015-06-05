@@ -133,9 +133,10 @@
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(90, 42);
             this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ShortcutsEnabled = false;
             this.txtCliente.Size = new System.Drawing.Size(271, 20);
             this.txtCliente.TabIndex = 100;
-            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
+            this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
             // 
             // label25
             // 
@@ -163,6 +164,7 @@
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(126, 20);
             this.dtDesde.TabIndex = 2;
+            this.dtDesde.ValueChanged += new System.EventHandler(this.dtDesde_ValueChanged);
             // 
             // label2
             // 

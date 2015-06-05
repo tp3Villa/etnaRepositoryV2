@@ -99,3 +99,12 @@ C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\bin\Deb
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.csprojResolveAssemblyReference.cache
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Bussiness.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Data.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Entity.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Data.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\bin\Debug\ETNA.SGI.Entity.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.csprojResolveAssemblyReference.cache
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Bussiness\obj\Debug\ETNA.SGI.Bussiness.pdb

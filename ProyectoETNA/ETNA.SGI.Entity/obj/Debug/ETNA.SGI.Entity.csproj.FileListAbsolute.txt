@@ -52,3 +52,8 @@ C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Entity\bin\Debug\
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Entity\bin\Debug\ETNA.SGI.Entity.dll.lastcodeanalysissucceeded
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Entity\obj\Debug\ETNA.SGI.Entity.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Entity\obj\Debug\ETNA.SGI.Entity.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Entity\bin\Debug\ETNA.SGI.Entity.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Entity\bin\Debug\ETNA.SGI.Entity.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Entity\obj\Debug\ETNA.SGI.Entity.csprojResolveAssemblyReference.cache
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Entity\obj\Debug\ETNA.SGI.Entity.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Entity\obj\Debug\ETNA.SGI.Entity.pdb

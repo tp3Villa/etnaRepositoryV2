@@ -82,6 +82,10 @@ Public Class TControlVB
             e.Handled = True
             Return a
         End If
+
+        
+
+
         ' aqui se hace la verificacion cuando es seleccionado el valor del texto 
         'y no sea considerado como la adicion de un digito mas al valor ya contenido en el textbox
         If Text.SelectedText = "" Then
@@ -101,6 +105,17 @@ Public Class TControlVB
                 End If
             Next
         End If
+
+
+        If e.KeyChar = "." Then
+            Dim car As String = CStr(Text.Text & e.KeyChar)
+            If InStr(Text.Text, ".") Then
+                e.Handled = True
+            End If
+        End If
+
+
+
     End Function
 
     Function Numero(ByVal e As System.Windows.Forms.KeyPressEventArgs, ByVal Text As System.Windows.Forms.TextBox) As Integer
@@ -119,6 +134,56 @@ Public Class TControlVB
         End If
 
     End Function
+
+    Function ValidarCajaTexto(ByVal e As System.Windows.Forms.KeyPressEventArgs, ByVal KeyAscii As Integer) As Integer
+
+        If KeyAscii = 39 Or KeyAscii = 22 Or KeyAscii = 3 Or KeyAscii = Keys.V Then
+            e.Handled = True
+        End If
+
+    End Function
+
+
+    'Function NumeroyLetras(ByVal e As System.Windows.Forms.KeyPressEventArgs, ByVal Text As System.Windows.Forms.TextBox) As Integer
+
+    'Dim dig As Integer = Len(Text.Text & e.KeyChar)
+    'Dim a As Integer
+
+
+    'Dim g As Boolean = e.KeyChar.IsDigit(e.KeyChar)
+    ' se verifica si es un digito o un punto para el decimal 
+    'If e.KeyChar.IsDigit(e.KeyChar) Then
+    ' e.Handled = False
+    'ElseIf e.KeyChar.IsLetter(e.KeyChar) Then
+    'e.Handled = False
+    'ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+    'e.Handled = False
+    'Return a
+    'ElseIf e.KeyChar.IsSeparator(e.KeyChar) Then
+    'e.Handled = False
+    'Return a
+    'Else
+    'e.Handled = True
+    'End If
+    'If e.KeyChar.IsDigit(e.KeyChar) Then
+    'e.Handled = False
+    'End If
+
+
+
+    'End Function
+
+    'Function ValidarCajaTexto(ByVal KeyAscii As Integer, ByVal e As System.Windows.Forms.KeyPressEventArgs) As Integer'
+    'Dim a As Integer
+    '    If KeyAscii >= 48 And KeyAscii <= 57 Or KeyAscii = 127 Or KeyAscii = 8 Then
+    '        e.Handled = False
+    '    Else
+    '        Return a
+    '    End If
+    'End Function
+
+
+
 
 
     '-----------------------------------------------

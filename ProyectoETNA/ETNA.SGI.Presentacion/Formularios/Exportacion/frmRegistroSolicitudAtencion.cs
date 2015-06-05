@@ -7,9 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using ETNA.SGI.Bussiness.Exportacion;
+
 using ETNA.SGI.Utils;
 using System.Globalization;
+using ETNA.SGI.Bussiness.Exportacion;
+
+
+
 
 namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 {
@@ -19,6 +23,13 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
         {
             InitializeComponent();
         }
+
+
+        
+
+        private BTablas bTablas = BTablas.getInstance();
+        private BTransaccion bTransaccion = BTransaccion.getInstance();
+
 
         public string Opcion = "";
         public string CorrSOLUPD = "";
@@ -59,12 +70,15 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 lblDestino.Text = Destino.Trim();
                 lblDireccion.Text = Direccion.Trim();
                 dtFechaReg.Value = Convert.ToDateTime(fecha1);
+
+
+                dtFechaEsp.MinDate = Convert.ToDateTime(fecha2);
                 dtFechaEsp.Value = Convert.ToDateTime(fecha2);
 
                 FormatoGrilla();
                 DataTable dt = new DataTable();
-                objBus = new BTablas();
-                dt = objBus.BRequerimientoDetalleXCodREQ(lblCodReq.Text.Trim());
+                //objBus = new BTablas();
+                dt = bTablas.BRequerimientoDetalleXCodREQ(lblCodReq.Text.Trim());
                 for (int i = 0; i <= dt.Rows.Count - 1; i++)
                 {
                     dr = tbldetalle.NewRow();
@@ -79,34 +93,35 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                     tbldetalle.AcceptChanges();
                 }
 
-                objTra = new BTransaccion();
-                int t = objTra.BTransaccionVarias("delete from docProdTEMP");
+                //objTra = new BTransaccion();
+                int t = bTransaccion.BTransaccionVarias("delete from docProdTEMP");
 
                 //objBus = new BTablas();
                 //dtReqProSii = objBus.getSELECTLIBRE("SELECT * FROM dbo.docProdTEMP");
             }
             catch { }
+            //dtFechaEsp.MinDate = DateTime.Now;
+
             this.Cursor = Cursors.Default;
+
         }
 
         DataTable tbldetalle1;
         DataRow dr1;
         DataTable tbldetalle;
         DataRow dr;
-        BTablas objBus = new BTablas();
-        BTransaccion objTra = new BTransaccion();
+
         private void frmRegistroSolicitudAtencion_Load(object sender, EventArgs e)
-        {
-            objTra = new BTransaccion();
-            int t = objTra.BTransaccionVarias("delete from docProdTEMP");
+        {            
+            int t = bTransaccion.BTransaccionVarias("delete from docProdTEMP");
 
             FormatoGrilla();
             lblResponsable.Text = Program.Nombre;
             dataGridView1.GridColor = Color.Red;
 
             int j = 0;
-            objBus = new BTablas();
-            DataTable dtOcpiones = objBus.getSELECTLIBRE("SELECT * FROM dbo.DosSIICEX");
+            //objBus = new BTablas();
+            DataTable dtOcpiones = bTablas.getSELECTLIBRE("SELECT * FROM dbo.DosSIICEX");
             while (j <= dtOcpiones.Rows.Count - 1)
             {
                 ListViewItem List;
@@ -122,6 +137,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 {
                     button2.Enabled = false;
                     button6.Enabled = false;
+
                     button1.Enabled = false;
                     button3.Enabled = false;
                     dtFechaEsp.Enabled = false;
@@ -132,10 +148,10 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 
 
                 DataTable dt = new DataTable();
-                objBus = new BTablas();
-                dt = objBus.getSELECTLIBRE("SELECT             Cod_Prod_Det_Req AS codProd,            DES_PROD AS desProd,            cantidad AS cantidad, " +
-" pre_prod AS PrecioS,            (cantidad*pre_prod) AS subPrecioS,            cod_unidad AS UndMeda,            pes_prod AS Peso,CIF,FOB FROM Requerimiento_Detalle  " +
-" LEFT OUTER JOIN  Producto ON (Cod_Prod_Det_Req=COD_PROD)             WHERE Cod_Det_Req='" + CorrREQUPD + "'");
+                //objBus = new BTablas();
+                dt = bTablas.getSELECTLIBRE("SELECT             R.idProducto AS codProd,            descripcionProducto AS desProd,            cantidad AS cantidad, " +
+ " pre_prod AS PrecioS,            (cantidad*pre_prod) AS subPrecioS,            tipounidadMedida AS UndMeda,            Peso AS Peso,CIF,FOB FROM Requerimiento_Detalle AS R " +
+ " LEFT OUTER JOIN  Producto AS P ON (R.idProducto=P.idProducto)             WHERE Cod_Det_Req='" + CorrREQUPD + "'");
 
                 for (int i = 0; i <= dt.Rows.Count - 1; i++)
                 {
@@ -152,13 +168,13 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 }
 
 
-                objTra = new BTransaccion();
-                int m = objTra.BTransaccionVarias("INSERT INTO docProdTEMP (Doc_Prod, Doc_Siicex) SELECT Doc_Prod, Doc_Siicex FROM DocProdReq WHERE Doc_Req=" + CorrREQUPD);
 
-                objBus = new BTablas();
-                DataTable dtMo = objBus.getSELECTLIBRE("SELECT Cod_Solicitud,Cod_Cab_Req_Solicitud,IATA_CAB_REQ,(SELECT IATA_DES FROM dbo.IATA WHERE IATA_COD=IATA_CAB_REQ) DES_IATA, " +
-" PAIS_CAB_REQ,(SELECT NOM_PAIS FROM PAIS WHERE Cod_Pais=PAIS_CAB_REQ) AS PAIS,RAZON_SOCIAL,DIRECCION,FEC_REG_CAB_REQ,FEC_RES_ESP_SOLICITUD,observacion_solicitud FROM dbo.SolicitudAtencion LEFT OUTER JOIN " +
-" dbo.Requerimiento ON (COD_CAB_REQ_SOLICITUD=COD_CAB_REQ) LEFT OUTER JOIN CLIENTE ON (CLI_CAB_REQ=CODIGO) WHERE Cod_Solicitud=" + CorrSOLUPD);
+                int m = bTransaccion.BTransaccionVarias("INSERT INTO docProdTEMP (IDPRODUCTO, COD_SIICEX) SELECT IDPRODUCTO, COD_SIICEX FROM DocProdReq WHERE COD_CAB_REQ=" + CorrREQUPD);
+
+
+                DataTable dtMo = bTablas.getSELECTLIBRE("SELECT Cod_Solicitud,S.Cod_Cab_Req AS Cod_Cab_Req_Solicitud,IATA_CAB_REQ,(SELECT IATA_DES FROM dbo.IATA WHERE IATA_COD=IATA_CAB_REQ) DES_IATA, " +
+ " R.Cod_Pais AS PAIS_CAB_REQ,(SELECT NOM_PAIS FROM PAIS WHERE Cod_Pais=R.Cod_Pais) AS PAIS,RAZON_SOCIAL,DIRECCION,FEC_REG_CAB_REQ,Convert(varchar(10), FEC_RES_ESP_SOLICITUD,103) AS FEC_RES_ESP_SOLICITUD,observacion_solicitud  " +
+ " FROM dbo.SolicitudAtencion AS S  LEFT OUTER JOIN  dbo.Requerimiento AS R ON (S.Cod_Cab_Req=R.COD_CAB_REQ) LEFT OUTER JOIN CLIENTE AS C ON (R.Cod_Cliente=C.Cod_Cliente) WHERE Cod_Solicitud=" + CorrSOLUPD);
 
                 codigoReq = CorrREQUPD;
 
@@ -169,7 +185,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 Destino = dtMo.Rows[0]["DIRECCION"].ToString();
                 Direccion = dtMo.Rows[0]["PAIS"].ToString();
                 fecha1 = dtMo.Rows[0]["FEC_REG_CAB_REQ"].ToString().Substring(6, 2) + "/" + dtMo.Rows[0]["FEC_REG_CAB_REQ"].ToString().Substring(4, 2) + "/" + dtMo.Rows[0]["FEC_REG_CAB_REQ"].ToString().Substring(0, 4);
-                fecha2 = dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(6, 2) + "/" + dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(4, 2) + "/" + dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(0, 4);
+                //fecha2 = dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(6, 2) + "/" + dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(4, 2) + "/" + dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString().Substring(0, 4);
+                fecha2 = dtMo.Rows[0]["FEC_RES_ESP_SOLICITUD"].ToString();
                 PAIS_CAB_REQ = dtMo.Rows[0]["PAIS_CAB_REQ"].ToString();
 
                 richTextBox1.Text = dtMo.Rows[0]["observacion_solicitud"].ToString().Trim();
@@ -256,8 +273,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                     desPROD = dataGridView1.Rows[p].Cells["producto"].Value.ToString();
                     label22.Text = "Producto - Bateria " + desPROD;
                     //frm.ShowDialog();
-                    objBus = new BTablas();
-                    dtReqProSii = objBus.getSELECTLIBRE("SELECT * FROM dbo.docProdTEMP");
+                    //objBus = new BTablas();
+                    dtReqProSii = bTablas.getSELECTLIBRE("SELECT idproducto AS Doc_Prod,cod_siicex AS Doc_Siicex FROM dbo.docProdTEMP");
                     panel1.Visible = true;
                     dvReqProSii = new DataView(dtReqProSii, "Doc_Prod=" + codPROD + "", "", DataViewRowState.OriginalRows);
                     int i = 0;
@@ -306,14 +323,14 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
         {
             if ((txtCIF.Text == "") || (Convert.ToDecimal(txtCIF.Text) == 0))
             {
-                MessageBox.Show("Porfavor Ingrese CIF", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Porfavor ingrese CIF!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCIF.Focus();
                 return;
             }
 
             if ((txtFOB.Text == "") || (Convert.ToDecimal(txtFOB.Text) == 0))
             {
-                MessageBox.Show("Porfavor Ingrese FOB", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Porfavor ingrese FOB!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtFOB.Focus();
                 return;
             }
@@ -336,7 +353,7 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 
             if (flat == "")
             {
-                MessageBox.Show("Seleccione Documentos", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("debe seleccionar documentos!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -345,12 +362,12 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             t = 0;
             i = 0;
             k = 0;
-            objBus = new BTablas();
-            dtReqProSii = objBus.getSELECTLIBRE("SELECT * FROM dbo.docProdTEMP");
+            //objBus = new BTablas();
+            dtReqProSii = bTablas.getSELECTLIBRE("SELECT idproducto AS Doc_Prod,cod_siicex AS Doc_Siicex FROM dbo.docProdTEMP");
             if (dtReqProSii.Rows.Count > 0)
             {
-                objTra = new BTransaccion();
-                t = objTra.BTransaccionVarias("delete from docProdTEMP where doc_prod=" + codPROD);
+                //objTra = new BTransaccion();
+                t = bTransaccion.BTransaccionVarias("delete from docProdTEMP where idproducto=" + codPROD);
             }
             
             t = 0;
@@ -362,8 +379,8 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                     k = 0;
                     opcion = lvAccesos.Items[i].Text.ToString().Trim();
 
-                    objTra = new BTransaccion();
-                    t = objTra.BTransaccionVarias("INSERT INTO [docProdTEMP] ([Doc_Prod],[Doc_Siicex]) VALUES " +
+                    //objTra = new BTransaccion();
+                    t = bTransaccion.BTransaccionVarias("INSERT INTO [docProdTEMP] ([idproducto],[cod_siicex]) VALUES " +
                                                   "(" + codPROD + ",'" + opcion + "')");
                     flat = "1";
                 }
@@ -417,12 +434,12 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             decimal fob1 = 0;
             if (lblCodReq.Text.Trim() == "")
             {
-                MessageBox.Show("Ingrese Codigo Req.", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese Código Req.!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (lblIATA.Text.Trim() == "")
             {
-                MessageBox.Show("Ingrese IATA", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese IATA!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -434,29 +451,29 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 
                 if (cif1 == 0)
                 {
-                    MessageBox.Show("Ingrese CIF", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Porfavor ingrese CIF!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (fob1 == 0)
                 {
-                    MessageBox.Show("Ingrese FOB", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Porfavor ingrese FOB!!", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
 
-            if (MessageBox.Show("Se Procedera a Grabar Req.", "Exportación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("¿Desea grabar la solicitud?", "Exportación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 // comienza grabacion
                 //insertamos la solicitud
-                objBus = new BTablas();
+                //objBus = new BTablas();
 
 
                 string corr = "";
 
                 if (CorrSOLUPD == "")
                 {
-                    corr = objBus.getSELECTLIBRE(" SELECT count(*)+1 AS corr FROM SolicitudAtencion").Rows[0][0].ToString();
+                    corr = bTablas.getSELECTLIBRE(" SELECT count(*)+1 AS corr FROM SolicitudAtencion").Rows[0][0].ToString();
                 }
                 else
                 {
@@ -469,15 +486,27 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                 fecha = FechaSis.ToShortDateString().Substring(6, 4) + FechaSis.ToShortDateString().Substring(3, 2) + FechaSis.ToShortDateString().Substring(0, 2);
                 fecha2 = dtFechaEsp.Value.Year.ToString() + dtFechaEsp.Value.Month.ToString("00", CultureInfo.InvariantCulture) + dtFechaEsp.Value.Day.ToString("00", CultureInfo.InvariantCulture);
 
-                objTra = new BTransaccion();
-                int K = objTra.BTransaccionVarias("DELETE FROM SolicitudAtencion WHERE Cod_Solicitud=" + corr);
+                int K = 0;
+                if (CorrSOLUPD == "")
+                {
+                    //objTra = new BTransaccion();
+                    K = bTransaccion.BTransaccionVarias("DELETE FROM SolicitudAtencion WHERE Cod_Solicitud=" + corr);
 
-                objTra = new BTransaccion();
-                K = objTra.BTransaccionVarias("INSERT INTO dbo.SolicitudAtencion (Cod_Solicitud, Cod_Cab_Req_Solicitud, Res_Solicitud, Fec_Reg_Solicitud, Fec_Res_Esp_Solicitud, Fec_Desp_Solicitud, Estado_Solicitud, Observacion_Solicitud) " +
-    " VALUES (" + corr + ", " + Convert.ToDecimal(lblCodReq.Text.Trim()) + ", '" + Program.Usuario + "', " + fecha + ", " + fecha2 + ", 0, 'A', '" + richTextBox1.Text.Trim() + "')");
+                    //objTra = new BTransaccion();
+                    K = bTransaccion.BTransaccionVarias("INSERT INTO dbo.SolicitudAtencion (Cod_Cab_Req, Res_Solicitud, Fec_Reg_Solicitud, Fec_Res_Esp_Solicitud, Fec_Desp_Solicitud, Estado_Solicitud, Observacion_Solicitud) " +
+        " VALUES (" + Convert.ToDecimal(lblCodReq.Text.Trim()) + ", '" + Program.Usuario + "', '" + fecha + "', '" + fecha2 + "', '" + fecha + "', 'A', '" + richTextBox1.Text.Trim() + "')");
+                }
+                else
+                {
+                    K = bTransaccion.BTransaccionVarias("UPDATE dbo.SolicitudAtencion SET  Res_Solicitud='" + Program.Usuario + "',Fec_Reg_Solicitud='" + fecha + "',Fec_Res_Esp_Solicitud='" + fecha2 + "', " +
+" Fec_Desp_Solicitud='" + fecha + "',Estado_Solicitud='A',Observacion_Solicitud='" + richTextBox1.Text.Trim() + "' " +
+" WHERE cod_solicitud=" + corr);             
+                }
 
-                objTra = new BTransaccion();
-                K = objTra.BTransaccionVarias("UPDATE Requerimiento SET  IATA_Cab_Req='" + codIATA + "',Est_Cab_Req='P' WHERE Cod_Cab_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()));
+
+
+                //objTra = new BTransaccion();
+                K = bTransaccion.BTransaccionVarias("UPDATE Requerimiento SET  IATA_Cab_Req='" + codIATA + "',Est_Cab_Req='P' WHERE Cod_Cab_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()));
 
                 decimal cifG, fobG, codProdG = 0;
                 for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
@@ -485,21 +514,21 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
                     codProdG = Convert.ToDecimal(dataGridView1["Codigo", i].Value.ToString());
                     cifG = Convert.ToDecimal(dataGridView1["cif", i].Value.ToString());
                     fobG = Convert.ToDecimal(dataGridView1["fob", i].Value.ToString());
-                    objTra = new BTransaccion();
-                    K = objTra.BTransaccionVarias("UPDATE Requerimiento_Detalle SET CIF=" + cifG + ",FOB=" + fobG + " WHERE Cod_Det_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()) + " AND Cod_Prod_Det_Req=" + codProdG);
+                    //objTra = new BTransaccion();
+                    K = bTransaccion.BTransaccionVarias("UPDATE Requerimiento_Detalle SET CIF=" + cifG + ",FOB=" + fobG + " WHERE Cod_Det_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()) + " AND IDPRODUCTO=" + codProdG);
                 }
 
-                objTra = new BTransaccion();
-                K = objTra.BTransaccionVarias("DELETE FROM DocProdReq WHERE Doc_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()));
+                //objTra = new BTransaccion();
+                K = bTransaccion.BTransaccionVarias("DELETE FROM DocProdReq WHERE Cod_Cab_Req=" + Convert.ToDecimal(lblCodReq.Text.Trim()));
 
-                objTra = new BTransaccion();
-                K = objTra.BTransaccionVarias("INSERT INTO DocProdReq (Doc_Req, Doc_Prod, Doc_Siicex) SELECT '" + Convert.ToDecimal(lblCodReq.Text.Trim()) + "' AS Doc_Req,Doc_Prod, Doc_Siicex FROM docProdTEMP");
+                //objTra = new BTransaccion();
+                K = bTransaccion.BTransaccionVarias("INSERT INTO DocProdReq (Cod_Cab_Req, idProducto, Cod_SIICEX) SELECT '" + Convert.ToDecimal(lblCodReq.Text.Trim()) + "' AS Cod_Cab_Req,idProducto, Cod_SIICEX FROM docProdTEMP");
 
-                objTra = new BTransaccion();
-                K = objTra.BTransaccionVarias("delete from docProdTEMP");
+                //objTra = new BTransaccion();
+                K = bTransaccion.BTransaccionVarias("delete from docProdTEMP");
 
 
-                MessageBox.Show("Solicitud ingresada Correctamente", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Solicitud ingresada correctamente", "Exportación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmAtencionSolicitud.Actualiza = true;                
                 this.Close();
 
@@ -513,6 +542,16 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             {
                 this.Close();
             }
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oControl.ValidarCajaTexto(e, e.KeyChar);
+        }
+
+        private void dtFechaReg_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

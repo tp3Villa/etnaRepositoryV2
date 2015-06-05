@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETNA.SGI.Presentacion", "ETNA.SGI.Presentacion\ETNA.SGI.Presentacion.csproj", "{FBEA3933-8D41-4161-BA30-4C4750C5A6A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETNA.SGI.Entity", "ETNA.SGI.Entity\ETNA.SGI.Entity.csproj", "{9D5B3824-833F-413A-B2F7-15F37A5E645F}"

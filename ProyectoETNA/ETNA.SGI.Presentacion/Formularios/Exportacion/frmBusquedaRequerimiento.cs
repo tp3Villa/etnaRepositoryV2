@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using ETNA.SGI.Bussiness.Exportacion;
+
 using System.Globalization;
+using ETNA.SGI.Bussiness.Exportacion;
+using ETNA.SGI.Utils;
+
+
 
 namespace ETNA.SGI.Presentacion.Formularios.Exportacion
 {
@@ -20,13 +24,20 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
         }
 
 
-        BTablas objBus = new BTablas();
+        TControlVB oControl = new TControlVB();
+
+
+        private BTablas bTablas = BTablas.getInstance();
+        private BTransaccion bTransaccion = BTransaccion.getInstance();
 
         private void frmBusquedaRequerimiento_Load(object sender, EventArgs e)
         {
+
+            dtHasta.MinDate = dtDesde.Value;
+
             dgvRequerimiento.GridColor = Color.Red;
-            objBus = new BTablas();
-            dgvRequerimiento.DataSource = objBus.BRequerimientos();
+            //objBus = new BTablas();
+            dgvRequerimiento.DataSource = bTablas.BRequerimientos();
         }
 
 
@@ -64,16 +75,31 @@ namespace ETNA.SGI.Presentacion.Formularios.Exportacion
             decimal Desde = Convert.ToDecimal(dtDesde.Value.Year.ToString() + dtDesde.Value.Month.ToString("00", CultureInfo.InvariantCulture) + dtDesde.Value.Day.ToString("00", CultureInfo.InvariantCulture));
             decimal hasta = Convert.ToDecimal(dtHasta.Value.Year.ToString() + dtHasta.Value.Month.ToString("00", CultureInfo.InvariantCulture) + dtHasta.Value.Day.ToString("00", CultureInfo.InvariantCulture));
 
-            objBus = new BTablas();
-            dgvRequerimiento.DataSource = objBus.BRequerimientosBUSQUEDAANIDAD(cod, razon, Desde, hasta);
+            //objBus = new BTablas();
+            dgvRequerimiento.DataSource = bTablas.BRequerimientosBUSQUEDAANIDAD(cod, razon, Desde, hasta);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dgvRequerimiento.GridColor = Color.Red;
-            objBus = new BTablas();
-            dgvRequerimiento.DataSource = objBus.BRequerimientos();
+            //objBus = new BTablas();
+            dgvRequerimiento.DataSource = bTablas.BRequerimientos();
+        }
+
+        private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oControl.Numero(e, txtCod);  
+        }
+
+        private void txtRazon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oControl.ValidarCajaTexto(e, e.KeyChar);
+        }
+
+        private void dtDesde_ValueChanged(object sender, EventArgs e)
+        {
+            dtHasta.MinDate = dtDesde.Value;
         }
     }
 }

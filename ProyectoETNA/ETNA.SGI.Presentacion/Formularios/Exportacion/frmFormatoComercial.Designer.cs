@@ -32,22 +32,23 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtTotal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbTipoDoc = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaPubl = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtFechaExpi = new System.Windows.Forms.DateTimePicker();
+            this.txtVersion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkDisponible = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRuta = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -86,15 +87,16 @@
             this.label11.Text = "Módulo Exportación";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox2
+            // cbTipoDoc
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoDoc.FormattingEnabled = true;
+            this.cbTipoDoc.Items.AddRange(new object[] {
             "Requisitos de Calidad e Inocuidad"});
-            this.comboBox2.Location = new System.Drawing.Point(199, 107);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 21);
-            this.comboBox2.TabIndex = 105;
+            this.cbTipoDoc.Location = new System.Drawing.Point(199, 107);
+            this.cbTipoDoc.Name = "cbTipoDoc";
+            this.cbTipoDoc.Size = new System.Drawing.Size(216, 21);
+            this.cbTipoDoc.TabIndex = 105;
             // 
             // label25
             // 
@@ -106,7 +108,6 @@
             this.label25.TabIndex = 104;
             this.label25.Text = "Tipo :";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label5
             // 
@@ -119,13 +120,13 @@
             this.label5.Text = "Fecha Publicaciòn :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker1
+            // dtFechaPubl
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(199, 152);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(126, 20);
-            this.dateTimePicker1.TabIndex = 106;
+            this.dtFechaPubl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaPubl.Location = new System.Drawing.Point(199, 152);
+            this.dtFechaPubl.Name = "dtFechaPubl";
+            this.dtFechaPubl.Size = new System.Drawing.Size(126, 20);
+            this.dtFechaPubl.TabIndex = 106;
             // 
             // label1
             // 
@@ -138,21 +139,23 @@
             this.label1.Text = "Fecha Expiraciòn :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker2
+            // dtFechaExpi
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(199, 191);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(126, 20);
-            this.dateTimePicker2.TabIndex = 108;
+            this.dtFechaExpi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaExpi.Location = new System.Drawing.Point(199, 191);
+            this.dtFechaExpi.Name = "dtFechaExpi";
+            this.dtFechaExpi.Size = new System.Drawing.Size(126, 20);
+            this.dtFechaExpi.TabIndex = 108;
             // 
-            // textBox1
+            // txtVersion
             // 
-            this.textBox1.Location = new System.Drawing.Point(199, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(104, 20);
-            this.textBox1.TabIndex = 111;
-            this.textBox1.Text = "1.0";
+            this.txtVersion.Location = new System.Drawing.Point(199, 237);
+            this.txtVersion.MaxLength = 4;
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.ShortcutsEnabled = false;
+            this.txtVersion.Size = new System.Drawing.Size(70, 20);
+            this.txtVersion.TabIndex = 111;
+            this.txtVersion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVersion_KeyPress);
             // 
             // label2
             // 
@@ -176,14 +179,16 @@
             this.label3.Text = "Disponible :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // checkBox1
+            // chkDisponible
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(199, 285);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 113;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkDisponible.AutoSize = true;
+            this.chkDisponible.Checked = true;
+            this.chkDisponible.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDisponible.Location = new System.Drawing.Point(199, 285);
+            this.chkDisponible.Name = "chkDisponible";
+            this.chkDisponible.Size = new System.Drawing.Size(15, 14);
+            this.chkDisponible.TabIndex = 113;
+            this.chkDisponible.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -196,13 +201,13 @@
             this.label4.Text = "Seleccionar Documento :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // txtRuta
             // 
-            this.textBox2.Location = new System.Drawing.Point(199, 350);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(337, 20);
-            this.textBox2.TabIndex = 115;
-            this.textBox2.Text = "C:\\DOCSIICEX\\reqCAL2015.pdf";
+            this.txtRuta.Enabled = false;
+            this.txtRuta.Location = new System.Drawing.Point(199, 350);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.Size = new System.Drawing.Size(337, 20);
+            this.txtRuta.TabIndex = 115;
             // 
             // groupBox2
             // 
@@ -227,6 +232,7 @@
             this.button1.Text = "Grabar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -249,6 +255,11 @@
             this.button3.TabIndex = 116;
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmFormatoComercial
             // 
@@ -257,17 +268,17 @@
             this.ClientSize = new System.Drawing.Size(625, 503);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtRuta);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chkDisponible);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVersion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtFechaExpi);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dtFechaPubl);
+            this.Controls.Add(this.cbTipoDoc);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.groupBox6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -289,21 +300,22 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbTipoDoc;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtFechaPubl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtFechaExpi;
+        private System.Windows.Forms.TextBox txtVersion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkDisponible;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRuta;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

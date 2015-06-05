@@ -50,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRequerimiento = new System.Windows.Forms.DataGridView();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +62,8 @@
             this.PAIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PAIS_CAB_REQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox6.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequerimiento)).BeginInit();
@@ -152,15 +152,19 @@
             // 
             this.txtRazon.Location = new System.Drawing.Point(120, 58);
             this.txtRazon.Name = "txtRazon";
+            this.txtRazon.ShortcutsEnabled = false;
             this.txtRazon.Size = new System.Drawing.Size(302, 20);
             this.txtRazon.TabIndex = 89;
+            this.txtRazon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazon_KeyPress);
             // 
             // txtCod
             // 
             this.txtCod.Location = new System.Drawing.Point(120, 27);
             this.txtCod.Name = "txtCod";
+            this.txtCod.ShortcutsEnabled = false;
             this.txtCod.Size = new System.Drawing.Size(104, 20);
             this.txtCod.TabIndex = 88;
+            this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
             // 
             // dtDesde
             // 
@@ -169,6 +173,7 @@
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(126, 20);
             this.dtDesde.TabIndex = 87;
+            this.dtDesde.ValueChanged += new System.EventHandler(this.dtDesde_ValueChanged);
             // 
             // dtHasta
             // 
@@ -252,14 +257,6 @@
             this.dgvRequerimiento.Size = new System.Drawing.Size(727, 286);
             this.dgvRequerimiento.TabIndex = 91;
             this.dgvRequerimiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Asociar";
-            this.dataGridViewImageColumn1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Filter;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Codigo
             // 
@@ -369,6 +366,14 @@
             this.PAIS_CAB_REQ.Name = "PAIS_CAB_REQ";
             this.PAIS_CAB_REQ.ReadOnly = true;
             this.PAIS_CAB_REQ.Visible = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Asociar";
+            this.dataGridViewImageColumn1.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Filter;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // frmBusquedaRequerimiento
             // 

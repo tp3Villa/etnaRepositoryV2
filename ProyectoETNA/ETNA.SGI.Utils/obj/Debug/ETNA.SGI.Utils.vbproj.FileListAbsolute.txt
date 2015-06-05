@@ -92,3 +92,19 @@ C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\E
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll.CodeAnalysisLog.xml
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll.lastcodeanalysissucceeded
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.pdb
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\bin\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.Resources.resources
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.vbproj.GenerateResource.Cache
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.dll
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.xml
+C:\Users\User\Desktop\Ultimo Entregabe TP3\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Utils\obj\Debug\ETNA.SGI.Utils.pdb

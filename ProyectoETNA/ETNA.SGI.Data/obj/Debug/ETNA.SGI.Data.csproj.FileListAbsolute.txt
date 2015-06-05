@@ -77,3 +77,10 @@ C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ET
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.csprojResolveAssemblyReference.cache
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.dll
 C:\App\visualstudio\UPC\etnaRepositoryV2\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Data.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Entity.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\bin\Debug\ETNA.SGI.Entity.pdb
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.csprojResolveAssemblyReference.cache
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.dll
+C:\Users\LAPDIER1\Desktop\Proyecto TP3\Ultimo Entregable\etnaRepositoryV2-master\etnaRepositoryV2-master\ProyectoETNA\ETNA.SGI.Data\obj\Debug\ETNA.SGI.Data.pdb

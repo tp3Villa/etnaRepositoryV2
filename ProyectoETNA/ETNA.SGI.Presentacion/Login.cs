@@ -18,7 +18,9 @@ namespace ETNA.SGI.Presentacion
 {
     public partial class Login : Form
     {
-        private BPersona bPersonal = BPersona.getInstance();
+        //private BPersona bPersonal = BPersona.getInstance();
+
+        private BLogin bLogin = BLogin.getInstance();
 
         public Login()
         {
@@ -41,7 +43,7 @@ namespace ETNA.SGI.Presentacion
             int nroUsuario = 0;
             try
             {
-                nroUsuario = ObjBus.BLogueo(ObjEnt).Rows.Count;
+                nroUsuario = bLogin.BLogueo(ObjEnt).Rows.Count;
             }
             catch (Exception ex)
             {
@@ -105,8 +107,8 @@ namespace ETNA.SGI.Presentacion
             textBox1.CharacterCasing = CharacterCasing.Upper;
             textBox2.CharacterCasing = CharacterCasing.Upper;
             textBox1.Focus();
-            textBox1.Text = "JPEREZ";
-            textBox2.Text = "123";
+            textBox1.Text = "ET22200";
+            textBox2.Text = "123456";
 
         }
 

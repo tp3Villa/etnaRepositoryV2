@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAprobacionSolicitud));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtTotal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.dgvRequerimiento = new System.Windows.Forms.DataGridView();
-            this.codSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.respo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalle = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.button5 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtDesde = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cod_solicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cod_cab_req_solicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fec_reg_solicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deta = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Anular = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRequerimiento)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox6
@@ -92,13 +94,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
             this.groupBox1.Location = new System.Drawing.Point(12, 93);
@@ -108,155 +106,79 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda";
             // 
-            // button2
+            // button5
             // 
-            this.button2.Image = global::ETNA.SGI.Presentacion.Properties.Resources.Buscar;
-            this.button2.Location = new System.Drawing.Point(508, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 28);
-            this.button2.TabIndex = 110;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
+            this.button5.Location = new System.Drawing.Point(788, 35);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(55, 57);
+            this.button5.TabIndex = 100;
+            this.button5.Text = "Salir";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // comboBox2
+            // groupBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Pendiente"});
-            this.comboBox2.Location = new System.Drawing.Point(248, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 21);
-            this.comboBox2.TabIndex = 106;
+            this.groupBox2.Controls.Add(this.dtHasta);
+            this.groupBox2.Controls.Add(this.dtDesde);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.Location = new System.Drawing.Point(10, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(650, 76);
+            this.groupBox2.TabIndex = 112;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fecha de Registro";
+            // 
+            // dtHasta
+            // 
+            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtHasta.Location = new System.Drawing.Point(297, 49);
+            this.dtHasta.Name = "dtHasta";
+            this.dtHasta.Size = new System.Drawing.Size(126, 20);
+            this.dtHasta.TabIndex = 3;
+            // 
+            // dtDesde
+            // 
+            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDesde.Location = new System.Drawing.Point(297, 15);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Size = new System.Drawing.Size(126, 20);
+            this.dtDesde.TabIndex = 2;
+            this.dtDesde.ValueChanged += new System.EventHandler(this.dtDesde_ValueChanged);
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(44, 75);
+            this.label2.Location = new System.Drawing.Point(128, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 18);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "Estado de la Solicitud :";
+            this.label2.Size = new System.Drawing.Size(84, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Hasta :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(677, 33);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(126, 20);
-            this.dateTimePicker2.TabIndex = 108;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(248, 31);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(126, 20);
-            this.dateTimePicker1.TabIndex = 107;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(485, 33);
+            this.label1.Location = new System.Drawing.Point(128, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 18);
-            this.label1.TabIndex = 100;
-            this.label1.Text = "Fecha de Registro Final :";
+            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Desde :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label25
+            // button1
             // 
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Navy;
-            this.label25.Location = new System.Drawing.Point(44, 33);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(186, 18);
-            this.label25.TabIndex = 99;
-            this.label25.Text = "Fecha de Registro Inicial :";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dgvRequerimiento
-            // 
-            this.dgvRequerimiento.AllowUserToAddRows = false;
-            this.dgvRequerimiento.AllowUserToDeleteRows = false;
-            this.dgvRequerimiento.AllowUserToResizeColumns = false;
-            this.dgvRequerimiento.AllowUserToResizeRows = false;
-            this.dgvRequerimiento.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRequerimiento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvRequerimiento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvRequerimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRequerimiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codSol,
-            this.Cliente,
-            this.Fecha1,
-            this.fecha2,
-            this.respo,
-            this.Estado,
-            this.detalle});
-            this.dgvRequerimiento.Location = new System.Drawing.Point(12, 215);
-            this.dgvRequerimiento.Name = "dgvRequerimiento";
-            this.dgvRequerimiento.ReadOnly = true;
-            this.dgvRequerimiento.RowHeadersVisible = false;
-            this.dgvRequerimiento.Size = new System.Drawing.Size(901, 297);
-            this.dgvRequerimiento.TabIndex = 99;
-            // 
-            // codSol
-            // 
-            this.codSol.DataPropertyName = "1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codSol.DefaultCellStyle = dataGridViewCellStyle1;
-            this.codSol.HeaderText = "Cod.Solicitud";
-            this.codSol.Name = "codSol";
-            this.codSol.ReadOnly = true;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "2";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 200;
-            // 
-            // Fecha1
-            // 
-            this.Fecha1.DataPropertyName = "3";
-            this.Fecha1.HeaderText = "Fec.Reserva";
-            this.Fecha1.Name = "Fecha1";
-            this.Fecha1.ReadOnly = true;
-            // 
-            // fecha2
-            // 
-            this.fecha2.DataPropertyName = "4";
-            this.fecha2.HeaderText = "Fec.Despacho";
-            this.fecha2.Name = "fecha2";
-            this.fecha2.ReadOnly = true;
-            // 
-            // respo
-            // 
-            this.respo.DataPropertyName = "5";
-            this.respo.HeaderText = "Responsable";
-            this.respo.Name = "respo";
-            this.respo.ReadOnly = true;
-            this.respo.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "6";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // detalle
-            // 
-            this.detalle.HeaderText = "Ver Detalle";
-            this.detalle.Image = global::ETNA.SGI.Presentacion.Properties.Resources._16__Find_1;
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
-            this.detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.detalle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.button1.Image = global::ETNA.SGI.Presentacion.Properties.Resources._16__Find_1;
+            this.button1.Location = new System.Drawing.Point(716, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 57);
+            this.button1.TabIndex = 111;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -266,24 +188,94 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // button5
+            // dataGridView1
             // 
-            this.button5.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ELIMINA;
-            this.button5.Location = new System.Drawing.Point(814, 531);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 57);
-            this.button5.TabIndex = 100;
-            this.button5.Text = "Salir";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cod_solicitud,
+            this.cod_cab_req_solicitud,
+            this.razon_social,
+            this.fec_reg_solicitud,
+            this.Deta,
+            this.Anular});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 215);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(901, 279);
+            this.dataGridView1.TabIndex = 100;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cod_solicitud
+            // 
+            this.cod_solicitud.DataPropertyName = "cod_solicitud";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cod_solicitud.DefaultCellStyle = dataGridViewCellStyle1;
+            this.cod_solicitud.HeaderText = "Cod.Sol.";
+            this.cod_solicitud.Name = "cod_solicitud";
+            this.cod_solicitud.ReadOnly = true;
+            this.cod_solicitud.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cod_cab_req_solicitud
+            // 
+            this.cod_cab_req_solicitud.DataPropertyName = "cod_cab_req_solicitud";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cod_cab_req_solicitud.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cod_cab_req_solicitud.HeaderText = "Cod.Req.";
+            this.cod_cab_req_solicitud.Name = "cod_cab_req_solicitud";
+            this.cod_cab_req_solicitud.ReadOnly = true;
+            // 
+            // razon_social
+            // 
+            this.razon_social.DataPropertyName = "razon_social";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.razon_social.DefaultCellStyle = dataGridViewCellStyle3;
+            this.razon_social.HeaderText = "Razón Social";
+            this.razon_social.Name = "razon_social";
+            this.razon_social.ReadOnly = true;
+            this.razon_social.Width = 280;
+            // 
+            // fec_reg_solicitud
+            // 
+            this.fec_reg_solicitud.DataPropertyName = "fec_reg_solicitud";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = null;
+            this.fec_reg_solicitud.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fec_reg_solicitud.HeaderText = "Fecha Registro";
+            this.fec_reg_solicitud.Name = "fec_reg_solicitud";
+            this.fec_reg_solicitud.ReadOnly = true;
+            this.fec_reg_solicitud.Width = 150;
+            // 
+            // Deta
+            // 
+            this.Deta.HeaderText = "Ver Detalles";
+            this.Deta.Image = global::ETNA.SGI.Presentacion.Properties.Resources._16__Find_;
+            this.Deta.Name = "Deta";
+            this.Deta.ReadOnly = true;
+            this.Deta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Deta.Width = 120;
+            // 
+            // Anular
+            // 
+            this.Anular.HeaderText = "Desaprobar";
+            this.Anular.Image = global::ETNA.SGI.Presentacion.Properties.Resources.ERASE02;
+            this.Anular.Name = "Anular";
+            this.Anular.ReadOnly = true;
+            this.Anular.Width = 120;
             // 
             // frmAprobacionSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 600);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.dgvRequerimiento);
+            this.ClientSize = new System.Drawing.Size(925, 505);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -292,10 +284,12 @@
             this.Name = "frmAprobacionSolicitud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aprobación de Solicitud de Requerimiento";
+            this.Activated += new System.EventHandler(this.frmAprobacionSolicitud_Activated);
             this.Load += new System.EventHandler(this.frmAprobacionSolicitud_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRequerimiento)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,22 +300,20 @@
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dgvRequerimiento;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codSol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn respo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewImageColumn detalle;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker dtHasta;
+        private System.Windows.Forms.DateTimePicker dtDesde;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod_solicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod_cab_req_solicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razon_social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fec_reg_solicitud;
+        private System.Windows.Forms.DataGridViewImageColumn Deta;
+        private System.Windows.Forms.DataGridViewImageColumn Anular;
     }
 }

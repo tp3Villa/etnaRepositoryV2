@@ -149,7 +149,7 @@
                             <div class="form-group">
                                 <input type="hidden" id="idProducto" />
                                 <input type="hidden" id="cantidadPedida" />
-                                <input type="text" class="form-control" id="txtCantidad" placeholder="Ingrese cantidad"/>
+                                <input type="text" class="form-control" id="txtCantidad" placeholder="Ingrese cantidad" maxlength="5"/>
                                 <label class="label-validar-m" id="lblCantidad"></label>
                             </div>
                         </div>

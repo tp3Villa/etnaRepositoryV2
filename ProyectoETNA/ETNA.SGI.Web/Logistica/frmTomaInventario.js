@@ -181,7 +181,8 @@ function Finalizar() {
         var arg = Sys.Serialization.JavaScriptSerializer.serialize(data);
         FinalizarTomaInventarioEventHandler(arg, function (result, context) {
             if (result == 0) {
-                document.getElementById('mensaje').innerHTML = "Toma de inventario finalizada correctamente";
+                document.getElementById('mensaje').innerHTML = "Toma de inventario finalizada correctamente" + "<br />" +
+                                                               "Por favor realizar el AJUSTE necesario en la opción Actualizar Inventario";
 
                 document.getElementById('btnAceptarError').style.display = "none";
                 document.getElementById('btnAceptarOk').style.display = "block";
@@ -189,7 +190,7 @@ function Finalizar() {
                 $('#modalMensaje').modal('show');
 
             } else {
-                document.getElementById('mensaje').innerHTML = "Error al finalizar toma de inventario";
+                document.getElementById('mensaje').innerHTML = "Ingrese la cantidad de todos los productos";
 
                 document.getElementById('btnAceptarOk').style.display = "none";
                 document.getElementById('btnAceptarError').style.display = "block";

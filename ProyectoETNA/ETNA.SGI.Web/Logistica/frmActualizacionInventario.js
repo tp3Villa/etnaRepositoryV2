@@ -58,7 +58,8 @@ function Iniciar(idProgInventario, estadoInventario) {
             var arg = Sys.Serialization.JavaScriptSerializer.serialize(data);
             IniciarInventarioEventHandler(arg, function (result, context) {
                 if (result == 0) {
-                    document.getElementById('mensaje').innerHTML = "Inventario iniciado correctamente";
+                    document.getElementById('mensaje').innerHTML = "Inventario iniciado correctamente"+"<br />"+
+                                                                   "Por favor realizar Toma de Inventario";
 
                     $('#modalMensaje').modal('show');
 
@@ -93,8 +94,9 @@ function Ajustar(idProgInventario, estadoInventario) {
 
             var arg = Sys.Serialization.JavaScriptSerializer.serialize(data);
             AjustarInventarioEventHandler(arg, function (result, context) {
-                if (result == 0) {
-                    document.getElementById('mensaje').innerHTML = "Inventario ajustado correctamente";
+                if (result == '0') {
+                    document.getElementById('mensaje').innerHTML = "Inventario ajustado correctamente" + "<br />" +
+                                                                   "Por favor consultar Movimientos de Almacén";
 
                     $('#modalMensaje').modal('show');
 

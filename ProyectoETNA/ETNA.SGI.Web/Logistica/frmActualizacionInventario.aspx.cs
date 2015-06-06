@@ -128,13 +128,13 @@ namespace ETNA.SGI.Web.Logistica
 
                 result = new ProgramacionInventarioBL().AjustarInventario(oBe).ToString();
 
+                return result;
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-            return result.ToString();
         }
         /// <summary>
         /// Manejador para obtener la lista de inventarios

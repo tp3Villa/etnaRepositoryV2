@@ -1,0 +1,1 @@
+delete from tablaTipo where idTipo IN (57,58)

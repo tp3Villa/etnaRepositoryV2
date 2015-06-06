@@ -10,7 +10,9 @@ function Nuevo() {
     /*MR-20150523 - FIN*/
     $("#txtFechaProgramadaNuevo").datepicker({
         defaultDate: "+1w",
-        minDate: "0D"
+        minDate: "0D",
+        changeMonth: true,
+        changeYear: true
     });
     $('#modalNuevo').modal('show');
     return false;
@@ -21,7 +23,9 @@ function Editar(idProgInventario, fechaProgramada, idTipoInventario, idAlmacen, 
     if (estado == 'PENDIENTE') {
         $("#txtFechaProgramadaEdit").datepicker({
             defaultDate: "+1w",
-            minDate: "0D"
+            minDate: "0D",
+            changeMonth: true,
+            changeYear: true
         });
 
         document.getElementById('idProgInventario').value = idProgInventario;
@@ -90,7 +94,8 @@ function Registrar() {
         var arg = Sys.Serialization.JavaScriptSerializer.serialize(data);
         RegistrarInventarioProgramadoEventHandler(arg, function (result, context) {
             if (result == 0) {
-                document.getElementById('mensaje').innerHTML = "Programación insertada correctamente";
+                document.getElementById('mensaje').innerHTML = "Programación insertada correctamente" + "<br />" +
+                                                               "Por favor INICIARLA en la opción Actualizar Inventario";
                 $('#modalMensaje').modal('show');
                 $('#modalNuevo').modal('hide');
 
@@ -139,7 +144,8 @@ function Actualizar() {
         var arg = Sys.Serialization.JavaScriptSerializer.serialize(data);
         ActualizarInventarioProgramadoEventHandler(arg, function (result, context) {
             if (result == 0) {
-                document.getElementById('mensaje').innerHTML = "Programación actualizada correctamente";
+                document.getElementById('mensaje').innerHTML = "Programación actualizada correctamente" + "<br />" +
+                                                               "Por favor INICIARLA en la opción Actualizar Inventario";
 
                 $('#modalMensaje').modal('show');
 

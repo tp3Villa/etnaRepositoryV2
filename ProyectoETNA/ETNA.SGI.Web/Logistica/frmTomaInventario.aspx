@@ -122,7 +122,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <input type="hidden" id="txtDetInventario" />
-                                <input type="text" class="form-control" id="txtCantidad" placeholder="Ingrese cantidad"/>
+                                <input type="text" class="form-control" id="txtCantidad" placeholder="Ingrese cantidad" maxlength="5"/>
                                 <label class="label-validar-m" id="lblCantidad"></label>
                             </div>
                         </div>
